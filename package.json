@@ -1,0 +1,22 @@
+{
+  "name": "garba-styleguide",
+  "version": "1.0.0",
+  "description": "A React.js styleguide to display all components contained in garba-ui",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garbarino-com/garba-styleguide.git"
+  },
+  "author": [
+    "Leonardo Pitelli <lpitelli@garbarino.com.ar>",
+    "Esteban Calvi <ecalvi@garbarino.com.ar>"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/garbarino-com/garba-styleguide/issues"
+  },
+  "homepage": "https://github.com/garbarino-com/garba-styleguide#readme"
+}
