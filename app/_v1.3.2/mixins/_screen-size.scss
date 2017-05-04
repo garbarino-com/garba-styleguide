@@ -1,0 +1,64 @@
+/////////////////////////////////////////////////////////////////////
+//////////////////// Breakpoints ////////////////////////////////////
+@mixin breakpoint($size, $exact: "exact"){
+	@if $size == "small"{
+		@if $exact == "exact"{
+			@media(min-width: 1px) and (max-width: 767px){
+				@content;
+			}
+		}@if $exact == "up"{
+			@media(min-width: 1px){
+				@content;
+			}
+		}
+	}
+
+	@else if $size == "medium"{
+		@if $exact == "exact"{
+			@media(min-width: 768px) and (max-width: 1024px){
+				@content;
+			}
+		}@if $exact == "up"{
+			@media(min-width: 768px){
+				@content;
+			}
+		}@if $exact == "down"{
+			@media(max-width: 1024px){
+				@content;
+			}
+		}
+	}	
+
+	@else if $size == "large"{
+		@if $exact {
+			@media(min-width: 1025px) and (max-width: 1365px){
+				@content;
+			}
+		}@if $exact == "up"{
+			@media(min-width: 1025px){
+				@content;
+			}
+		}@if $exact == "down"{
+			@media(max-width: 1280px){
+				@content;
+			}
+		}
+	}
+
+	@else if $size == "huge"{
+		@media(min-width: 1366px){
+			@content;
+		}
+	}
+}
+
+// Mixin Retina
+@mixin retina {
+	@media
+		only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	    only screen and (-o-min-device-pixel-ratio: 3/2),
+	    only screen and (min--moz-device-pixel-ratio: 1.5),
+	    only screen and (min-device-pixel-ratio: 1.5) {
+			@content;
+	}
+}
