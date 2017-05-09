@@ -1,10 +1,10 @@
 'use strict';
 
-require('./garba-styleguide.scss');
+require('./styleguide/garba-styleguide.scss');
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import components from 'garba-ui';
+import components from './components/';
 
 import StyleGuideBlock from './styleguide/styleguide__block/styleguide__block';
 

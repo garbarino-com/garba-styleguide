@@ -11,95 +11,91 @@ var StyleLintPlugin = require('stylelint-webpack-plugin');
 // Styles compiler plugin
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-
 require('es6-promise').polyfill();
 
-// Specify the resulting CSS filename
-let plugins = [
-    new ExtractTextPlugin('css/garbaui.css')
-];
-
 const config = {
-    entry: './app/index.js',
+  entry: './app/index.js',
 
-    output: {
-        path: __dirname,
-        filename: './app/app.js'
-    },
+  output: {
+    path: __dirname,
+    filename: './app/app.js'
+  },
 
-    module: {
-        rules: [
-            {
-                test: /\.(js|jsx)?$/,
-                use: [
-                    {
-                        loader: 'babel-loader',
-                        options: {
-                            cacheDirectory: true
-                        }
-                    }
-                ],
-                exclude: /node_modules/
-            },
-            {
-                test: /\.scss$/,
-                use: [
-                    {
-                        loader: 'css-loader'
-                    },
-                    {
-                        loader: 'sass-loader'
-                    }
-                ],
-                exclude: /node_modules/
-            },
-            {
-                test: /\.css$/,
-                use: [
-                    {
-                        loader: 'style-loader'
-                    },
-                    {
-                        loader: 'css-loader'
-                    }
-                ]
-            },
-            {
-                test: /\.(png|woff|woff2|ttf|eot|svg)(\?[a-z0-9]+)?$/,
-                use: [
-                    {
-                        loader: 'file-loader'
-                    }
-                ]
-            },
-            {
-                test: /\.md$/,
-                use: [
-                    {
-                        loader: 'html-loader'
-                    },
-                    {
-                        loader: 'markdown-loader'
-                    }
-                ]
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)?$/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              cacheDirectory: true
             }
+          }
+        ],
+        exclude: /node_modules/
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'sass-loader'
+          }
+        ],
+        exclude: /node_modules/
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader'
+          }
         ]
-    },
+      },
+      {
+        test: /\.(png|woff|woff2|ttf|eot|svg)(\?[a-z0-9]+)?$/,
+        use: [
+          {
+            loader: 'file-loader'
+          }
+        ]
+      },
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'html-loader'
+          },
+          {
+            loader: 'markdown-loader'
+          }
+        ]
+      }
+    ]
+  },
 
-    plugins: [
-        new ExtractTextPlugin("styles.css"),
-    ],
 
-    // Colored output
-    stats: {
-        colors: true
-    },
+  // Specify the resulting CSS filename
+  plugins: [
+    new ExtractTextPlugin("styles.css"),
+  ],
 
-    // Create Sourcemaps for the bundle
-    devtool: 'source-map',
+  // Colored output
+  stats: {
+    colors: true
+  },
 
-    // Keep proccess running
-    watch: true
+  // Create Sourcemaps for the bundle
+  devtool: 'source-map',
+
+  // Keep proccess running
+  watch: true
 }
 
 module.exports = config;
