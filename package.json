@@ -40,16 +40,6 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "bootstrap-sass-grid": "^4.0.1",
-<<<<<<< Updated upstream
-    "css-loader": "^0.21.0",
-    "es6-promise": "^3.0.2",
-    "file-loader": "^0.10.0",
-    "frontend-settings": "git+https://github.com/garbarino-com/frontend-settings.git",
-    "highlight.js": "^9.5.0",
-    "html-loader": "^0.4.3",
-    "markdown-loader": "^0.1.7",
-    "node-sass": "^3.3.3",
-=======
     "css-loader": "^0.28.1",
     "es6-promise": "^4.1.0",
     "extract-text-webpack-plugin": "^2.1.0",
@@ -59,7 +49,6 @@
     "html-loader": "^0.4.5",
     "markdown-loader": "^2.0.0",
     "node-sass": "^4.5.2",
->>>>>>> Stashed changes
     "normalize-scss": "^6.0.0",
     "postcss-loader": "^2.0.1",
     "react-element-to-jsx-string": "^6.4.0",
