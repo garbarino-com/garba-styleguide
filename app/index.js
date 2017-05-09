@@ -4,7 +4,7 @@ require('./garba-styleguide.scss');
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import components from './components';
+import components from 'garba-ui';
 
 import StyleGuideBlock from './styleguide/styleguide__block/styleguide__block';
 
