@@ -5,10 +5,10 @@
 // URL: (https://github.com/garbarino-com/garba-ui/blob/LICENSE.md)
 //
 
-// Import styles-library into styleguide project
-//@import "../node_modules/garba-ui/app/lib/garbaui";
+@import "variables/styleguide-variables";
 
-//@import "./variables/styleguide-variables";
+// Import styles-library into styleguide project
+@import "./node_modules/garba-ui/app/lib/garbaui";
 
 // TODO(ecalvi): Bootstrap 3 grid is imported here for prototyping purposes.
 // In the future we should review this and choose a grid to use within the
@@ -16,5 +16,5 @@
 @import "./node_modules/bootstrap-sass-grid/sass/bootstrap-sass-grid";
 
 // Style guide
-//@import "./styleguide/styleguide";
-//@import "./styleguide/styleguide__block/styleguide__block";
+@import "styleguide";
+@import "styleguide__block/styleguide__block";

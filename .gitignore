@@ -5,3 +5,5 @@ node_modules/
 .sass-cache/
 .idea/
 icomoon
+dist/
+app/

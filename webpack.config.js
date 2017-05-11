@@ -4,6 +4,7 @@ var path = require('path');
 var webpack = require('webpack');
 var autoprefixer = require('autoprefixer');
 var toolSettings = require('frontend-settings');
+var jsonImporter = require('node-sass-json-importer');
 
 // Stylelint plugin
 var StyleLintPlugin = require('stylelint-webpack-plugin');
@@ -14,11 +15,13 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 require('es6-promise').polyfill();
 
 const config = {
-  entry: './app/index.js',
+  entry: {
+    app: './app/index.js'
+  },
 
   output: {
     path: __dirname,
-    filename: './app/app.js'
+    filename: './dist/[name].bundle.js'
   },
 
   module: {
@@ -43,7 +46,7 @@ const config = {
           },
           {
             loader: 'sass-loader'
-          }
+          },
         ],
         exclude: /node_modules/
       },
@@ -62,7 +65,7 @@ const config = {
         test: /\.(png|woff|woff2|ttf|eot|svg)(\?[a-z0-9]+)?$/,
         use: [
           {
-            loader: 'file-loader'
+            loader: 'url-loader?limit=10000'
           }
         ]
       },
@@ -83,7 +86,15 @@ const config = {
 
   // Specify the resulting CSS filename
   plugins: [
-    new ExtractTextPlugin("styles.css"),
+    new ExtractTextPlugin('dist/garba-styleguide.css'),
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        sassLoader: {
+          importer: jsonImporter,
+        },
+        context: __dirname,
+      },
+    }),
   ],
 
   // Colored output
