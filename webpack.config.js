@@ -40,14 +40,14 @@ const config = {
       },
       {
         test: /\.scss$/,
-        use: [
-          {
-            loader: 'css-loader'
-          },
-          {
-            loader: 'sass-loader'
-          },
-        ],
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            'css-loader',
+            'sass-loader?sourceMap',
+          ],
+          publicPath: '/css/',
+        }),
         exclude: /node_modules/
       },
       {
