@@ -31,4 +31,5 @@ app.use((err, request, response, next) => {
 
 app.use('/assets', express.static(path.join(__dirname, 'assets')))
 hbs.registerPartials(__dirname + '/views')
-hbs.registerPartials(__dirname + '/views/layouts')
+hbs.registerPartials(__dirname + '/views/layouts/')
+hbs.registerPartials(__dirname + '/views/partials/')
