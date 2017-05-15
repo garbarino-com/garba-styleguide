@@ -4,8 +4,10 @@
   "description": "A React.js styleguide to display all components contained in garba-ui",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass ./app/_garbaui.scss ./dist/stylesheets/garbaui.css --o ./dist/ --output-style expanded && node-sass ./app/_garbaui.scss ./dist/stylesheets/garbaui.min.css --o ./dist/ --output-style compressed",
-    "start": "node ./index.js"
+    "sass": "node-sass ./assets/scss/garba-styleguide.scss ./assets/css/garba-styleguide.css --output-style compressed",
+    "sass:watch": "node-sass ./assets/scss/garba-styleguide.scss ./assets/css/garba-styleguide.css --output-style expanded --watch",
+    "start-server": "node ./index.js",
+    "start-dev": "npm run sass:watch & npm run start-server"
   },
   "repository": {
     "type": "git",
@@ -32,12 +34,14 @@
   },
   "homepage": "https://github.com/garbarino-com/garba-styleguide#readme",
   "devDependencies": {
+    "bootstrap-sass-grid": "^4.0.1",
     "frontend-settings": "git+https://github.com/garbarino-com/frontend-settings.git"
   },
   "dependencies": {
     "express": "^4.15.2",
     "garba-ui": "^2.0.2-Alpha.2",
     "handlebars": "^4.0.8",
-    "hbs": "^4.0.1"
+    "hbs": "^4.0.1",
+    "node-sass": "^4.5.2"
   }
 }
