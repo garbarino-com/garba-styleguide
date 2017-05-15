@@ -29,5 +29,6 @@ app.use((err, request, response, next) => {
   response.status(500).send('Something broke!')
 })
 
+app.use('/assets', express.static(path.join(__dirname, 'assets')))
 hbs.registerPartials(__dirname + '/views')
 hbs.registerPartials(__dirname + '/views/layouts')
