@@ -1,6 +1,20 @@
 <ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active">
-    <a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a>
+  <li role="presentation">
+    <a href="#home" aria-controls="home" role="tab" data-toggle="tab">Instalación</a>
+    <ul>
+      <li>
+        <a href="#">Introducción</a>
+      </li>
+      <li>
+        <a href="#">Instalación</a>
+      </li>
+      <li>
+        <a href="#">Configuración</a>
+      </li>
+      <li>
+        <a href="#">Créditos</a>
+      </li>
+    </ul>
   </li>
   <li role="presentation">
     <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a>
@@ -11,4 +25,13 @@
   <li role="presentation">
     <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a>
   </li>
+
+  {{#each mapComponents}}
+    <li role="presentation" class="active">
+      <a href={{ componentUrl }} aria-controls="settings" role="tab"
+        data-toggle="tab">
+          {{ ComponentName }}
+      </a>
+    </li>
+  {{/each}}
 </ul>

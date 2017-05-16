@@ -1,20 +1,53 @@
 .nav-tabs {
-  border-bottom: 1px solid $gray-lighter;
+  border-bottom: 1px solid darken($gray-light, 2%);
 
-  li a {
-    border-top: 1px solid $gray-lighter;
-    color: $text-color;
-    display: block;
-    padding: 1rem;
+  li {
+    > a {
+      border-top: 1px solid darken($gray-light, 2%);
+      color: $text-color;
+      display: block;
+      padding: 1rem;
 
-    &:hover {
-      background-color: $gray-lighter;
-      text-decoration: none;
+      &:hover {
+        background-color: $gray-lighter;
+        text-decoration: none;
+      }
+
+      &:active,
+      &:focus {
+        outline: 0;
+      }
     }
 
-    &:active,
-    &:focus {
-      outline: 0;
+    // Hide submenus by default
+    > ul {
+      background-color: $gray-lighter;
+      border-bottom: 1px solid darken($gray-light, 2%);
+      display: none;
+
+      li a {
+        border-top: 1px solid darken($gray-light, 2%);
+        padding: .75rem 1rem;
+
+        &:hover {
+          background-color: $gray-light;
+        }
+      }
+    }
+
+    // Active state
+    &.active {
+      > a {
+        &,
+        &:hover {
+          background-color: $gray-lighter;
+          cursor: default;
+        }
+      }
+
+      > ul {
+        display: block;
+      }
     }
   }
 }
