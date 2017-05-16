@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/garbarino-com/garba-styleguide#readme",
   "devDependencies": {
-    "bootstrap-sass-grid": "^4.0.1",
+    "bootstrap-sass": "^3.3.7",
     "frontend-settings": "git+https://github.com/garbarino-com/frontend-settings.git"
   },
   "dependencies": {

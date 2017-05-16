@@ -7,12 +7,31 @@
 </head>
 
 <body>
-  {{> header}}
+<div class="row-wrapper">
+  <nav class="main-nav">
+    {{> header}}
+    {{> sidenav}}
+  </nav>
 
-  {{> main_wrapper}}
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade active in" id="home">
+      {{> tab1}}
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="profile">
+      {{> tab1}}
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="messages">
+      {{> tab1}}
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="settings">
+      {{> tab1}}
+    </div>
 
-  {{> footer}}
+    {{> footer}}
+  </div>
 
-  {{> scripts}}
+</div>
+
+{{> scripts}}
 </body>
 </html>

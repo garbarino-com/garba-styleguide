@@ -5,16 +5,29 @@
 // URL: (https://github.com/garbarino-com/garba-ui/blob/LICENSE.md)
 //
 
-@import "variables/styleguide-variables";
-
 // Import styles-library into styleguide project
 @import "./node_modules/garba-ui/app/lib/garbaui";
 
+@import "variables/styleguide-variables";
+@import "variables/grid-variables";
+
 // TODO(ecalvi): Bootstrap 3 grid is imported here for prototyping purposes.
 // In the future we should review this and choose a grid to use within the
-// frame that doesn't necessarilly need to be this one.
-@import "./node_modules/bootstrap-sass-grid/sass/bootstrap-sass-grid";
+// frame that doesn't necessarily need to be this one.
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid-framework";
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid";
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
 
-// Style guide
-@import "styleguide";
-@import "styleguide__block/styleguide__block";
+// Bootstrap utilities
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/vendor-prefixes";
+@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/component-animations";
+
+// Helpers
+@import "helpers/scaffolding";
+@import "helpers/utilities";
+
+// Style guide components
+@import "components/footer";
+@import "components/header";
+@import "components/layout";
+@import "components/navbar";
