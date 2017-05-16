@@ -6,4 +6,4 @@ node_modules/
 .idea/
 icomoon
 dist/
-app/
+assets/css/
