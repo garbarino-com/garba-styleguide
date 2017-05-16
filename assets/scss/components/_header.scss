@@ -3,8 +3,13 @@
   height: 4rem;
 }
 
-.navbar-brand > img {
-  width: 3rem;
+.navbar-brand {
   display: block;
-  margin: 0 auto;
+  padding: 0.5rem;
+
+  > img {
+    width: 3rem;
+    display: block;
+    margin: 0 auto;
+  }
 }
