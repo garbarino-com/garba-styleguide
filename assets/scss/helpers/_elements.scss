@@ -41,3 +41,20 @@ h6, .h6 {font-size: .5rem;}
   margin-bottom: .5rem;
   padding-bottom: 1rem;
 }
+
+.hero {
+  background-color: $brand-secondary;
+  color: $text-inverse;
+  height: 100%;
+  padding: 2rem 1.5rem;
+  width: 100%;
+}
+
+.welcome-hero {
+  background: transparent url('../images/wallpaper.png') 0 0 no-repeat;
+  background-size: contain;
+}
+
+.hero-heading {
+  color: $text-inverse;
+}

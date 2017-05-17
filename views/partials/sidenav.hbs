@@ -1,6 +1,11 @@
 <ul class="nav nav-tabs" role="tablist">
   <li role="presentation">
-    <a href="#home" aria-controls="home" role="tab" data-toggle="tab">Instalación</a>
+    <a href="#welcome" aria-controls="profile" role="tab" data-toggle="tab">
+      Welcome
+    </a>
+  </li>
+  <li role="presentation">
+    <a href="#installation" aria-controls="home" role="tab" data-toggle="tab">Instalación</a>
     <ul>
       <li>
         <a href="#">Introducción</a>
@@ -17,21 +22,59 @@
     </ul>
   </li>
   <li role="presentation">
-    <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a>
+    <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
+      Buttons
+    </a>
+  </li>
+  <li role="presentation">
+    <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
+      Button Actions
+    </a>
+  </li>
+  <li role="presentation">
+    <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
+      Labels
+    </a>
+  </li>
+  <li role="presentation">
+    <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
+      Tags
+    </a>
+  </li>
+  <li role="presentation">
+    <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
+      Tooltips
+    </a>
+  </li>
+  <li role="presentation">
+    <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
+      Imagen de producto
+    </a>
+  </li>
+  <li role="presentation">
+    <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
+      Precio
+    </a>
+  </li>
+  <li role="presentation">
+    <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
+      Íconos
+    </a>
   </li>
   <li role="presentation">
     <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a>
   </li>
-  <li role="presentation">
-    <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a>
-  </li>
 
-  {{#each mapComponents}}
+  {{!--
+  TODO (ecalvi): Make this iteration work!
+
+  {{#each components}}
     <li role="presentation" class="active">
-      <a href={{ componentUrl }} aria-controls="settings" role="tab"
+      <a href="#" aria-controls="settings" role="tab"
         data-toggle="tab">
-          {{ ComponentName }}
+          {{this.name}}
       </a>
     </li>
   {{/each}}
+  --}}
 </ul>

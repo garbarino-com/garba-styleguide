@@ -1,14 +1,17 @@
-const express = require('express')
-const app = express()
-const path = require('path')
-const hbs  = require('hbs')
-const port = 3000
+const express    = require('express')
+const app        = express()
+const path       = require('path')
+const hbs        = require('hbs')
+// const markdown   = require('helper-markdown')
+const port      = 3000
+
+var components = require('./docs/components')
 
 app.set('view engine', '.hbs')
 app.set('views', path.join(__dirname, 'views'))
 
 app.get('/', (request, response) => {
-  return response.render('index');
+  return response.render('index', components = {components});
 })
 
 app.listen(port, (err) => {
@@ -30,6 +33,16 @@ app.use((err, request, response, next) => {
 })
 
 app.use('/assets', express.static(path.join(__dirname, 'assets')))
+
+// Helpers
+// hbs.registerHelper('markdown', markdown());
+hbs.registerHelper('toJSON', (context) => {
+  "use strict";
+  return JSON.stringify(context);
+});
+
+
+// Partials
 hbs.registerPartials(__dirname + '/views')
 hbs.registerPartials(__dirname + '/views/layouts')
 hbs.registerPartials(__dirname + '/views/partials')
