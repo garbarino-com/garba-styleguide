@@ -1,7 +1,10 @@
 {
   "sites": {
     "styles": {
-      "glob": "node_modules/garba-ui/lib/components/**/*.{scss,md}",
+      "glob": {
+        "pattern": "node_modules/garba-ui/lib/components/**/*.{scss,md}",
+        "ignore": "node_modules/garba-ui/lib/_v1.3.2/**/*.{scss,md}"
+      },
       "dest": "styleguide"
     }
   }

@@ -1,10 +1,13 @@
 var connect = require('gulp-connect')
-    del = require('del'),
-    documentjs = require('documentjs'),
-    gulp = require('gulp'),
-    runSequence = require('run-sequence'),
-    sass = require('gulp-sass'),
-    sourcemaps = require('gulp-sourcemaps');
+  del = require('del'),
+  documentjs = require('documentjs'),
+  gulp = require('gulp'),
+  runSequence = require('run-sequence'),
+  sass = require('gulp-sass'),
+  shell = require('gulp-shell'),
+  sourcemaps = require('gulp-sourcemaps');
+
+// var toolConfig = require('./documentjs.json')
 
 // Styles compilation
 gulp.task('sass', function() {
@@ -18,9 +21,15 @@ gulp.task('sass', function() {
     .pipe(sourcemaps.write('./'))
 });
 
+// Runs the "documentjs" build command
+gulp.task('build-styleguide', shell.task([
+  './node_modules/.bin/documentjs'
+]));
+
 // Start server
 gulp.task('connect', function() {
   connect.server({
+    root: './styleguide',
     livereload: true,
     port: 3000
   });
