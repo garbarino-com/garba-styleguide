@@ -2,8 +2,10 @@ const express    = require('express')
 const app        = express()
 const path       = require('path')
 const hbs        = require('hbs')
-// const markdown   = require('helper-markdown')
-const port      = 3000
+const port       = 3000
+
+var helpers = require('handlebars-helpers');
+// var markdown = helpers.markdown();
 
 var components = require('./docs/components')
 
@@ -35,7 +37,7 @@ app.use((err, request, response, next) => {
 app.use('/assets', express.static(path.join(__dirname, 'assets')))
 
 // Helpers
-// hbs.registerHelper('markdown', markdown());
+hbs.registerHelper('md');
 hbs.registerHelper('toJSON', (context) => {
   "use strict";
   return JSON.stringify(context);

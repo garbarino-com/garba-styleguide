@@ -9,7 +9,8 @@
       padding: 1rem;
 
       &:hover {
-        background-color: $gray-lighter;
+        color: $text-inverse;
+        background-color: $text-color;
         text-decoration: none;
       }
 
@@ -41,6 +42,7 @@
         &,
         &:hover {
           background-color: $gray-lighter;
+          color: $text-color;
           cursor: default;
         }
       }
