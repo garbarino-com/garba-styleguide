@@ -1,0 +1,8 @@
+{
+  "sites": {
+    "styles": {
+      "glob": "node_modules/garba-ui/lib/components/**/*.{scss,md}",
+      "dest": "styleguide"
+    }
+  }
+}

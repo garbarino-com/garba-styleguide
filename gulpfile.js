@@ -1,4 +1,6 @@
-var del = require('del'),
+var connect = require('gulp-connect')
+    del = require('del'),
+    documentjs = require('documentjs'),
     gulp = require('gulp'),
     runSequence = require('run-sequence'),
     sass = require('gulp-sass'),
@@ -14,4 +16,12 @@ gulp.task('sass', function() {
 
     // TODO: Test sourcemaps
     .pipe(sourcemaps.write('./'))
+});
+
+// Start server
+gulp.task('connect', function() {
+  connect.server({
+    livereload: true,
+    port: 3000
+  });
 });

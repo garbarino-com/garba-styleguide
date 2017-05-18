@@ -6,7 +6,6 @@
   "scripts": {
     "sass": "node-sass ./assets/scss/garba-styleguide.scss ./assets/css/garba-styleguide.css --output-style compressed",
     "sass:watch": "node-sass ./assets/scss/garba-styleguide.scss ./assets/css/garba-styleguide.css --output-style expanded --watch",
-    "start-server": "node ./index.js",
     "start-dev": "npm run sass:watch & npm run start-server"
   },
   "repository": {
@@ -38,15 +37,14 @@
     "del": "^2.2.2",
     "frontend-settings": "git+https://github.com/garbarino-com/frontend-settings.git",
     "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
     "run-sequence": "^1.2.2"
   },
   "dependencies": {
-    "express": "^4.15.2",
+    "documentjs": "^0.4.4",
     "garba-ui": "^2.0.2-Alpha.2",
-    "handlebars": "^4.0.8",
-    "hbs": "^4.0.1",
     "node-sass": "^4.5.2"
   }
 }
