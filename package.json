@@ -40,6 +40,7 @@
     "gulp-connect": "^5.0.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
+    "gulp-wrap": "^0.13.0",
     "run-sequence": "^1.2.2"
   },
   "dependencies": {
