@@ -1,0 +1,10 @@
+config.rb
+.DS_Store
+npm-debug.log
+node_modules/
+.sass-cache/
+.idea/
+icomoon
+dist/
+assets/css/
+styleguide/

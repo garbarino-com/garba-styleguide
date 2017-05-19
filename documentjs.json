@@ -6,9 +6,10 @@
   "sites": {
     "styles": {
       "glob": {
-        "pattern": "./node_modules/garba-ui/lib/components/**/*.{scss,md}",
-        "ignore": "./node_modules/garba-ui/lib/_v1.3.2/**/*.{scss,md}"
+        "pattern": "less/**/*.{css,less,md}",
+        "ignore": "less/{demos,style-guide-theme}/**/*"
       },
+      "parent": "styleguide",
       "dest": "styleguide"
     }
   }

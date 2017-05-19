@@ -33,20 +33,17 @@
   },
   "homepage": "https://github.com/garbarino-com/garba-styleguide#readme",
   "devDependencies": {
-    "bootstrap-sass": "^3.3.7",
-    "del": "^2.2.2",
-    "frontend-settings": "git+https://github.com/garbarino-com/frontend-settings.git",
+    "documentjs": "^0.4.4",
     "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.0",
-    "gulp-wrap": "^0.13.0",
-    "run-sequence": "^1.2.2"
-  },
-  "dependencies": {
-    "documentjs": "^0.4.4",
-    "garba-ui": "^2.0.2-Alpha.2",
+    "gulp-less": "^3.0.5",
+    "gulp-minify-css": "^1.2.2",
     "gulp-shell": "^0.6.3",
+    "gulp-wrap": "^0.13.0",
+    "less": "^2.6.1",
+    "bootstrap-sass": "^3.3.7",
+    "frontend-settings": "git+https://github.com/garbarino-com/frontend-settings.git",
+    "gulp-sass": "^3.1.0",
     "node-sass": "^4.5.2"
   }
 }
