@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var shell = require('gulp-shell');
-var less = require('gulp-less');
+var sass = require('gulp-sass');
 var wrap = require("gulp-wrap");
 var connect = require('gulp-connect');
 
@@ -22,17 +22,17 @@ gulp.task('reload-styleguide', ['force-styleguide'], function (event) {
       .pipe(connect.reload());
 });
 
-// Compiles, autoprefixes & minifies the less files
-gulp.task('less', function () {
+// Compiles, autoprefixes & minifies the sass files
+gulp.task('sass', function () {
   return gulp
-    .src(['./less/styles.less'])
-    .pipe(less())
-    .pipe(gulp.dest('./dist'));
+    .src(['./assets/scss/*.scss'])
+    .pipe(sass())
+    .pipe(gulp.dest('./assets/css/garba-styleguide.css'));
 });
 
 // Copies the compiled styles to the style guide folder
-gulp.task('copy-styles', ['less'], function() {
-  gulp.src('./dist/styles.css')
+gulp.task('copy-styles', ['sass'], function() {
+  gulp.src('/assets/css/garba-styleguide.css')
     .pipe(gulp.dest('./styleguide/patterns'));
 });
 
@@ -40,10 +40,10 @@ gulp.task('copy-styles', ['less'], function() {
 // and copies them to the styleguide
 gulp.task('copy-demos', function () {
   gulp.src([
-      './less/demos/**/*.html',
-      '!./less/demos/_demo-container.html'
+      './theme/demos/**/*.html',
+      '!./theme/demos/_demo-container.html'
     ])
-    .pipe(wrap({ src: './less/demos/_demo-container.html' }))
+    .pipe(wrap({ src: './theme/demos/_demo-container.html' }))
     .pipe(gulp.dest('./styleguide/demos'));
 });
 
@@ -65,7 +65,7 @@ gulp.task('server', function () {
 
 // Watches files and auto-refreshes when changes are saved
 gulp.task('watch', function () {
-  gulp.watch(['./less/**/*'], function (event) {
+  gulp.watch(['./theme/**/*'], function (event) {
     // timeout gives documentjs a chance to finish compiling first
     setTimeout(function() {
       return gulp
@@ -73,10 +73,10 @@ gulp.task('watch', function () {
         .pipe(connect.reload());
       }, 400);
   });
-  gulp.watch(['./less/**/*.less'], ['styleguide', 'less', 'copy-styles']);
-  gulp.watch(['./less/demos/**/*.html'], ['copy-demos']);
+  gulp.watch(['./theme/**/*.scss'], ['styleguide', 'sass', 'copy-styles']);
+  gulp.watch(['./theme/demos/**/*.html'], ['copy-demos']);
   // watches style guide theme files and runs a whole rebuild after saves
-  gulp.watch(['./style-guide-theme/**/*'], ['reload-styleguide', 'less', 'copy-styles', 'copy-demos', 'copy-fonts']);
+  gulp.watch(['./style-guide-theme/**/*'], ['reload-styleguide', 'sass', 'copy-styles', 'copy-demos', 'copy-fonts']);
 });
 
-gulp.task('dev', ['force-styleguide', 'less', 'copy-styles', 'copy-demos', 'copy-fonts', 'server', 'watch']);
+gulp.task('dev', ['force-styleguide', 'sass', 'copy-styles', 'copy-demos', 'copy-fonts', 'server', 'watch']);

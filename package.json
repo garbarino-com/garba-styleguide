@@ -1,7 +1,7 @@
 {
   "name": "garba-styleguide",
   "version": "1.0.0-Development",
-  "description": "A React.js styleguide to display all components contained in garba-ui",
+  "description": "A styleguide to display all components contained in garba-ui.",
   "main": "index.js",
   "scripts": {
     "sass": "node-sass ./assets/scss/garba-styleguide.scss ./assets/css/garba-styleguide.css --output-style compressed",
@@ -13,13 +13,10 @@
     "url": "git+https://github.com/garbarino-com/garba-styleguide.git"
   },
   "keywords": [
-    "babel",
     "styleguide",
     "es6",
     "sass",
-    "react",
     "workflow",
-    "webpack",
     "sass",
     "UI framework"
   ],
@@ -33,17 +30,16 @@
   },
   "homepage": "https://github.com/garbarino-com/garba-styleguide#readme",
   "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
     "documentjs": "^0.4.4",
+    "frontend-settings": "git+https://github.com/garbarino-com/frontend-settings.git",
     "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0",
-    "gulp-less": "^3.0.5",
     "gulp-minify-css": "^1.2.2",
+    "gulp-sass": "^3.1.0",
     "gulp-shell": "^0.6.3",
     "gulp-wrap": "^0.13.0",
     "less": "^2.6.1",
-    "bootstrap-sass": "^3.3.7",
-    "frontend-settings": "git+https://github.com/garbarino-com/frontend-settings.git",
-    "gulp-sass": "^3.1.0",
     "node-sass": "^4.5.2"
   }
 }

@@ -6,8 +6,8 @@
   "sites": {
     "styles": {
       "glob": {
-        "pattern": "less/**/*.{css,less,md}",
-        "ignore": "less/{demos,style-guide-theme}/**/*"
+        "pattern": "theme/**/*.{css,scss,md}",
+        "ignore": "theme/{demos,style-guide-theme}/**/*"
       },
       "parent": "styleguide",
       "dest": "styleguide"
