@@ -4,6 +4,9 @@ var sass = require('gulp-sass');
 var wrap = require("gulp-wrap");
 var connect = require('gulp-connect');
 
+// Base paths (root)
+var libraryPath = '/node_modules/garba-ui/app/lib/components/**/*.scss';
+
 // Runs the "documentjs" build command
 gulp.task('styleguide', shell.task([
   './node_modules/.bin/documentjs'
@@ -40,10 +43,10 @@ gulp.task('copy-styles', ['sass'], function() {
 // and copies them to the styleguide
 gulp.task('copy-demos', function () {
   gulp.src([
-      './theme/demos/**/*.html',
-      '!./theme/demos/_demo-container.html'
+      './components/demos/**/*.html',
+      '!./components/demos/_demo-container.html'
     ])
-    .pipe(wrap({ src: './theme/demos/_demo-container.html' }))
+    .pipe(wrap({ src: './components/demos/_demo-container.html' }))
     .pipe(gulp.dest('./styleguide/demos'));
 });
 
@@ -65,7 +68,7 @@ gulp.task('server', function () {
 
 // Watches files and auto-refreshes when changes are saved
 gulp.task('watch', function () {
-  gulp.watch(['./theme/**/*'], function (event) {
+  gulp.watch(['./components/**/*'], function (event) {
     // timeout gives documentjs a chance to finish compiling first
     setTimeout(function() {
       return gulp
@@ -73,10 +76,10 @@ gulp.task('watch', function () {
         .pipe(connect.reload());
       }, 400);
   });
-  gulp.watch(['./theme/**/*.scss'], ['styleguide', 'sass', 'copy-styles']);
-  gulp.watch(['./theme/demos/**/*.html'], ['copy-demos']);
+  gulp.watch(['./components/**/*.scss'], ['styleguide', 'sass', 'copy-styles']);
+  gulp.watch(['./components/demos/**/*.html'], ['copy-demos']);
   // watches style guide theme files and runs a whole rebuild after saves
-  gulp.watch(['./style-guide-theme/**/*'], ['reload-styleguide', 'sass', 'copy-styles', 'copy-demos', 'copy-fonts']);
+  gulp.watch(['./theme/**/*'], ['reload-styleguide', 'sass', 'copy-styles', 'copy-demos', 'copy-fonts']);
 });
 
 gulp.task('dev', ['force-styleguide', 'sass', 'copy-styles', 'copy-demos', 'copy-fonts', 'server', 'watch']);
