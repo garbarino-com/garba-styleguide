@@ -1,1 +1,0 @@
-Add your pattern library fonts here and they'll be coppied into styleguide/fonts when compiling.
