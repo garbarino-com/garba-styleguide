@@ -1,0 +1,15 @@
+.navbar {
+  color: $text-inverse;
+  height: 4rem;
+}
+
+.navbar-brand {
+  display: block;
+  padding: 0.5rem;
+
+  > img {
+    width: 3rem;
+    display: block;
+    margin: 0 auto;
+  }
+}

@@ -8,7 +8,7 @@ var libraryPath = '/node_modules/garba-ui/app/lib/components/**/*.scss';
 
 // Runs the kss build command
 gulp.task('styleguide', shell.task([
-  './node_modules/.bin/kss --source ./node_modules/garba-ui/app/lib/'
+  './node_modules/.bin/kss --config ./kss-config.json'
 ]));
 
 // Compiles, autoprefixes & minifies the sass files
@@ -22,7 +22,7 @@ gulp.task('sass', function () {
 // Runs a server at http://localhost:4200/
 gulp.task('server', function () {
   connect.server({
-    root: './styleguide',
+    root: './dist',
     port: process.env.PORT || '3000',
     livereload: true
   });

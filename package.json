@@ -31,6 +31,7 @@
   "homepage": "https://github.com/garbarino-com/garba-styleguide#readme",
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
+    "bourbon": "^4.3.4",
     "frontend-settings": "git+https://github.com/garbarino-com/frontend-settings.git",
     "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0",
