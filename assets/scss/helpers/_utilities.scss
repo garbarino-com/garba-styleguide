@@ -1,5 +1,10 @@
-// Extends bootstrap utility
+// A group of reusable mixins
 
-.fade.in {
-  z-index: 20;
+@mixin hide-element {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+@mixin hide-element-simple {
+  display: none !important;
 }

@@ -1,9 +1,11 @@
-.navbar {
+.kss-header {
+  background-color: $brand-corporate;
   color: $text-inverse;
   height: 4rem;
+  margin-top: 0;
 }
 
-.navbar-brand {
+.kss-doc-title {
   display: block;
   padding: 0.5rem;
 

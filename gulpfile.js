@@ -1,7 +1,9 @@
-var gulp = require('gulp');
-var shell = require('gulp-shell');
-var sass = require('gulp-sass');
-var connect = require('gulp-connect');
+var autoprefixer = require('gulp-autoprefixer'),
+    connect = require('gulp-connect'),
+    gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    shell = require('gulp-shell'),
+    toolSettings = require('frontend-settings');
 
 // Base paths (root)
 var libraryPath = '/node_modules/garba-ui/app/lib/components/**/*.scss';
@@ -15,11 +17,16 @@ gulp.task('styleguide', shell.task([
 gulp.task('sass', function () {
   return gulp
     .src(['./assets/scss/*.scss'])
-    .pipe(sass())
-    .pipe(gulp.dest('./assets/css/garba-styleguide.css'));
+    .pipe(sass(
+      {outputStyle: 'compressed'}
+    ).on('error', sass.logError))
+    .pipe(gulp.dest('./dist/kss-assets/'))
+
+    // TODO: Test autoprefixer
+    .pipe(autoprefixer(toolSettings.autoprefixer));
 });
 
-// Runs a server at http://localhost:4200/
+// Runs a server at http://localhost:3000/
 gulp.task('server', function () {
   connect.server({
     root: './dist',
@@ -28,10 +35,15 @@ gulp.task('server', function () {
   });
 });
 
+// Remove css folder and run sass compiler on file change.
+gulp.task('watch', ['clean:sass', 'sass'], function() {
+  gulp.watch(input().styles, ['sass']);
+});
+
 // Watches files and auto-refreshes when changes are saved
 gulp.task('watch', function () {
-  gulp.watch(['./components/**/*'], function (event) {
-    // timeout gives documentjs a chance to finish compiling first
+  gulp.watch('./assets/**/*', ['sass'], function (event) {
+    // timeout gives kss a chance to finish compiling first
     setTimeout(function() {
       return gulp
         .src(event.path)

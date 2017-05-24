@@ -1,14 +1,11 @@
 {
-  "//": "The source and destination paths are relative to this file.",
-  "source": [
-    "./node_modules/garba-ui/app/lib/"
-  ],
+  "title": "Garba Styleguide",
+  "builder": "./theme/",
+  "source": "./node_modules/garba-ui/app/lib/components/",
+  "homepage": "../theme/homepage.md",
   "destination":  "./dist/",
-
-  "//": "The css and js paths are URLs relative to the generated style guide.",
   "css": [
-    "./assets/css/garba-styleguide.css"
+    "./kss-assets/garba-styleguide.css"
   ],
-  "js": [
-  ]
+  "js": []
 }
