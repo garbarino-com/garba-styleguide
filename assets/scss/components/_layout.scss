@@ -1,6 +1,39 @@
 #kss-node {
+  background-color: $body-bg;
+
+  .kss-header {
+    height: $header-height;
+    margin-top: 0;
+    position: fixed;
+    width: 100%;
+  }
+
+  // Add padding spacer to content
+  .kss-sidebar,
   .kss-main {
-    margin-left: 0;
-    padding: 0 20px 0 30px;
+    padding-top: $content-top-spacer;
+  }
+
+  .kss-main {
+    // Media query for tablets
+    @media only screen and (max-width: $screen-md-max) {
+      margin-left: 0;
+      width: $content-width;
+    }
+  }
+
+  .kss-sidebar {
+    background-image: none;
+    box-shadow: none;
+
+    @media only screen and (max-width: $screen-md-max) {
+      height: auto;
+      float: none;
+      left: $content-width;
+      max-height: 100%;
+      overflow: auto;
+      padding-right: 1rem;
+      width: $nav-width;
+    }
   }
 }

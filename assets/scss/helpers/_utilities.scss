@@ -8,3 +8,15 @@
 @mixin hide-element-simple {
   display: none !important;
 }
+
+// Floats
+// -------------------------
+.center-block {
+  @include center-block;
+}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}

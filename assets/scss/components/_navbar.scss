@@ -1,55 +1,22 @@
-.nav-tabs {
-  border-bottom: 1px solid darken($gray-light, 2%);
+#kss-node .kss-nav {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 
-  li {
-    > a {
-      border-top: 1px solid darken($gray-light, 2%);
-      color: $text-color;
-      display: block;
-      padding: 1rem;
+  .kss-nav__menu-link {
+    border-left: 2px solid transparent;
+    color: $gray-medium;
+    display: block;
+    padding: 0.25rem;
+    padding-left: .5rem;
 
-      &:hover {
-        color: $text-inverse;
-        background-color: $text-color;
-        text-decoration: none;
-      }
-
-      &:active,
-      &:focus {
-        outline: 0;
-      }
+    &:hover {
+      border-left-color: $gray-dark;
+      text-decoration: none;
     }
 
-    // Hide submenus by default
-    > ul {
-      background-color: $gray-lighter;
-      border-bottom: 1px solid darken($gray-light, 2%);
-      display: none;
-
-      li a {
-        border-top: 1px solid darken($gray-light, 2%);
-        padding: .75rem 1rem;
-
-        &:hover {
-          background-color: $gray-light;
-        }
-      }
-    }
-
-    // Active state
-    &.active {
-      > a {
-        &,
-        &:hover {
-          background-color: $gray-lighter;
-          color: $text-color;
-          cursor: default;
-        }
-      }
-
-      > ul {
-        display: block;
-      }
+    &:hover,
+    .kss-nav__ref {
+      color: $gray-dark;
     }
   }
 }

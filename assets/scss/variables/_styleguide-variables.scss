@@ -6,8 +6,6 @@
 /* stylelint-disable scss/dollar-variable-colon-space-after */
 /* Rule is disabled here for better legibility */
 
-$header-height:         3rem !default;
-
 //* Line height values
 $line-height-base:      1.5 !default; // 21px
 $line-height-sm:        1 !default; // 12px
@@ -15,6 +13,16 @@ $line-height-sm:        1 !default; // 12px
 // Override framework definition of assets location using
 $assets-url:             "../../node_modules/garba-ui/dist/";
 
-$nav-width: 220px;
+$brand-url:            "https://dj4i04i24axgu.cloudfront.net/normandia/statics/logos/logo-garbarino-rojo.svg" !default;
+$header-bg:            $nav-bg !default;
+$header-padding:       .5rem !default;
+$brand-height:         2rem !default;
+$header-height:        ($header-padding * 2) + $brand-height !default;
+
+
+$content-top-spacer:   $header-height + 1.5rem !default;
+
+$content-width:   75% !default;
+$nav-width:       100% - $content-width !default;
 
 /* stylelint-enable scss/dollar-variable-colon-space-after */
