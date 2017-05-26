@@ -1,9 +1,11 @@
 #kss-node {
   .kss-header {
     background-color: $header-bg;
+    border-bottom: 1px solid $gray-light;
     color: $gray-dark;
     margin-top: 0;
     padding: $header-padding;
+    z-index: $zindex-navbar;
 
     > p {
       line-height: $brand-height;
@@ -24,6 +26,35 @@
       width: 3rem;
       display: block;
       margin: 0 auto;
+    }
+  }
+
+  // Header Navbar
+  .kss-nav__header {
+    float: right;
+
+    .kss-nav__menu {
+      margin-bottom: 0;
+      margin-top: 0;
+      padding-right: 1rem;
+    }
+
+    .kss-nav__menu-item {
+      display: inline-block;
+
+      .kss-nav__name {
+        color: $gray-dark;
+        display: inline-block;
+        line-height: $brand-height + ($header-padding * 2);
+        padding-left: $header-padding * 2;
+        padding-right: $header-padding * 2;
+        margin-top: $header-padding * -1;
+        margin-bottom: $header-padding * -1;
+
+        &:hover {
+          background-color: $gray-lighter;
+        }
+      }
     }
   }
 }
