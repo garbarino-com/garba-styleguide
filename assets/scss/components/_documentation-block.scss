@@ -1,0 +1,73 @@
+#kss-node {
+  .kss-title {
+    border-bottom: 1px solid $gray-light;
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+  }
+
+  .kss-title__permalink {
+    color: #gray-darker;
+
+    &:hover {
+      color: $brand-corporate;
+    }
+  }
+
+  .kss-modifier__wrapper,
+  .kss-markup {
+    border-color: $gray-medium;
+    border-radius: $border-radius-base;
+  }
+
+  .kss-modifier__heading {
+    margin: 0 -1rem 1rem -1rem;
+    padding: .5rem 1rem;
+  }
+
+  .kss-modifier__wrapper {
+    padding: 0 1rem 1rem;
+  }
+
+  ol.linenums {
+    background: transparent;
+    padding: 7px;
+    padding: 0;
+
+    li {
+      border-bottom: 0;
+      min-height: initial;
+      padding: .5rem;
+
+      &:first-child {
+        padding-top: .5rem;
+      }
+
+      &.L0,
+      &.L2,
+      &.L4,
+      &.L6,
+      &.L8,
+      &.L10 {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.kss-markup[open] summary {
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+
+// Override styles for markup
+.tag {
+  background-color: transparent;
+  border: 0;
+  display: inline;
+  font-size: inherit;
+  height: auto;
+  line-height: inherit;
+  max-width: initial;
+  padding: 0;
+  text-transform: none;
+}

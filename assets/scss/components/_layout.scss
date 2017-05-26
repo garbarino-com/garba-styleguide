@@ -1,3 +1,5 @@
+// This file leads with positioning, for visual styling go to each component partial.
+
 #kss-node {
   background-color: $body-bg;
 
@@ -13,8 +15,19 @@
 
   // Add padding spacer to content
   .kss-sidebar,
-  .kss-main {
+  .kss-main,
+  &.kss-fullscreen-mode .kss-section {
     padding-top: $content-top-spacer;
+  }
+
+  // Horizontal spacers for fullscreen content
+  .is-fullscreen .kss-modifier__example {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .is-fullscreen .kss-modifier__heading {
+    margin: 0 1.5rem 1rem;
   }
 
   .kss-main {
@@ -42,30 +55,6 @@
       overflow: auto;
       padding-right: 1rem;
       width: $nav-width;
-    }
-  }
-
-  .kss-nav__menu-child {
-    .kss-nav__menu-item:first-child {
-      border-top: 0;
-      margin-top: 0;
-      padding: 0;
-    }
-
-    .kss-nav__menu-item:last-child {
-      border-bottom: 0;
-      margin-bottom: 0;
-      padding: 0;
-    }
-  }
-
-  .kss-nav__menu-link {
-    &:before {
-      // content: initial;
-    }
-
-    .kss-nav__ref {
-      @include hide-element;
     }
   }
 }

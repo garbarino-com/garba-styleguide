@@ -56,5 +56,10 @@
         }
       }
     }
+
+    // Hide order refference
+    .kss-nav__ref {
+      @include hide-element;
+    }
   }
 }

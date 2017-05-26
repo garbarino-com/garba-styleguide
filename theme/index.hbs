@@ -55,22 +55,6 @@
     <{{#if @first}}div{{else}}section{{/if}} id="kssref-{{referenceURI}}" class="kss-section kss-section--depth-{{depth}} {{#if @root.template.isItem}}is-fullscreen{{/if}}">
 
       <div class="kss-style">
-        <h{{depth}} class="kss-title kss-title--level-{{depth}}">
-          <a class="kss-title__permalink" href="#kssref-{{referenceURI}}">
-            <span class="kss-title__ref">
-              {{referenceNumber}}
-              <span class="kss-title__permalink-hash">
-                {{#if @root.hasNumericReferences}}
-                  #permalink
-                {{else}}
-                  #{{reference}}
-                {{/if}}
-              </span>
-            </span>
-            {{header}}
-          </a>
-        </h{{depth}}>
-
         {{#if example}}
           <p class="kss-toolbar">
             {{#unless @root.template.isItem}}
@@ -125,6 +109,22 @@
             </a>
           </p>
         {{/if}}
+        <h{{depth}} class="kss-title kss-title--level-{{depth}}">
+          <a class="kss-title__permalink" href="#kssref-{{referenceURI}}">
+            <span class="kss-title__ref">
+              {{referenceNumber}}
+              <span class="kss-title__permalink-hash">
+                {{#if @root.hasNumericReferences}}
+                  #permalink
+                {{else}}
+                  #{{reference}}
+                {{/if}}
+              </span>
+            </span>
+            {{header}}
+          </a>
+        </h{{depth}}>
+
 
         {{#if description}}
           <div class="kss-description">
@@ -216,7 +216,8 @@
           <ul class="kss-nav__menu-child">
           {{#each children}}
             <li class="kss-nav__menu-item">
-              <a class="kss-nav__menu-link" href="section-{{../referenceURI}}.html#kssref-{{referenceURI}}">
+              <a class="kss-nav__menu-link {{#if isGrandChild}}kss-nav__grand-child{{/if}}"
+                  href="section-{{../referenceURI}}.html#kssref-{{referenceURI}}">
                 <span class="kss-nav__ref {{#if isGrandChild}}kss-nav__ref-child{{/if}}">{{referenceNumber}}</span
                 ><span class="kss-nav__name">{{header}}</span>
               </a>
