@@ -15,17 +15,19 @@
 
   .kss-modifier__wrapper,
   .kss-markup {
-    border-color: $gray-medium;
-    border-radius: $border-radius-base;
+    border: 0;
   }
 
   .kss-modifier__heading {
-    margin: 0 -1rem 1rem -1rem;
-    padding: .5rem 1rem;
+    background-color: transparent;
+    border-bottom-color: $gray-light;
+    color: $gray-medium;
+    margin: 0 0 1rem;
+    padding: .5rem 0;
   }
 
   .kss-modifier__wrapper {
-    padding: 0 1rem 1rem;
+    padding: 0;
   }
 
   ol.linenums {
@@ -54,9 +56,15 @@
   }
 }
 
-.kss-markup[open] summary {
-  border-bottom: 0;
-  margin-bottom: 0;
+.kss-markup {
+  &[open] summary {
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  code {
+    color: $brand-primary;
+  }
 }
 
 // Override styles for markup
