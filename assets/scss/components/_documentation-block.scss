@@ -30,6 +30,15 @@
     padding: 0;
   }
 
+  .kss-modifier__name {
+    color: $brand-corporate;
+
+    // Adds symbol after names have been declared.
+    &:after {
+      content: ":";
+    }
+  }
+
   ol.linenums {
     background: transparent;
     padding: 7px;
