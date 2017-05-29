@@ -54,18 +54,28 @@
       }
     }
   }
+
+  .kss-markup {
+    summary {
+      padding-left: 0;
+    }
+
+    &[open] summary {
+      border-bottom: 0;
+      padding-bottom: .5rem;
+    }
+
+    .prettyprint {
+      border: 1px solid $gray-medium;
+      border-radius: $border-radius-base;
+    }
+
+    code {
+      color: $brand-primary;
+    }
+  }
 }
 
-.kss-markup {
-  &[open] summary {
-    border-bottom: 0;
-    margin-bottom: 0;
-  }
-
-  code {
-    color: $brand-primary;
-  }
-}
 
 // Override styles for markup
 .tag {
