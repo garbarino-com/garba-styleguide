@@ -32,7 +32,7 @@
 
   .kss-main {
     // Media query for tablets
-    @media only screen and (max-width: $screen-md-max) {
+    @media only screen and (min-width: $screen-sm-max) {
       margin-left: 0;
       width: $content-width;
     }
@@ -45,7 +45,7 @@
     box-shadow: none;
 
     // Media query for tablets
-    @media only screen and (max-width: $screen-md-max) {
+    @media only screen and (min-width: $screen-sm-max) {
       border-top: 0;
       box-shadow: none;
       float: none;
