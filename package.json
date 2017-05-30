@@ -32,14 +32,18 @@
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
     "bourbon": "^4.3.4",
+    "del": "^2.2.2",
     "frontend-settings": "git+https://github.com/garbarino-com/frontend-settings.git",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-connect": "^5.0.0",
+    "gulp-debug": "^3.1.0",
     "gulp-sass": "^3.1.0",
     "gulp-shell": "^0.6.3",
     "helper-markdown": "^0.2.2",
     "kss": "^3.0.0-beta.18",
-    "node-sass": "^4.5.2"
-  }
+    "node-sass": "^4.5.2",
+    "node-sass-json-importer": "^3.0.2"
+  },
+  "dependencies": {}
 }

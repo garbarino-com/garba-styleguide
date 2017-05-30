@@ -5,7 +5,7 @@
   "homepage": "homepage.md",
   "destination":  "./dist/",
   "css": [
-    "./kss-assets/garba-styleguide.css"
+    "./kss-assets/css/garba-styleguide.css"
   ],
   "js": []
 }
