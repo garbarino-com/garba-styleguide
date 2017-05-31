@@ -91,7 +91,10 @@ gulp.task('server', function () {
 // Watches files and auto-refreshes when changes are saved
 gulp.task('watch', ['clean:sass', 'clean:fonts', 'clean:images', 'copy:fonts',
   'copy:images', 'sass'], function () {
-  gulp.watch(assetsPath + '**/*', ['sass'], function (event) {
+  gulp.watch([
+      assetsPath + '**/*',
+      libraryPath + '**/*'
+    ], ['sass'], function (event) {
     // timeout gives kss a chance to finish compiling first
     setTimeout(function() {
       return gulp

@@ -1,8 +1,13 @@
 {
   "title": "Garba Styleguide V3.0.0-Alpha",
   "builder": "./theme/",
-  "source": "./node_modules/garba-ui/app/lib/components/",
-  "homepage": "homepage.md",
+  "source": [
+    "./node_modules/garba-ui/app/docs/",
+    "./node_modules/garba-ui/app/lib/components/",
+    "./node_modules/garba-ui/app/lib/helpers",
+    "./node_modules/garba-ui/app/lib/elements"
+  ],
+  "homepage": "introduction.md",
   "destination":  "./dist/",
   "css": [
     "./kss-assets/css/garba-styleguide.css"

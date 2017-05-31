@@ -18,7 +18,8 @@
     border: 0;
   }
 
-  .kss-modifier__heading {
+  .kss-modifier__heading,
+  .kss-parameters__title {
     background-color: transparent;
     border-bottom-color: $gray-light;
     color: $gray-medium;
@@ -83,6 +84,37 @@
       color: $brand-primary;
     }
   }
+
+  // Parameters
+  .kss-parameters {
+    border: 1px solid $gray-medium;
+    border-radius: $border-radius-base;
+    width: 100%;
+
+    pre,
+    code,
+    kbd,
+    samp {
+      padding: .25rem;
+    }
+  }
+
+  .kss-parameters__item:not(:last-child) {
+    border-bottom: 1px solid $gray-medium;
+  }
+
+  .kss-parameters__name {
+    padding: .5rem;
+  }
+
+  // Component block
+  .kss-section {
+    margin-bottom: 0;
+
+    + .kss-section {
+      padding-top: $header-height + 1rem;
+    }
+  }
 }
 
 // Code display styles
@@ -93,11 +125,11 @@
   samp {
     background-color: $code-bg;
     border-radius: $border-radius-base;
+    color: $brand-corporate;
     display: inline-block;
     padding: 0 .25rem;
   }
 }
-
 
 // Override styles for markup
 .tag {

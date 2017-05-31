@@ -40,7 +40,6 @@
     "gulp-debug": "^3.1.0",
     "gulp-sass": "^3.1.0",
     "gulp-shell": "^0.6.3",
-    "helper-markdown": "^0.2.2",
     "kss": "^3.0.0-beta.18",
     "node-sass": "^4.5.2",
     "node-sass-json-importer": "^3.0.2"
