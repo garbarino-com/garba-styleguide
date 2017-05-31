@@ -110,6 +110,7 @@
   // Component block
   .kss-section {
     margin-bottom: 0;
+    padding-bottom: 2rem;
 
     + .kss-section {
       padding-top: $header-height + 1rem;

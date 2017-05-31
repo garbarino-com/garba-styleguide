@@ -42,6 +42,11 @@
     padding-top: 0;
   }
 
+  // Kill bullet for default lists
+  .kss-nav__menu-item::before {
+    content: initial;
+  }
+
   .kss-nav__menu-child {
     .kss-nav__menu-item:first-child {
       border-top: 0;
