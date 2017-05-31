@@ -5,6 +5,7 @@ var autoprefixer = require('gulp-autoprefixer'),
     gulp = require('gulp'),
     jsonImporter = require('node-sass-json-importer'),
     sass = require('gulp-sass'),
+    sassConfig = require('./sass-config.json'),
     shell = require('gulp-shell'),
     toolSettings = require('frontend-settings');
 
