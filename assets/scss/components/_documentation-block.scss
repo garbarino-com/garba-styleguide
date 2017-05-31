@@ -85,6 +85,19 @@
   }
 }
 
+// Code display styles
+.kss-style {
+  pre,
+  code,
+  kbd,
+  samp {
+    background-color: $code-bg;
+    border-radius: $border-radius-base;
+    display: inline-block;
+    padding: 0 .25rem;
+  }
+}
+
 
 // Override styles for markup
 .tag {

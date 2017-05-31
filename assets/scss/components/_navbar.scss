@@ -4,7 +4,7 @@
 
   .kss-nav__menu-link {
     border-left: 2px solid transparent;
-    color: $gray-medium;
+    color: $gray-dark;
     display: block;
     padding: 0.25rem;
     padding-left: .5rem;
@@ -36,6 +36,7 @@
 
   // Navigation subitems
   .kss-nav__grand-child {
+    color: $gray-medium;
     font-size: $font-size-sm;
     padding-bottom: 0;
     padding-top: 0;
