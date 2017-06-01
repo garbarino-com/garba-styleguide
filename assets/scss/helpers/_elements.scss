@@ -89,7 +89,7 @@ html {
   // Paragraph
   // -------------------------
   p {
-    margin: 0 0 .5rem;
+    margin: 0 0 1rem;
   }
 
   // Lists
@@ -126,7 +126,13 @@ html {
   blockquote {
     background-color: $code-bg;
     border-radius: $border-radius-base;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
     padding: .5rem 1rem;
+
+    h3:first-child {
+      margin-top: .5rem;
+    }
   }
 }
 

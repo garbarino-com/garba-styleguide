@@ -18,6 +18,13 @@
     border: 0;
   }
 
+  .kss-markup {
+    border-top: 1px solid $gray-light;
+    margin: 3rem 0 1rem;
+    padding: .5rem 0;
+  }
+
+
   .kss-modifier__heading,
   .kss-parameters__title {
     background-color: transparent;
@@ -78,6 +85,7 @@
     .prettyprint {
       border: 1px solid $gray-medium;
       border-radius: $border-radius-base;
+      width: 100%;
     }
 
     code {
