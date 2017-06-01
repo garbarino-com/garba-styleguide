@@ -141,14 +141,19 @@
 }
 
 // Override styles for markup
-.tag {
-  background-color: transparent;
-  border: 0;
-  display: inline;
-  font-size: inherit;
-  height: auto;
-  line-height: inherit;
-  max-width: initial;
-  padding: 0;
-  text-transform: none;
+pre,
+code,
+kbd,
+samp {
+  .tag {
+    background-color: transparent;
+    border: 0;
+    display: inline;
+    font-size: inherit;
+    height: auto;
+    line-height: inherit;
+    max-width: initial;
+    padding: 0;
+    text-transform: none;
+  }
 }

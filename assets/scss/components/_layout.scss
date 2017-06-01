@@ -36,6 +36,8 @@
   }
 
   .kss-main {
+    padding-bottom: $content-top-spacer;
+
     // Media query for tablets
     @media only screen and (min-width: $screen-sm-max) {
       margin-left: 0;
