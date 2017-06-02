@@ -26,8 +26,8 @@
 
   // Horizontal spacers for fullscreen content
   .is-fullscreen .kss-modifier__example {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: $content-side-spacer;
+    padding-right: $content-side-spacer;
   }
 
   .is-fullscreen .kss-modifier__heading {
@@ -36,6 +36,10 @@
   }
 
   .kss-main {
+    @include clearfix;
+    float: none;
+    padding-left: $content-side-spacer;
+    padding-right: $content-gap-spacer;
     padding-bottom: $content-top-spacer;
 
     // Media query for tablets
