@@ -11,14 +11,15 @@ var autoprefixer = require('gulp-autoprefixer'),
 
 // Base paths (root)
 var assetsPath = './assets/'
-var libraryPath = './node_modules/garba-ui/app/';
+var libraryPath = './node_modules/garba-ui/';
 var outputPath = './dist/kss-assets/';
 
 // Specify folder names
 var folder = {
   styles : 'css/',
   fonts: 'fonts/',
-  images: 'images/'
+  images: 'images/',
+  scripts: 'javascript/'
 }
 
 // File cleaning tasks
@@ -34,6 +35,10 @@ gulp.task('clean:images', function () {
   return del(outputPath + folder.images + '*.*');
 });
 
+gulp.task('clean:scripts', function () {
+  return del(outputPath + folder.scripts + '*.*');
+});
+
 // Runs the kss build command
 gulp.task('styleguide', shell.task([
   './node_modules/.bin/kss --config ./kss-config.json'
@@ -43,23 +48,34 @@ gulp.task('styleguide', shell.task([
 // Assets files such as images and icon-fonts need to be copied to the theme assets
 // folder in order to be available for the browser.
 
+// Copy Fonts
 gulp.task('copy:fonts', function () {
   return gulp.src([
-      libraryPath + folder.fonts + '*', // New icon font path
-      libraryPath + 'lib/_v1.3.2/fonts/*' // Old icon font path
+      libraryPath + 'dist/' + folder.fonts + '*', // New icon font path
+      libraryPath + 'dist/' + 'lib/_v1.3.2/fonts/*' // Old icon font path
     ])
     .pipe(debug([
-      libraryPath + folder.fonts + '*', // New icon font path
-      libraryPath + 'lib/_v1.3.2/fonts/*' // Old icon font path
+      libraryPath + 'dist/' + folder.fonts + '*', // New icon font path
+      libraryPath + 'dist/' + 'lib/_v1.3.2/fonts/*' // Old icon font path
     ]))
     .pipe(debug({title: 'copy-from:'}))
     .pipe(gulp.dest(outputPath + folder.fonts))
     .pipe(debug({title: 'copy-to:'}));
 });
 
+// Copy Scripts
+gulp.task('copy:scripts', function () {
+  return gulp.src((libraryPath + 'dist/' + folder.scripts + '*'))
+    .pipe(debug(libraryPath + 'dist/' + folder.scripts))
+    .pipe(debug({title: 'copy-from:'}))
+    .pipe(gulp.dest(outputPath + folder.scripts))
+    .pipe(debug({title: 'copy-to:'}));
+});
+
+// Copy Images
 gulp.task('copy:images', function () {
-  return gulp.src((libraryPath + folder.images + '*'))
-    .pipe(debug(libraryPath + folder.images))
+  return gulp.src((libraryPath + 'dist/' + folder.images + '*'))
+    .pipe(debug(libraryPath + 'dist/' + folder.images))
     .pipe(debug({title: 'copy-from:'}))
     .pipe(gulp.dest(outputPath + folder.images))
     .pipe(debug({title: 'copy-to:'}));
@@ -90,10 +106,10 @@ gulp.task('server', function () {
 
 // Watches files and auto-refreshes when changes are saved
 gulp.task('watch', ['clean:sass', 'clean:fonts', 'clean:images', 'copy:fonts',
-  'copy:images', 'sass'], function () {
+  'copy:images', 'copy:scripts', 'sass'], function () {
   gulp.watch([
-      assetsPath + '**/*',
-      libraryPath + '**/*'
+      assetsPath + 'app/' + '**/*',
+      libraryPath + 'app/' + '**/*'
     ], ['sass'], function (event) {
     // timeout gives kss a chance to finish compiling first
     setTimeout(function() {
@@ -106,4 +122,4 @@ gulp.task('watch', ['clean:sass', 'clean:fonts', 'clean:images', 'copy:fonts',
 });
 
 gulp.task('start-dev', ['styleguide', 'clean:sass', 'clean:fonts', 'clean:images',
-  'copy:fonts', 'copy:images', 'sass', 'server', 'watch']);
+  'copy:fonts', 'copy:images', 'copy:scripts', 'sass', 'server', 'watch']);
