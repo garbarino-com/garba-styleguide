@@ -42,7 +42,8 @@
     "gulp-shell": "^0.6.3",
     "kss": "^3.0.0-beta.18",
     "node-sass": "^4.5.2",
-    "node-sass-json-importer": "^3.0.2"
+    "node-sass-json-importer": "^3.0.2",
+    "requirejs": "^2.3.3"
   },
   "dependencies": {}
 }

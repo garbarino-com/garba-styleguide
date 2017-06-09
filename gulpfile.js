@@ -65,7 +65,14 @@ gulp.task('copy:fonts', function () {
 
 // Copy Scripts
 gulp.task('copy:scripts', function () {
-  return gulp.src((libraryPath + 'dist/' + folder.scripts + '*'))
+  return gulp
+    .src([
+      // Copy library script to assets folder
+      (libraryPath + 'dist/' + folder.scripts + '*.js'),
+
+      // Copy requirejs to assets folder
+      ('./node_modules/requirejs/*.js')
+    ])
     .pipe(debug(libraryPath + 'dist/' + folder.scripts))
     .pipe(debug({title: 'copy-from:'}))
     .pipe(gulp.dest(outputPath + folder.scripts))
