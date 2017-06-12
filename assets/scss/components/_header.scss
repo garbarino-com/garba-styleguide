@@ -18,9 +18,13 @@
     background: transparent url($brand-url) 0 0 no-repeat;
     background-size: contain;
     display: block;
-    float: left;
     height: $brand-height;
-    width: 20rem;
+
+    // Media query for tablets
+    @media only screen and (min-width: $screen-sm-max) {
+      float: left;
+      width: 20rem;
+    }
 
     > img {
       width: 3rem;
@@ -31,7 +35,13 @@
 
   // Header Navbar
   .kss-nav__header {
-    float: right;
+    margin-top: 1rem;
+
+    // Media query for tablets
+    @media only screen and (min-width: $screen-sm-max) {
+      float: right;
+      margin-top: 0;
+    }
 
     .kss-nav__menu {
       margin-bottom: 0;
