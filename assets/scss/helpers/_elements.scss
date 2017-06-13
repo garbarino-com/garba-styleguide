@@ -162,3 +162,21 @@ html {
 .hero-heading {
   color: $text-inverse;
 }
+
+// Esta clase existe sólo para demostrar la grilla.
+
+.grid-display {
+  background-color: #336699;
+
+  > div {
+    border: 1px solid #336699;
+
+    &:after {
+      @include make-pseudo-element;
+      background-color: #66ccff;
+      color: $text-inverse;
+      content: "column";
+      padding: .5rem;
+    }
+  }
+}

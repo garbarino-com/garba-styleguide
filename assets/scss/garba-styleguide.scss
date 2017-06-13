@@ -17,14 +17,6 @@
 @import "./node_modules/garba-ui/app/lib/garbaui";
 
 @import "variables/styleguide-variables";
-@import "variables/grid-variables";
-
-// TODO(ecalvi): Bootstrap 3 grid is imported here for prototyping purposes.
-// In the future we should review this and choose a grid to use within the
-// frame that doesn't necessarily need to be this one.
-@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid-framework";
-@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid";
-@import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
 
 // Bootstrap utilities
 @import "./node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/vendor-prefixes";
