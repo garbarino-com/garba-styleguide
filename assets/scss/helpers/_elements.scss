@@ -169,7 +169,8 @@ html {
   background-color: #336699;
 
   > div {
-    border: 1px solid #336699;
+    border-top: 1px solid #336699;
+    border-bottom: 1px solid #336699;
 
     &:after {
       @include make-pseudo-element;
