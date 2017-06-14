@@ -43,8 +43,12 @@
   }
 
   // Kill bullet for default lists
-  .kss-nav__menu-item::before {
-    content: initial;
+  .kss-nav__menu-item {
+    padding-bottom: 0;
+
+    &::before {
+      content: initial;
+    }
   }
 
   .kss-nav__menu-child {
