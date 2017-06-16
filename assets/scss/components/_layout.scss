@@ -17,6 +17,7 @@
   .kss-sidebar,
   .kss-main,
   &.kss-fullscreen-mode .kss-section {
+    background-color: $body-bg;
     padding-top: $content-top-spacer;
   }
 
