@@ -35,10 +35,12 @@
 
   // Header Navbar
   .kss-nav__header {
-    margin-top: 1rem;
+    background-color: $body-bg;
+    margin-top: .5rem;
 
     // Media query for tablets
     @media only screen and (min-width: $screen-sm-max) {
+      background-color: transparent;
       float: right;
       margin-top: 0;
     }
@@ -46,7 +48,16 @@
     .kss-nav__menu {
       margin-bottom: 0;
       margin-top: 0;
-      padding-right: 1rem;
+      padding-bottom: $spacer-sm;
+      overflow: auto;
+      white-space: nowrap;
+
+      // Media query for tablets
+      @media only screen and (min-width: $screen-sm-max) {
+        margin-top: $spacer-base * -1;
+        padding-bottom: $spacer-base;
+        padding-top: $spacer-base;
+      }
     }
 
     .kss-nav__menu-item {

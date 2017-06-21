@@ -39,13 +39,15 @@
   .kss-main {
     @include clearfix;
     float: none;
-    padding-left: $content-side-spacer;
-    padding-right: $content-gap-spacer;
+    padding-left: 0;
+    padding-right: 0;
     padding-bottom: $content-top-spacer;
 
     // Media query for tablets
     @media only screen and (min-width: $screen-sm-max) {
       margin-left: 0;
+      padding-left: $content-side-spacer;
+      padding-right: $content-gap-spacer;
       width: $content-width;
     }
   }

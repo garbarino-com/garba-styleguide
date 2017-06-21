@@ -275,6 +275,48 @@
 {{{scripts}}}
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+
+{{!-- TODO(ecalvi): Borrar este bloque después de que esté terminado el bundle de javascript.--}}
+<script src="https://cdn.rawgit.com/kenwheeler/slick/master/slick/slick.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.carousel').slick({
+      arrows: false,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      cssEase: 'linear',
+      infinite: true,
+      mobileFirst: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      speed: 500,
+      responsive: [{
+        breakpoint: 768,
+        settings: {
+          arrows: true,
+          dots: true,
+          fade: true
+        }
+      }]
+    });
+
+    $('.carousel-shelf').slick({
+      infinite: false,
+      speed: 300,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      variableWidth: true,
+      dots: false,
+      lazyLoad: 'ondemand',
+      responsive: [{
+        breakpoint: 1025,
+        settings: 'unslick'
+      }]
+    });
+  });
+</script>
+
 <script data-main="kss-assets/javascript/garbaui"
   src="kss-assets/javascript/require.js"></script>
 
