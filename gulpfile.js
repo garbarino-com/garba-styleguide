@@ -68,10 +68,7 @@ gulp.task('copy:scripts', function () {
   return gulp
     .src([
       // Copy library script to assets folder
-      (libraryPath + 'dist/' + folder.scripts + '*.js'),
-
-      // Copy requirejs to assets folder
-      ('./node_modules/requirejs/*.js')
+      (libraryPath + 'dist/' + folder.scripts + '*.js')
     ])
     .pipe(debug(libraryPath + 'dist/' + folder.scripts))
     .pipe(debug({title: 'copy-from:'}))
