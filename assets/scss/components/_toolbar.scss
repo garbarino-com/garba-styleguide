@@ -14,8 +14,8 @@
     box-shadow: none;
     color: $tooltip-color;
     font-size: $font-size-sm;
-    height: $tooltip-height;
-    line-height: $tooltip-height;
+    height: 2rem;
+    line-height: 2rem;
     padding: 0 $tooltip-padding;
 
     &:before {
