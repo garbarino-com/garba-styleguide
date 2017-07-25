@@ -4,9 +4,7 @@
   "description": "A styleguide to display all components contained in garba-ui.",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass ./assets/scss/garba-styleguide.scss ./assets/css/garba-styleguide.css --output-style compressed",
-    "sass:watch": "node-sass ./assets/scss/garba-styleguide.scss ./assets/css/garba-styleguide.css --output-style expanded --watch",
-    "start-dev": "npm run sass:watch & npm run start-server"
+    "start": "gulp start-dev"
   },
   "repository": {
     "type": "git",
