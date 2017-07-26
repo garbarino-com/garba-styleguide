@@ -68,7 +68,7 @@
 </ul>
 <p>Basado en <a href="https://github.com/kss-node/kss-node">KSS</a>.</p>
 <hr>
-<h1 id="modo-de-uso">Modo de Uso</h1>
+<h1 id="uso">Uso</h1>
 <p><em>Garba UI</em> está construído usando npm así que es necesario que tengas esa herramienta instalada primero.</p>
 <p>Ir al directorio donde lo quieras usar y tipear en la consola:</p>
 <pre><code>$ npm install garba-ui --save-dev
@@ -90,8 +90,17 @@
 </li>
 </ul>
 <blockquote>
-<p><em>Opcional:</em> De ser más cómodo, se ofrece la alternativa, en el caso de ser necesario sobreescribir variables para un proyecto particular, de importarlas desde un archivo .json</p>
+<p><strong>Opcional:</strong> De ser más cómodo, se ofrece la alternativa, en el caso de ser necesario sobreescribir variables para un proyecto particular, de importarlas desde un archivo .json</p>
 </blockquote>
+<hr>
+<h1 id="estructura">Estructura</h1>
+<p>Las partes que componen la librería se dicen mayormente de <strong>3 categorías</strong>, nombradas (arbitrariamente) y en orden de ascendente de complejidad:</p>
+<ul>
+<li><strong>Elementos</strong>: Elementos son los bloques de construcción de más bajo nivel. Idealmente deberían ser posibles de ser reducidos a un<code>número</code> (ej: un valor de tamaño de fuente, el módulo del baseline-grid), un <code>string</code> (ej: el encoding de un ícono, el hexa de uncolor) o un <code>boolean</code> (ej: habilitar o deshabilitar <code>diplay: grid</code> o ). Cabe aclarar que aunque podrían existir casos en los que eso no sea posible. El elemento sólo vive como una abstracción y no significa nada para el usuario final.</li>
+<li><strong>Componentes</strong>: El componente es el segundo nivel en orden ascendente de complejidad. Un componente es una articulación de elementos que ya constituyen una unidad de información para el usuario pero que carecen de significado sin un contexto (ej: La caja de producto). Un componente puede además tener un estado individual como por ejemplo <code>error</code>, <code>loading</code> o `no-disponible (ej. Si un query de búsqueda devuelve una serie de resultados de los cuales uno no está tiene stock y no está disponible, el estado es aplicado sólo en ese ítem).</li>
+<li><strong>Módulos</strong>: Los módulos son articulaciones de componentes o elementos que constituyen bloques de información para el usuario. Por ej: El componente caja de producto aislado no transmite información alguna por sí mismo, sino cuando se articula con otros componentes y conforma un módulo como un resultado de búsqueda, una landing de categoría o un carousel que muestra otros productos similares. Los módulos pueden tener un estado que se aplica sobre toda la articulación. Ej: Cuando el usuario filtra un Resultado de búsqueda (módulo <em>lista de productos</em>), el módulo puede recibir un estado <code>loading</code> entre que se hace ese request y se reciben los nuevos resultados.</li>
+</ul>
+<p>Por el momento la librería sólo sirve un bundle de javascript para usar junto con <em>Jquery (v 1.12.3)</em>. En el futuro se planea incluir bundles que cubran proyectos que utilicen data-binding.</p>
 <hr>
 <h1 id="contribution-guidelines">Contribution guidelines</h1>
 <ul>
