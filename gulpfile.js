@@ -2,8 +2,10 @@ var autoprefixer = require('gulp-autoprefixer'),
     connect = require('gulp-connect'),
     debug = require('gulp-debug'),
     del = require('del'),
+    ghPages = require('gulp-gh-pages'),
     gulp = require('gulp'),
     jsonImporter = require('node-sass-json-importer'),
+    runSequence = require('run-sequence'),
     sass = require('gulp-sass'),
     sassConfig = require('./sass-config.json'),
     shell = require('gulp-shell'),
@@ -125,5 +127,29 @@ gulp.task('watch', ['clean:sass', 'clean:fonts', 'clean:images', 'copy:fonts',
   // watches style guide theme files and runs a whole rebuild after saves
 });
 
+
+// Dev task: Runs styleguide, compiles styles, copies fonts and images (also
+// watches for changes in styles.)
 gulp.task('start-dev', ['styleguide', 'clean:sass', 'clean:fonts', 'clean:images',
   'copy:fonts', 'copy:images', 'copy:scripts', 'sass', 'server', 'watch']);
+
+
+// Deploy to gh-pages task: Uploads /dist to a branch gh-pages
+// (url: https://garbarino-com.github.io/garba-styleguide/)
+
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages({
+      force: true
+    }));
+});
+
+
+// Run this task to build the styleguide and deploy to url:
+// https://garbarino-com.github.io/garba-styleguide/
+
+gulp.task('build-and-deploy', function (callback) {
+  runSequence('styleguide', 'clean:sass', 'clean:fonts', 'clean:images',
+  'copy:fonts', 'copy:images', 'copy:scripts', 'sass', 'deploy', callback);
+});
+
