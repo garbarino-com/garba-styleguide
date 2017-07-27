@@ -50,6 +50,12 @@
           </a>
 
         </li>
+        <li class="kss-nav__menu-item">
+          <a class="kss-nav__menu-link" href="section-modules.html">
+            <span class="kss-nav__ref">5</span><span class="kss-nav__name">Módulos</span>
+          </a>
+
+        </li>
     </ul>
   </nav>
 </header>
@@ -67,13 +73,15 @@
                   #Helpers.Misc.RemoveUnit
               </span>
             </span>
-            @strip-units($number)
+            @px-to-rem($pxval)
           </a>
         </h3>
 
 
           <div class="kss-description">
-            <p>Devuelve el número de una variable quitándole la unidad de medida.</p>
+            <p>Convierte un valor en pixels a su equivalente en rems. Asume que $font-size-base
+es el valor de font-size de <html>. Ejemplo: en el caso de querer convertir 12px
+a rem, escribir <code>px-to-rem(12)</code> o <code>px-to-rem(12px)</code>.</p>
 
           </div>
 
@@ -81,7 +89,7 @@
 
 
         <div class="kss-source kss-style">
-          Source: <code>_px-to-rem.scss</code>, line 1
+          Source: <code>_px-to-rem.scss</code>, line 18
         </div>
 
     </div>
@@ -137,12 +145,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
 <script src="kss-assets/javascript/garbaui.min.js"></script>
-
-
-<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
-</body>
-</html>
-rc="kss-assets/javascript/garbaui.min.js"></script>
 
 
 <!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->

@@ -62,11 +62,11 @@
 
 <article role="main" class="kss-main">
 
-    <div id="kssref-elements-buttons-6-action" class="kss-section kss-section--depth-3 is-fullscreen">
+    <div id="kssref-modules-genericstates" class="kss-section kss-section--depth-2 is-fullscreen">
 
       <div class="kss-style">
           <p class="kss-toolbar">
-            <a href="#kssref-elements-buttons-6-action" data-kss-guides="true">
+            <a href="#kssref-modules-genericstates" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
               <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
@@ -87,7 +87,7 @@
                 <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
               </svg>
             </a>
-            <a href="#kssref-elements-buttons-6-action" data-kss-markup="true">
+            <a href="#kssref-modules-genericstates" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
               <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
@@ -95,30 +95,23 @@
               </svg>
             </a>
           </p>
-        <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-elements-buttons-6-action">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-modules-genericstates">
             <span class="kss-title__ref">
-              2.3.6
+              5.1
               <span class="kss-title__permalink-hash">
-                  #Elements.Buttons.6-Action
+                  #Modules.GenericStates
               </span>
             </span>
-            Action buttons
+            Estados genéricos de módulo
           </a>
-        </h3>
+        </h2>
 
 
           <div class="kss-description">
-            <p>Las classes de botones de acción se pueden usar en los elementos <code>&lt;a&gt;</code> o <code>&lt;button&gt;</code>.
-Los botones de acción son botones que ejecutan acciones que sean propias del
-contexto en el que se encuentra el usuario y en ciertos casos para disparar
-funcionalidades dentro de la página. No se deben usar para navegar entre
-documentos o secciones, para eso son los links o botones.</p>
-<blockquote>
-<p>Los <em>Action buttons</em> carecen de un texto que describa la acción que ejecutan
-por lo que se sugiere acompañar su utilización con un <em>tooltip</em> cumpla esa función
-(Nota: deberíamos estudiar como asistir al usuario en dispositivos touch).</p>
-</blockquote>
+            <p>Son variaciones de estado para módulos que son compartidos y aplicables a
+todos. No se deben usar estos estados para los elementos y componentes que
+ya tienen definidos un estilo visual para dichos estados.</p>
 
           </div>
 
@@ -131,117 +124,73 @@ por lo que se sugiere acompañar su utilización con un <em>tooltip</em> cumpla 
             </div>
 
           <div class="kss-modifier__example">
-            <button class="button--action " type="button"
-    data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
-  <i class="icon"></i>
-  Action
-</button>
-<a class="button--action " href="#0" role="button"
-    data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
-  <i class="icon"></i>
-  Action
-</a>
+            <style>
+  .placeholder-class img {
+    max-width: 100%;
+  }
+</style>
+
+<div class="placeholder-class ">
+  <img src="./kss-assets/images/component-placeholder.jpg" alt="Component placeholder">
+</div>
 
             <div class="kss-modifier__example-footer"></div>
           </div>
 
             <div class="kss-modifier__name kss-style">
-              .button--action__primary
+              .element__is-active
             </div>
             <div class="kss-modifier__description kss-style">
-              Ejecuta la acción primaria en un grupo de acciones (por el momento, está reservado a la acción de <em>Quitar del carrito</em>).
+              El elemento está <em>active</em>.
             </div>
             <div class="kss-modifier__example">
-              <button class="button--action button--action__primary" type="button"
-    data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
-  <i class="icon"></i>
-  Action
-</button>
-<a class="button--action button--action__primary" href="#0" role="button"
-    data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
-  <i class="icon"></i>
-  Action
-</a>
+              <style>
+  .placeholder-class img {
+    max-width: 100%;
+  }
+</style>
+
+<div class="placeholder-class element__is-active">
+  <img src="./kss-assets/images/component-placeholder.jpg" alt="Component placeholder">
+</div>
 
               <div class="kss-modifier__example-footer"></div>
             </div>
             <div class="kss-modifier__name kss-style">
-              .button--action__fav
+              .element__is-loading
             </div>
             <div class="kss-modifier__description kss-style">
-              Marcar item como favorito.
+              El elemento está <em>cargando</em>.
             </div>
             <div class="kss-modifier__example">
-              <button class="button--action button--action__fav" type="button"
-    data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
-  <i class="icon"></i>
-  Action
-</button>
-<a class="button--action button--action__fav" href="#0" role="button"
-    data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
-  <i class="icon"></i>
-  Action
-</a>
+              <style>
+  .placeholder-class img {
+    max-width: 100%;
+  }
+</style>
+
+<div class="placeholder-class element__is-loading">
+  <img src="./kss-assets/images/component-placeholder.jpg" alt="Component placeholder">
+</div>
 
               <div class="kss-modifier__example-footer"></div>
             </div>
             <div class="kss-modifier__name kss-style">
-              .button--action__facebook
+              .element__is-disabled
             </div>
             <div class="kss-modifier__description kss-style">
-              Compartir item en Facebook.
+              El elemento está <em>deshabilitado</em>.
             </div>
             <div class="kss-modifier__example">
-              <button class="button--action button--action__facebook" type="button"
-    data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
-  <i class="icon"></i>
-  Action
-</button>
-<a class="button--action button--action__facebook" href="#0" role="button"
-    data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
-  <i class="icon"></i>
-  Action
-</a>
+              <style>
+  .placeholder-class img {
+    max-width: 100%;
+  }
+</style>
 
-              <div class="kss-modifier__example-footer"></div>
-            </div>
-            <div class="kss-modifier__name kss-style">
-              .button--action__twitter
-            </div>
-            <div class="kss-modifier__description kss-style">
-              Compartir item en Twitter.
-            </div>
-            <div class="kss-modifier__example">
-              <button class="button--action button--action__twitter" type="button"
-    data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
-  <i class="icon"></i>
-  Action
-</button>
-<a class="button--action button--action__twitter" href="#0" role="button"
-    data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
-  <i class="icon"></i>
-  Action
-</a>
-
-              <div class="kss-modifier__example-footer"></div>
-            </div>
-            <div class="kss-modifier__name kss-style">
-              .button__is-active
-            </div>
-            <div class="kss-modifier__description kss-style">
-              Todos los modificadores tienen disponible su propia variable de la clase <code>button__is-active</code> para cuando sea necesario marcar que una acción ya se ha ejecutado (ej. /&quot;El producto se ha marcado como favorito&quot;/).
-            </div>
-            <div class="kss-modifier__example">
-              <button class="button--action button__is-active" type="button"
-    data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
-  <i class="icon"></i>
-  Action
-</button>
-<a class="button--action button__is-active" href="#0" role="button"
-    data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
-  <i class="icon"></i>
-  Action
-</a>
+<div class="placeholder-class element__is-disabled">
+  <img src="./kss-assets/images/component-placeholder.jpg" alt="Component placeholder">
+</div>
 
               <div class="kss-modifier__example-footer"></div>
             </div>
@@ -249,23 +198,22 @@ por lo que se sugiere acompañar su utilización con un <em>tooltip</em> cumpla 
 
           <details class="kss-markup kss-style">
             <summary>
-                Markup: <code>button-actions/button-actions.hbs</code>
+                Markup: <code>generic-states/generic-element.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class&#x3D;&quot;button--action {{modifier_class}}&quot; type&#x3D;&quot;button&quot;
-    data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;top&quot; title&#x3D;&quot;Nota informativa sobre la acción&quot;&gt;
-  &lt;i class&#x3D;&quot;icon&quot;&gt;&lt;/i&gt;
-  Action
-&lt;/button&gt;
-&lt;a class&#x3D;&quot;button--action {{modifier_class}}&quot; href&#x3D;&quot;#0&quot; role&#x3D;&quot;button&quot;
-    data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;top&quot; title&#x3D;&quot;Nota informativa sobre la acción&quot;&gt;
-  &lt;i class&#x3D;&quot;icon&quot;&gt;&lt;/i&gt;
-  Action
-&lt;/a&gt;
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;style&gt;
+  .placeholder-class img {
+    max-width: 100%;
+  }
+&lt;/style&gt;
+
+&lt;div class&#x3D;&quot;placeholder-class {{modifier_class}}&quot;&gt;
+  &lt;img src&#x3D;&quot;./kss-assets/images/component-placeholder.jpg&quot; alt&#x3D;&quot;Component placeholder&quot;&gt;
+&lt;/div&gt;
 </code></pre>
           </details>
 
         <div class="kss-source kss-style">
-          Source: <code>button-actions/_button-actions.scss</code>, line 1
+          Source: <code>generic-states/_generic-states.scss</code>, line 1
         </div>
 
     </div>
