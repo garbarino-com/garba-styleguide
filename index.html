@@ -60,7 +60,8 @@
 <p><img src="./kss-assets/images/garba-ui-main.png" alt="alt Main Project Image"></p>
 <p>Un catálogo de componentes visuales y mixins para ser usados en proyectos de la compañía.</p>
 <ul>
-<li><a href="#modo-de-uso">Modo de Uso</a></li>
+<li><a href="#uso">Uso</a></li>
+<li><a href="#estructura">Estructura</a></li>
 <li><a href="#contribution-guidelines">Contribution guidelines</a></li>
 <li><a href="#dependencias">Dependencias</a></li>
 <li><a href="#responsables">Responsables</a></li>
@@ -70,22 +71,48 @@
 <hr>
 <h1 id="uso">Uso</h1>
 <p><em>Garba UI</em> está construído usando npm así que es necesario que tengas esa herramienta instalada primero.</p>
-<p>Ir al directorio donde lo quieras usar y tipear en la consola:</p>
-<pre><code>$ npm install garba-ui --save-dev
-</code></pre><p>Eso debería instalar todas las dependencias necesarias.</p>
-<p>Una vez instalada la dependencia, <em>Garba UI</em> contiene toda la librería de estilos:</p>
+<p>Al momento todavía no hay una versión de esta librería de la cual hayamos hecho un release y la versión que se encuentra subida a <a href="https://www.npmjs.com/package/garba-ui">npm</a> es vieja.</p>
+<p>Sin embargo, como la idea es que la puedan instalar e ir mirándola, se la pueden instalar yendo a su directorio de proyectos y tipeando en la consola:</p>
+<pre><code>$ npm install https://github.com/garbarino-com/garba-ui.git#develop
+</code></pre><p>Una vez instalada la dependencia, <em>Garba UI</em> contiene toda la librería de estilos y scripts:</p>
 <ul>
 <li><em>dist:</em> Dentro de esta carpeta se encuentra la versión pre-compilada de la librería:<ul>
-<li><em>css:</em> Contiene versiones en <code>css</code> minificadas y sin minificar de la librería.</li>
-<li><em>fonts:</em> Contiene las icon fonts.</li>
-<li><em>images:</em> Contiene imágenes necesarias para el sitio.</li>
+<li><em>css:</em> Contiene versiones minificadas y sin minificar de la librería de estilos.</li>
+<li><em>fonts:</em> Contiene las dos icon fonts: la que forma parte de la vieja librería y la que corresponde a la nueva.</li>
+<li><em>images:</em> Contiene imágenes necesarias que se usan en la librería.</li>
+<li><em>javascript:</em> Contiene versiones del bundle de javascript necesarias para hacer andar algunos componentes que forman parte de esta librería. El bundle sirve además algunas scripts que son compartidos por todos los proyectos:<ul>
+<li>Modals (Bootstrap).</li>
+<li>Tooltip (Bootstrap).</li>
+<li>Tabs (Bootstrap).</li>
+<li>Jquery (v1.12.3): La versión de jquery que se servía desde <a href="https://github.com/garbarino-com/normandia">Normandia</a> se incluye como dependencia del proyecto pero no forma parte de este Bundle. Es necesario llamarla aparte. Sugerimos usar <code>&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js&quot;&gt;&lt;/script&gt;</code> como CDN.</li>
+<li>Algunos scripts compartidos que formaban parte del proyecto <a href="https://github.com/garbarino-com/normandia">Normandia</a> que empezarían a servirse a través de esta librería:<ul>
+<li>Cookies</li>
+<li>Campaign Modals/First Purchase</li>
+<li>Offers Hunter</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li><em>app:</em> Contiene los archivos fuente sin compilar que componen la librería:<ul>
 <li><em>lib:</em> Contiene los archivos fuente en <code>sass</code>e incluye también la primera versión de la librería (1.3.2) que se irá deprecando de a poco a medida que se migre hacia la nueva versión.</li>
-<li><em>fonts:</em> Contiene las icon fonts. (Existe la posibilidad de que estas se migren en el futuro a archivos <code>svg</code>.)</li>
-<li><em>images:</em> Contiene imágenes necesarias para el sitio.</li>
+<li><em>fonts:</em> Contiene las dos icon fonts: la que forma parte de la vieja librería y la que corresponde a la nueva. Existe la posibilidad de que los nuevos íconos se migren en el futuro a <code>svg</code>. También se incluye el proyecto de generación de la fuente para <a href="https://icomoon.io">IcoMoon</a> para ambos ses de íconos.</li>
+<li><em>images:</em> Contiene imágenes necesarias que se usan en la librería.</li>
 <li><em>docs:</em> Contiene este archivo explicativo.</li>
+<li><em>javascript:</em> Contiene los scripts fuente que se incluyen en el build de <a href="http://browserify.org/">Browserify</a>:<ul>
+<li>Modals (Bootstrap).</li>
+<li>Tooltip (Bootstrap).</li>
+<li>Tabs (Bootstrap).</li>
+<li>Jquery (v1.12.3): La versión de jquery que se servía desde <a href="https://github.com/garbarino-com/normandia">Normandia</a> se incluye como dependencia.</li>
+<li>Algunos scripts compartidos que formaban parte del proyecto <a href="https://github.com/garbarino-com/normandia">Normandia</a> que empezarían a servirse a través de esta librería:<ul>
+<li>Cookies</li>
+<li>Campaign Modals/First Purchase</li>
+<li>Offers Hunter</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -94,11 +121,11 @@
 </blockquote>
 <hr>
 <h1 id="estructura">Estructura</h1>
-<p>Las partes que componen la librería se dicen mayormente de <strong>3 categorías</strong>, nombradas (arbitrariamente) y en orden de ascendente de complejidad:</p>
+<p>La estructura de la librería está basada en <a href="http://bradfrost.com/blog/post/atomic-web-design/">Atomic Design</a>. Las partes que componen la librería se dividen mayormente en <strong>3 categorías</strong>, nombradas (arbitrariamente) y en orden de ascendente de complejidad:</p>
 <ul>
 <li><strong>Elementos</strong>: Elementos son los bloques de construcción de más bajo nivel. Idealmente deberían ser posibles de ser reducidos a un<code>número</code> (ej: un valor de tamaño de fuente, el módulo del baseline-grid), un <code>string</code> (ej: el encoding de un ícono, el hexa de uncolor) o un <code>boolean</code> (ej: habilitar o deshabilitar <code>diplay: grid</code> o ). Cabe aclarar que aunque podrían existir casos en los que eso no sea posible. El elemento sólo vive como una abstracción y no significa nada para el usuario final.</li>
 <li><strong>Componentes</strong>: El componente es el segundo nivel en orden ascendente de complejidad. Un componente es una articulación de elementos que ya constituyen una unidad de información para el usuario pero que carecen de significado sin un contexto (ej: La caja de producto). Un componente puede además tener un estado individual como por ejemplo <code>error</code>, <code>loading</code> o `no-disponible (ej. Si un query de búsqueda devuelve una serie de resultados de los cuales uno no está tiene stock y no está disponible, el estado es aplicado sólo en ese ítem).</li>
-<li><strong>Módulos</strong>: Los módulos son articulaciones de componentes o elementos que constituyen bloques de información para el usuario. Por ej: El componente caja de producto aislado no transmite información alguna por sí mismo, sino cuando se articula con otros componentes y conforma un módulo como un resultado de búsqueda, una landing de categoría o un carousel que muestra otros productos similares. Los módulos pueden tener un estado que se aplica sobre toda la articulación. Ej: Cuando el usuario filtra un Resultado de búsqueda (módulo <em>lista de productos</em>), el módulo puede recibir un estado <code>loading</code> entre que se hace ese request y se reciben los nuevos resultados.</li>
+<li><strong>Módulos</strong>: Los módulos son articulaciones de componentes o elementos que constituyen bloques de información para el usuario. Por ej: El componente caja de producto aislado no transmite información alguna por sí mismo sino cuando se articula con otras cajas de producto y conforma un módulo: resultado de búsqueda, una landing de categoría o un carousel que muestra otros productos similares, etc. Dicho de otro modo: lo que define al módulo es que transmite información o tiene un propósito para el usuario. <em>Es un módulo</em>: el header, el footer, un form de selección de método de pago. <em>No son módulos</em>: Un form con sus inputs y labels o una agrupación de cajas de producto sin indicación que denoten su propósito (como un título o una bajada de texto). Un módulo puede recibir un estado que se aplica sobre toda esa articulación. Ej: Cuando el usuario filtra un Resultado de búsqueda (módulo <em>lista de productos</em>), el módulo puede recibir un estado <code>loading</code> entre el momento en que se hace ese request y el se vuelven a dibujar los nuevos resultados.</li>
 </ul>
 <p>Por el momento la librería sólo sirve un bundle de javascript para usar junto con <em>Jquery (v 1.12.3)</em>. En el futuro se planea incluir bundles que cubran proyectos que utilicen data-binding.</p>
 <hr>
