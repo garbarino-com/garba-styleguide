@@ -7,6 +7,7 @@
     "./node_modules/garba-ui/app/lib/elements/",
     "./node_modules/garba-ui/app/lib/functional/",
     "./node_modules/garba-ui/app/lib/helpers/",
+    "./node_modules/garba-ui/app/lib/modules/",
     "./node_modules/garba-ui/app/lib/variables/"
   ],
   "homepage": "introduction.md",
