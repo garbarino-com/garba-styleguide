@@ -141,6 +141,10 @@
   }
 }
 
+.linenums li > .pln {
+  @include hide-element;
+}
+
 // Override styles for markup
 pre,
 code,
@@ -156,5 +160,9 @@ samp {
     max-width: initial;
     padding: 0;
     text-transform: none;
+  }
+
+  > .pln {
+    @include show-element(inline-block);
   }
 }

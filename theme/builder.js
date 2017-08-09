@@ -1,5 +1,10 @@
 'use strict';
 
+const path = require('path');
+const fs = require('fs');
+
+
+
 /**
  * This module is used to load the base KSS builder class needed by this builder
  * and to define any custom CLI options or extend any base class methods.
@@ -128,6 +133,17 @@ class KssBuilderHandlebars extends KssBuilderBaseHandlebars {
           return buffer;
         });
       }
+
+      // Register partial to be reused throughout the app
+
+      // Partial folder
+      var templateUrl = './node_modules/garba-ui/app/lib/';
+
+      // Register partial files
+      var content = fs.readFileSync(path.resolve(templateUrl,
+        'components/item-box/item-box' + '.hbs'), 'utf8');
+
+      this.Handlebars.registerPartial('itemBox', content);
 
       return Promise.resolve(styleGuide);
     });
