@@ -134,7 +134,7 @@ para asegurar una visualización equivalente en todos los browsers.</p>
             </div>
 
           <div class="kss-modifier__example">
-            <a class="button " href="#0" role="button">Link</a>
+            <a class="button " href="/url/de/producto/" role="button">Link</a>
 <button class="button " type="submit">Button</button>
 <input class="button " type="button" value="Input">
 <input class="button " type="submit" value="Submit">
@@ -150,7 +150,7 @@ para asegurar una visualización equivalente en todos los browsers.</p>
               Cuando el cursor está posicionado sobre el elemento.
             </div>
             <div class="kss-modifier__example">
-              <a class="button pseudo-class-hover" href="#0" role="button">Link</a>
+              <a class="button pseudo-class-hover" href="/url/de/producto/" role="button">Link</a>
 <button class="button pseudo-class-hover" type="submit">Button</button>
 <input class="button pseudo-class-hover" type="button" value="Input">
 <input class="button pseudo-class-hover" type="submit" value="Submit">
@@ -165,7 +165,7 @@ para asegurar una visualización equivalente en todos los browsers.</p>
               Cuando es presionado.
             </div>
             <div class="kss-modifier__example">
-              <a class="button pseudo-class-focus" href="#0" role="button">Link</a>
+              <a class="button pseudo-class-focus" href="/url/de/producto/" role="button">Link</a>
 <button class="button pseudo-class-focus" type="submit">Button</button>
 <input class="button pseudo-class-focus" type="button" value="Input">
 <input class="button pseudo-class-focus" type="submit" value="Submit">
@@ -179,12 +179,14 @@ para asegurar una visualización equivalente en todos los browsers.</p>
             <summary>
                 Markup: <code>buttons/buttons.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;a class&#x3D;&quot;button {{modifier_class}}&quot; href&#x3D;&quot;#0&quot; role&#x3D;&quot;button&quot;&gt;Link&lt;/a&gt;
-&lt;button class&#x3D;&quot;button {{modifier_class}}&quot; type&#x3D;&quot;submit&quot;&gt;Button&lt;/button&gt;
-&lt;input class&#x3D;&quot;button {{modifier_class}}&quot; type&#x3D;&quot;button&quot; value&#x3D;&quot;Input&quot;&gt;
-&lt;input class&#x3D;&quot;button {{modifier_class}}&quot; type&#x3D;&quot;submit&quot; value&#x3D;&quot;Submit&quot;&gt;
-&lt;input class&#x3D;&quot;button {{modifier_class}}&quot; type&#x3D;&quot;reset&quot; value&#x3D;&quot;Reset&quot;&gt;
-</code></pre>
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;a class&#x3D;&quot;button {{modifier_class}}&quot; href&#x3D;&quot;{{url}}&quot; role&#x3D;&quot;button&quot;&gt;{{text_anchor}}&lt;/a&gt;
+&lt;button class&#x3D;&quot;button {{modifier_class}}&quot; type&#x3D;&quot;submit&quot;&gt;{{text_button}}&lt;/button&gt;
+&lt;input class&#x3D;&quot;button {{modifier_class}}&quot; type&#x3D;&quot;button&quot; value&#x3D;&quot;{{text_input}}&quot;&gt;
+&lt;input class&#x3D;&quot;button {{modifier_class}}&quot; type&#x3D;&quot;submit&quot; value&#x3D;&quot;{{text_submit}}&quot;&gt;
+&lt;input class&#x3D;&quot;button {{modifier_class}}&quot; type&#x3D;&quot;reset&quot; value&#x3D;&quot;{{text_reset}}&quot;&gt;
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">

@@ -62,11 +62,11 @@
 
 <article role="main" class="kss-main">
 
-    <div id="kssref-functional-carousel-1-simplecarousel" class="kss-section kss-section--depth-3 is-fullscreen">
+    <div id="kssref-components-celllist-1-linkedcelllist" class="kss-section kss-section--depth-3 is-fullscreen">
 
       <div class="kss-style">
           <p class="kss-toolbar">
-            <a href="#kssref-functional-carousel-1-simplecarousel" data-kss-guides="true">
+            <a href="#kssref-components-celllist-1-linkedcelllist" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
               <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
@@ -87,7 +87,7 @@
                 <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
               </svg>
             </a>
-            <a href="#kssref-functional-carousel-1-simplecarousel" data-kss-markup="true">
+            <a href="#kssref-components-celllist-1-linkedcelllist" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
               <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
@@ -96,27 +96,22 @@
             </a>
           </p>
         <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-functional-carousel-1-simplecarousel">
+          <a class="kss-title__permalink" href="#kssref-components-celllist-1-linkedcelllist">
             <span class="kss-title__ref">
-              3.1.1
+              1.1.1
               <span class="kss-title__permalink-hash">
-                  #Functional.Carousel.1-SimpleCarousel
+                  #Components.CellList.1-LinkedCellList
               </span>
             </span>
-            Billboard Carousel
+            Cell list con links
           </a>
         </h3>
 
 
           <div class="kss-description">
-            <p>Esta variación de carousel está pensada para ser usada como vidriera en sitios
-o secciones internas del sitios.</p>
-<ul>
-<li>Sólo muestra 1 ítem por página.</li>
-<li>Dicho ítem toma todo el ancho del carousel.</li>
-<li>Tiene autoplay.</li>
-<li>No tiene lazy-loading habilitado.</li>
-</ul>
+            <p>Agregale links a las <em>Cell-list</em> usando tags <code>&lt;a&gt;</code> o <code>&lt;button&gt;</code>en vez de
+<code>&lt;li&gt;</code> o <code>&lt;div&gt;</code> (eso también implica que el elemento padre debería ser un
+<code>&lt;div&gt;</code> en lugar de un <code>&lt;ul&gt;</code>.</p>
 
           </div>
 
@@ -124,53 +119,192 @@ o secciones internas del sitios.</p>
 
         <div class="kss-modifier__wrapper">
 
+            <div class="kss-modifier__default-name kss-style">
+              Default styling
+            </div>
 
           <div class="kss-modifier__example">
-            <div class="carousel-billboard ">
-  <a href="#0" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
-    <img src="http://lorempixel.com/g/1024/224/sports/1"
-      alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+            <div class="cell-list">
+  <a href="#0" class="cell-list-item ">
+    <span class="cell-list-item__body">
+      Lorem ipsum dolor sit amet
+    </span>
   </a>
-  <a href="#0" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
-    <img src="http://lorempixel.com/g/1024/224/nightlife/2"
-      alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+  <a href="#0" class="cell-list-item ">
+    <span class="cell-list-item__body">
+      Nullam dapibus luctus eros eu porta
+    </span>
   </a>
-  <a href="#0" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
-    <img src="http://lorempixel.com/g/1024/224/technics/3"
-      alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+  <a href="#0" class="cell-list-item ">
+    <span class="cell-list-item__body">
+      Mauris non est purus
+    </span>
   </a>
-  <a href="#0" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
-    <img src="http://lorempixel.com/g/1024/224/abstract/4"
-      alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+  <a href="#0" class="cell-list-item ">
+    <span class="cell-list-item__body">
+       Aliquam vel congue nibh
+    </span>
   </a>
 </div>
 
             <div class="kss-modifier__example-footer"></div>
           </div>
 
+            <div class="kss-modifier__name kss-style">
+              :hover
+            </div>
+            <div class="kss-modifier__description kss-style">
+              Cuando el mouse se desliza sobre el botón.
+            </div>
+            <div class="kss-modifier__example">
+              <div class="cell-list">
+  <a href="#0" class="cell-list-item pseudo-class-hover">
+    <span class="cell-list-item__body">
+      Lorem ipsum dolor sit amet
+    </span>
+  </a>
+  <a href="#0" class="cell-list-item pseudo-class-hover">
+    <span class="cell-list-item__body">
+      Nullam dapibus luctus eros eu porta
+    </span>
+  </a>
+  <a href="#0" class="cell-list-item pseudo-class-hover">
+    <span class="cell-list-item__body">
+      Mauris non est purus
+    </span>
+  </a>
+  <a href="#0" class="cell-list-item pseudo-class-hover">
+    <span class="cell-list-item__body">
+       Aliquam vel congue nibh
+    </span>
+  </a>
+</div>
+
+              <div class="kss-modifier__example-footer"></div>
+            </div>
+            <div class="kss-modifier__name kss-style">
+              :focus
+            </div>
+            <div class="kss-modifier__description kss-style">
+              Cuando es presionado.
+            </div>
+            <div class="kss-modifier__example">
+              <div class="cell-list">
+  <a href="#0" class="cell-list-item pseudo-class-focus">
+    <span class="cell-list-item__body">
+      Lorem ipsum dolor sit amet
+    </span>
+  </a>
+  <a href="#0" class="cell-list-item pseudo-class-focus">
+    <span class="cell-list-item__body">
+      Nullam dapibus luctus eros eu porta
+    </span>
+  </a>
+  <a href="#0" class="cell-list-item pseudo-class-focus">
+    <span class="cell-list-item__body">
+      Mauris non est purus
+    </span>
+  </a>
+  <a href="#0" class="cell-list-item pseudo-class-focus">
+    <span class="cell-list-item__body">
+       Aliquam vel congue nibh
+    </span>
+  </a>
+</div>
+
+              <div class="kss-modifier__example-footer"></div>
+            </div>
+            <div class="kss-modifier__name kss-style">
+              .item__is-checked
+            </div>
+            <div class="kss-modifier__description kss-style">
+              Indica que el ítem fue seleccionado.
+            </div>
+            <div class="kss-modifier__example">
+              <div class="cell-list">
+  <a href="#0" class="cell-list-item item__is-checked">
+    <span class="cell-list-item__body">
+      Lorem ipsum dolor sit amet
+    </span>
+  </a>
+  <a href="#0" class="cell-list-item item__is-checked">
+    <span class="cell-list-item__body">
+      Nullam dapibus luctus eros eu porta
+    </span>
+  </a>
+  <a href="#0" class="cell-list-item item__is-checked">
+    <span class="cell-list-item__body">
+      Mauris non est purus
+    </span>
+  </a>
+  <a href="#0" class="cell-list-item item__is-checked">
+    <span class="cell-list-item__body">
+       Aliquam vel congue nibh
+    </span>
+  </a>
+</div>
+
+              <div class="kss-modifier__example-footer"></div>
+            </div>
+            <div class="kss-modifier__name kss-style">
+              .item__is-disabled
+            </div>
+            <div class="kss-modifier__description kss-style">
+              Estado deshabilitado.
+            </div>
+            <div class="kss-modifier__example">
+              <div class="cell-list">
+  <a href="#0" class="cell-list-item item__is-disabled">
+    <span class="cell-list-item__body">
+      Lorem ipsum dolor sit amet
+    </span>
+  </a>
+  <a href="#0" class="cell-list-item item__is-disabled">
+    <span class="cell-list-item__body">
+      Nullam dapibus luctus eros eu porta
+    </span>
+  </a>
+  <a href="#0" class="cell-list-item item__is-disabled">
+    <span class="cell-list-item__body">
+      Mauris non est purus
+    </span>
+  </a>
+  <a href="#0" class="cell-list-item item__is-disabled">
+    <span class="cell-list-item__body">
+       Aliquam vel congue nibh
+    </span>
+  </a>
+</div>
+
+              <div class="kss-modifier__example-footer"></div>
+            </div>
         </div>
 
           <details class="kss-markup kss-style">
             <summary>
-                Markup: <code>carousel/billboard-carousel.hbs</code>
+                Markup: <code>cell-list/cell-list-linked.hbs</code>
             </summary>
             <pre class="prettyprint linenums lang-html">
-              <code data-language="html">&lt;div class&#x3D;&quot;carousel-billboard {{modifier_class}}&quot;&gt;
-  &lt;a href&#x3D;&quot;#0&quot; title&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&quot;&gt;
-    &lt;img src&#x3D;&quot;http://lorempixel.com/g/1024/224/sports/1&quot;
-      alt&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&quot;&gt;
+              <code data-language="html">&lt;div class&#x3D;&quot;cell-list&quot;&gt;
+  &lt;a href&#x3D;&quot;#0&quot; class&#x3D;&quot;cell-list-item {{modifier_class}}&quot;&gt;
+    &lt;span class&#x3D;&quot;cell-list-item__body&quot;&gt;
+      Lorem ipsum dolor sit amet
+    &lt;/span&gt;
   &lt;/a&gt;
-  &lt;a href&#x3D;&quot;#0&quot; title&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&quot;&gt;
-    &lt;img src&#x3D;&quot;http://lorempixel.com/g/1024/224/nightlife/2&quot;
-      alt&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&quot;&gt;
+  &lt;a href&#x3D;&quot;#0&quot; class&#x3D;&quot;cell-list-item {{modifier_class}}&quot;&gt;
+    &lt;span class&#x3D;&quot;cell-list-item__body&quot;&gt;
+      Nullam dapibus luctus eros eu porta
+    &lt;/span&gt;
   &lt;/a&gt;
-  &lt;a href&#x3D;&quot;#0&quot; title&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&quot;&gt;
-    &lt;img src&#x3D;&quot;http://lorempixel.com/g/1024/224/technics/3&quot;
-      alt&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&quot;&gt;
+  &lt;a href&#x3D;&quot;#0&quot; class&#x3D;&quot;cell-list-item {{modifier_class}}&quot;&gt;
+    &lt;span class&#x3D;&quot;cell-list-item__body&quot;&gt;
+      Mauris non est purus
+    &lt;/span&gt;
   &lt;/a&gt;
-  &lt;a href&#x3D;&quot;#0&quot; title&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&quot;&gt;
-    &lt;img src&#x3D;&quot;http://lorempixel.com/g/1024/224/abstract/4&quot;
-      alt&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&quot;&gt;
+  &lt;a href&#x3D;&quot;#0&quot; class&#x3D;&quot;cell-list-item {{modifier_class}}&quot;&gt;
+    &lt;span class&#x3D;&quot;cell-list-item__body&quot;&gt;
+       Aliquam vel congue nibh
+    &lt;/span&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 </code>
@@ -178,7 +312,7 @@ o secciones internas del sitios.</p>
           </details>
 
         <div class="kss-source kss-style">
-          Source: <code>carousel/_carousel.scss</code>, line 49
+          Source: <code>cell-list/_cell-list.scss</code>, line 102
         </div>
 
     </div>

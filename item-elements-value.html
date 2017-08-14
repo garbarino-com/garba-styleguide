@@ -126,20 +126,23 @@ o importes totales (no necesariamente aplica a los precios por unidad).</p>
             </div>
 
           <div class="kss-modifier__example">
-            <div class="value-container " itemprop="offers"
-    itemscope itemtype="http://schema.org/Offer">
+            <div class="value-container" itemprop="offers" itemscope
+    itemtype="http://schema.org/Offer">
   <span class="value-note">
-    Precio en 1 pago.
+      <del>$1299</del>
+      <span class="label label--main">
+        38% off
+      </span>
   </span>
-
-  <meta itemprop="priceCurrency" content={this.props.currency}>
+  <meta itemprop="priceCurrency" content="ARS">
   <span class="value-item">
-    $<span itemprop={this.props.itempropItem}>
-      119.99
+    $<span itemprop="price">
+      799
     </span>
   </span>
-
-  <link href="http://schema.org/InStock" itemprop="inStock">
+  <link
+      href="http://schema.org/InStock" itemprop="inStock"
+>
 </div>
 
             <div class="kss-modifier__example-footer"></div>
@@ -152,20 +155,23 @@ o importes totales (no necesariamente aplica a los precios por unidad).</p>
               Reservado para <em>Ficha de producto</em> y el bloque <em>Súper Oferta</em>.
             </div>
             <div class="kss-modifier__example">
-              <div class="value-container value-container--lg" itemprop="offers"
-    itemscope itemtype="http://schema.org/Offer">
+              <div class="value-container" itemprop="offers" itemscope
+    itemtype="http://schema.org/Offer">
   <span class="value-note">
-    Precio en 1 pago.
+      <del>$1299</del>
+      <span class="label label--main">
+        38% off
+      </span>
   </span>
-
-  <meta itemprop="priceCurrency" content={this.props.currency}>
+  <meta itemprop="priceCurrency" content="ARS">
   <span class="value-item">
-    $<span itemprop={this.props.itempropItem}>
-      119.99
+    $<span itemprop="price">
+      799
     </span>
   </span>
-
-  <link href="http://schema.org/InStock" itemprop="inStock">
+  <link
+      href="http://schema.org/InStock" itemprop="inStock"
+>
 </div>
 
               <div class="kss-modifier__example-footer"></div>
@@ -177,20 +183,23 @@ o importes totales (no necesariamente aplica a los precios por unidad).</p>
               Se utiliza para comunicar importes totales (p.ej: en el checkout).
             </div>
             <div class="kss-modifier__example">
-              <div class="value-container value-container--sm" itemprop="offers"
-    itemscope itemtype="http://schema.org/Offer">
+              <div class="value-container" itemprop="offers" itemscope
+    itemtype="http://schema.org/Offer">
   <span class="value-note">
-    Precio en 1 pago.
+      <del>$1299</del>
+      <span class="label label--main">
+        38% off
+      </span>
   </span>
-
-  <meta itemprop="priceCurrency" content={this.props.currency}>
+  <meta itemprop="priceCurrency" content="ARS">
   <span class="value-item">
-    $<span itemprop={this.props.itempropItem}>
-      119.99
+    $<span itemprop="price">
+      799
     </span>
   </span>
-
-  <link href="http://schema.org/InStock" itemprop="inStock">
+  <link
+      href="http://schema.org/InStock" itemprop="inStock"
+>
 </div>
 
               <div class="kss-modifier__example-footer"></div>
@@ -201,22 +210,32 @@ o importes totales (no necesariamente aplica a los precios por unidad).</p>
             <summary>
                 Markup: <code>value/value.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;value-container {{modifier_class}}&quot; itemprop&#x3D;&quot;offers&quot;
-    itemscope itemtype&#x3D;&quot;http://schema.org/Offer&quot;&gt;
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;div class&#x3D;&quot;value-container&quot; itemprop&#x3D;&quot;offers&quot; itemscope
+    itemtype&#x3D;&quot;http://schema.org/Offer&quot;&gt;
   &lt;span class&#x3D;&quot;value-note&quot;&gt;
-    Precio en 1 pago.
+    {{#if discount}}
+      &lt;del&gt;${{list_price}}&lt;/del&gt;
+      &lt;span class&#x3D;&quot;label label--main&quot;&gt;
+        {{discount}}% off
+      &lt;/span&gt;
+    {{/if}}
   &lt;/span&gt;
-
-  &lt;meta itemprop&#x3D;&quot;priceCurrency&quot; content&#x3D;{this.props.currency}&gt;
+  &lt;meta itemprop&#x3D;&quot;priceCurrency&quot; content&#x3D;&quot;ARS&quot;&gt;
   &lt;span class&#x3D;&quot;value-item&quot;&gt;
-    $&lt;span itemprop&#x3D;{this.props.itempropItem}&gt;
-      119.99
+    $&lt;span itemprop&#x3D;&quot;price&quot;&gt;
+      {{price}}
     &lt;/span&gt;
   &lt;/span&gt;
-
-  &lt;link href&#x3D;&quot;http://schema.org/InStock&quot; itemprop&#x3D;&quot;inStock&quot;&gt;
+  &lt;link
+    {{#if enabled_for_sale}}
+      href&#x3D;&quot;http://schema.org/InStock&quot; itemprop&#x3D;&quot;inStock&quot;
+    {{else}}
+      href&#x3D;&quot;http://schema.org/OutOfStock&quot; itemprop&#x3D;&quot;OutOfStock&quot;
+    {{/if}}&gt;
 &lt;/div&gt;
-</code></pre>
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">

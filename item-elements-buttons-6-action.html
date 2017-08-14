@@ -131,12 +131,7 @@ por lo que se sugiere acompañar su utilización con un <em>tooltip</em> cumpla 
             </div>
 
           <div class="kss-modifier__example">
-            <button class="button--action " type="button"
-    data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
-  <i class="icon"></i>
-  Action
-</button>
-<a class="button--action " href="#0" role="button"
+            <a class="button--action " href="/url/de/producto/" role="button"
     data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
   <i class="icon"></i>
   Action
@@ -152,12 +147,7 @@ por lo que se sugiere acompañar su utilización con un <em>tooltip</em> cumpla 
               Ejecuta la acción primaria en un grupo de acciones (por el momento, está reservado a la acción de <em>Quitar del carrito</em>).
             </div>
             <div class="kss-modifier__example">
-              <button class="button--action button--action__primary" type="button"
-    data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
-  <i class="icon"></i>
-  Action
-</button>
-<a class="button--action button--action__primary" href="#0" role="button"
+              <a class="button--action button--action__primary" href="/url/de/producto/" role="button"
     data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
   <i class="icon"></i>
   Action
@@ -172,12 +162,7 @@ por lo que se sugiere acompañar su utilización con un <em>tooltip</em> cumpla 
               Marcar item como favorito.
             </div>
             <div class="kss-modifier__example">
-              <button class="button--action button--action__fav" type="button"
-    data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
-  <i class="icon"></i>
-  Action
-</button>
-<a class="button--action button--action__fav" href="#0" role="button"
+              <a class="button--action button--action__fav" href="/url/de/producto/" role="button"
     data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
   <i class="icon"></i>
   Action
@@ -192,12 +177,7 @@ por lo que se sugiere acompañar su utilización con un <em>tooltip</em> cumpla 
               Compartir item en Facebook.
             </div>
             <div class="kss-modifier__example">
-              <button class="button--action button--action__facebook" type="button"
-    data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
-  <i class="icon"></i>
-  Action
-</button>
-<a class="button--action button--action__facebook" href="#0" role="button"
+              <a class="button--action button--action__facebook" href="/url/de/producto/" role="button"
     data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
   <i class="icon"></i>
   Action
@@ -212,12 +192,7 @@ por lo que se sugiere acompañar su utilización con un <em>tooltip</em> cumpla 
               Compartir item en Twitter.
             </div>
             <div class="kss-modifier__example">
-              <button class="button--action button--action__twitter" type="button"
-    data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
-  <i class="icon"></i>
-  Action
-</button>
-<a class="button--action button--action__twitter" href="#0" role="button"
+              <a class="button--action button--action__twitter" href="/url/de/producto/" role="button"
     data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
   <i class="icon"></i>
   Action
@@ -232,12 +207,7 @@ por lo que se sugiere acompañar su utilización con un <em>tooltip</em> cumpla 
               Todos los modificadores tienen disponible su propia variable de la clase <code>button__is-active</code> para cuando sea necesario marcar que una acción ya se ha ejecutado (ej. /&quot;El producto se ha marcado como favorito&quot;/).
             </div>
             <div class="kss-modifier__example">
-              <button class="button--action button__is-active" type="button"
-    data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
-  <i class="icon"></i>
-  Action
-</button>
-<a class="button--action button__is-active" href="#0" role="button"
+              <a class="button--action button__is-active" href="/url/de/producto/" role="button"
     data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
   <i class="icon"></i>
   Action
@@ -251,17 +221,14 @@ por lo que se sugiere acompañar su utilización con un <em>tooltip</em> cumpla 
             <summary>
                 Markup: <code>button-actions/button-actions.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class&#x3D;&quot;button--action {{modifier_class}}&quot; type&#x3D;&quot;button&quot;
-    data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;top&quot; title&#x3D;&quot;Nota informativa sobre la acción&quot;&gt;
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;a class&#x3D;&quot;button--action {{modifier_class}}&quot; href&#x3D;&quot;{{url}}&quot; role&#x3D;&quot;button&quot;
+    data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;top&quot; title&#x3D;&quot;{{note}}&quot;&gt;
   &lt;i class&#x3D;&quot;icon&quot;&gt;&lt;/i&gt;
-  Action
-&lt;/button&gt;
-&lt;a class&#x3D;&quot;button--action {{modifier_class}}&quot; href&#x3D;&quot;#0&quot; role&#x3D;&quot;button&quot;
-    data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;top&quot; title&#x3D;&quot;Nota informativa sobre la acción&quot;&gt;
-  &lt;i class&#x3D;&quot;icon&quot;&gt;&lt;/i&gt;
-  Action
+  {{text}}
 &lt;/a&gt;
-</code></pre>
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">

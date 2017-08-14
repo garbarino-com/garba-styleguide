@@ -104,7 +104,9 @@ y posiblemente herramienta para ajustar los criterios de búsqueda y filtrar
 resultados. Ese mismo módulo podría usarse después como landing de categoría
 o cómo listado de ofertas para un evento especial.</p>
 <p>Un módulo puede recibir un estado que se aplica sobre toda esa articulación.
-Ej: Cuando el usuario filtra un Resultado de búsqueda (módulo <em>lista de productos</em>), el módulo puede recibir un estado <code>loading</code> entre el momento en que se hace ese request y el se vuelven a dibujar los nuevos resultados.</p>
+Ej: Cuando el usuario filtra un Resultado de búsqueda (módulo <em>lista de productos</em>),
+el módulo puede recibir un estado <code>loading</code> entre el momento en que se hace ese request
+y el se vuelven a dibujar los nuevos resultados.</p>
 
           </div>
 
@@ -212,7 +214,7 @@ ya tienen definidos un estilo visual para dichos estados.</p>
           </div>
 
             <div class="kss-modifier__name kss-style">
-              .element__is-active
+              .module__is-active
             </div>
             <div class="kss-modifier__description kss-style">
               El elemento está <em>active</em>.
@@ -224,14 +226,14 @@ ya tienen definidos un estilo visual para dichos estados.</p>
   }
 </style>
 
-<div class="placeholder-class element__is-active">
+<div class="placeholder-class module__is-active">
   <img src="./kss-assets/images/component-placeholder.jpg" alt="Component placeholder">
 </div>
 
               <div class="kss-modifier__example-footer"></div>
             </div>
             <div class="kss-modifier__name kss-style">
-              .element__is-loading
+              .module__is-loading
             </div>
             <div class="kss-modifier__description kss-style">
               El elemento está <em>cargando</em>.
@@ -243,14 +245,14 @@ ya tienen definidos un estilo visual para dichos estados.</p>
   }
 </style>
 
-<div class="placeholder-class element__is-loading">
+<div class="placeholder-class module__is-loading">
   <img src="./kss-assets/images/component-placeholder.jpg" alt="Component placeholder">
 </div>
 
               <div class="kss-modifier__example-footer"></div>
             </div>
             <div class="kss-modifier__name kss-style">
-              .element__is-disabled
+              .module__is-disabled
             </div>
             <div class="kss-modifier__description kss-style">
               El elemento está <em>deshabilitado</em>.
@@ -262,7 +264,7 @@ ya tienen definidos un estilo visual para dichos estados.</p>
   }
 </style>
 
-<div class="placeholder-class element__is-disabled">
+<div class="placeholder-class module__is-disabled">
   <img src="./kss-assets/images/component-placeholder.jpg" alt="Component placeholder">
 </div>
 
@@ -274,7 +276,8 @@ ya tienen definidos un estilo visual para dichos estados.</p>
             <summary>
                 Markup: <code>generic-states/generic-element.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;style&gt;
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;style&gt;
   .placeholder-class img {
     max-width: 100%;
   }
@@ -283,7 +286,8 @@ ya tienen definidos un estilo visual para dichos estados.</p>
 &lt;div class&#x3D;&quot;placeholder-class {{modifier_class}}&quot;&gt;
   &lt;img src&#x3D;&quot;./kss-assets/images/component-placeholder.jpg&quot; alt&#x3D;&quot;Component placeholder&quot;&gt;
 &lt;/div&gt;
-</code></pre>
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">

@@ -62,11 +62,11 @@
 
 <article role="main" class="kss-main">
 
-    <div id="kssref-functional-carousel-1-simplecarousel" class="kss-section kss-section--depth-3 is-fullscreen">
+    <div id="kssref-components-celllist-3-checkboxcelllist" class="kss-section kss-section--depth-3 is-fullscreen">
 
       <div class="kss-style">
           <p class="kss-toolbar">
-            <a href="#kssref-functional-carousel-1-simplecarousel" data-kss-guides="true">
+            <a href="#kssref-components-celllist-3-checkboxcelllist" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
               <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
@@ -87,7 +87,7 @@
                 <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
               </svg>
             </a>
-            <a href="#kssref-functional-carousel-1-simplecarousel" data-kss-markup="true">
+            <a href="#kssref-components-celllist-3-checkboxcelllist" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
               <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
@@ -96,27 +96,21 @@
             </a>
           </p>
         <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-functional-carousel-1-simplecarousel">
+          <a class="kss-title__permalink" href="#kssref-components-celllist-3-checkboxcelllist">
             <span class="kss-title__ref">
-              3.1.1
+              1.1.3
               <span class="kss-title__permalink-hash">
-                  #Functional.Carousel.1-SimpleCarousel
+                  #Components.CellList.3-CheckboxCellList
               </span>
             </span>
-            Billboard Carousel
+            Cell list con checkboxes
           </a>
         </h3>
 
 
           <div class="kss-description">
-            <p>Esta variación de carousel está pensada para ser usada como vidriera en sitios
-o secciones internas del sitios.</p>
-<ul>
-<li>Sólo muestra 1 ítem por página.</li>
-<li>Dicho ítem toma todo el ancho del carousel.</li>
-<li>Tiene autoplay.</li>
-<li>No tiene lazy-loading habilitado.</li>
-</ul>
+            <p>Las Cell-lists pueden usarse dentro para checkboxes dentro de un form para
+seleccionar entre un set de ítems que puede contener textos o imagenes.</p>
 
           </div>
 
@@ -126,23 +120,66 @@ o secciones internas del sitios.</p>
 
 
           <div class="kss-modifier__example">
-            <div class="carousel-billboard ">
-  <a href="#0" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
-    <img src="http://lorempixel.com/g/1024/224/sports/1"
-      alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
-  </a>
-  <a href="#0" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
-    <img src="http://lorempixel.com/g/1024/224/nightlife/2"
-      alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
-  </a>
-  <a href="#0" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
-    <img src="http://lorempixel.com/g/1024/224/technics/3"
-      alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
-  </a>
-  <a href="#0" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
-    <img src="http://lorempixel.com/g/1024/224/abstract/4"
-      alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
-  </a>
+            <div class="cell-list">
+  <label class="cell-list-item">
+    <input type="checkbox" id="" value="">
+    <span class="cell-list-item__body">
+
+      <span class="icon-email"></span>
+      Morbi quis mi
+    </span>
+  </label>
+  <label class="cell-list-item">
+    <input type="checkbox" id="" value="">
+    <span class="cell-list-item__body">
+
+      <span class="icon-garbarino-viajes"></span>
+      spanus efficitur
+    </label>
+  </label>
+  <label class="cell-list-item">
+    <input type="checkbox" id="" value="">
+    <span class="cell-list-item__body">
+
+      <span class="icon-gift"></span>
+      Spanue quis
+    </label>
+  </label>
+  <label class="cell-list-item">
+    <input type="checkbox" id="" value="">
+    <span class="cell-list-item__body">
+
+      <span class="icon-gift"></span>
+      spanm facilisis
+    </label>
+  </label>
+</div>
+
+<div class="cell-list">
+  <label class="cell-list-item">
+    <input type="checkbox" id="" value="">
+    <span class="img-container">
+      <img src="http://lorempixel.com/320/240/business/1/" alt="Morbi quis mi">
+    </span>
+  </label>
+  <label class="cell-list-item">
+    <input type="checkbox" id="" value="">
+    <span class="img-container">
+      <img src="http://lorempixel.com/320/120/city/1/" alt="Spanus efficitur">
+    </label>
+  </label>
+  <label class="cell-list-item">
+    <input type="checkbox" id="" value="">
+    <span class="img-container">
+      <img src="http://lorempixel.com/320/240/sport/1/" alt="Spanue quis">
+    </label>
+  </label>
+  <label class="cell-list-item">
+    <input type="checkbox" id="" value="">
+    <span class="img-container">
+      <img src="http://lorempixel.com/240/320/technics/1/" alt="Spanm facilisis">
+    </label>
+  </label>
 </div>
 
             <div class="kss-modifier__example-footer"></div>
@@ -152,33 +189,78 @@ o secciones internas del sitios.</p>
 
           <details class="kss-markup kss-style">
             <summary>
-                Markup: <code>carousel/billboard-carousel.hbs</code>
+                Markup: <code>cell-list/cell-list-with-checkboxes.hbs</code>
             </summary>
             <pre class="prettyprint linenums lang-html">
-              <code data-language="html">&lt;div class&#x3D;&quot;carousel-billboard {{modifier_class}}&quot;&gt;
-  &lt;a href&#x3D;&quot;#0&quot; title&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&quot;&gt;
-    &lt;img src&#x3D;&quot;http://lorempixel.com/g/1024/224/sports/1&quot;
-      alt&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&quot;&gt;
-  &lt;/a&gt;
-  &lt;a href&#x3D;&quot;#0&quot; title&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&quot;&gt;
-    &lt;img src&#x3D;&quot;http://lorempixel.com/g/1024/224/nightlife/2&quot;
-      alt&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&quot;&gt;
-  &lt;/a&gt;
-  &lt;a href&#x3D;&quot;#0&quot; title&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&quot;&gt;
-    &lt;img src&#x3D;&quot;http://lorempixel.com/g/1024/224/technics/3&quot;
-      alt&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&quot;&gt;
-  &lt;/a&gt;
-  &lt;a href&#x3D;&quot;#0&quot; title&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&quot;&gt;
-    &lt;img src&#x3D;&quot;http://lorempixel.com/g/1024/224/abstract/4&quot;
-      alt&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&quot;&gt;
-  &lt;/a&gt;
+              <code data-language="html">{{!-- Ejemplo con checkboxes --}}
+&lt;div class&#x3D;&quot;cell-list&quot;&gt;
+  &lt;label class&#x3D;&quot;cell-list-item&quot;&gt;
+    &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;&quot; value&#x3D;&quot;&quot;&gt;
+    &lt;span class&#x3D;&quot;cell-list-item__body&quot;&gt;
+
+      &lt;span class&#x3D;&quot;icon-email&quot;&gt;&lt;/span&gt;
+      Morbi quis mi
+    &lt;/span&gt;
+  &lt;/label&gt;
+  &lt;label class&#x3D;&quot;cell-list-item&quot;&gt;
+    &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;&quot; value&#x3D;&quot;&quot;&gt;
+    &lt;span class&#x3D;&quot;cell-list-item__body&quot;&gt;
+
+      &lt;span class&#x3D;&quot;icon-garbarino-viajes&quot;&gt;&lt;/span&gt;
+      spanus efficitur
+    &lt;/label&gt;
+  &lt;/label&gt;
+  &lt;label class&#x3D;&quot;cell-list-item&quot;&gt;
+    &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;&quot; value&#x3D;&quot;&quot;&gt;
+    &lt;span class&#x3D;&quot;cell-list-item__body&quot;&gt;
+
+      &lt;span class&#x3D;&quot;icon-gift&quot;&gt;&lt;/span&gt;
+      Spanue quis
+    &lt;/label&gt;
+  &lt;/label&gt;
+  &lt;label class&#x3D;&quot;cell-list-item&quot;&gt;
+    &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;&quot; value&#x3D;&quot;&quot;&gt;
+    &lt;span class&#x3D;&quot;cell-list-item__body&quot;&gt;
+
+      &lt;span class&#x3D;&quot;icon-gift&quot;&gt;&lt;/span&gt;
+      spanm facilisis
+    &lt;/label&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+
+{{!-- Ejemplo con checkboxes e imagenes (usa .img-container) --}}
+&lt;div class&#x3D;&quot;cell-list&quot;&gt;
+  &lt;label class&#x3D;&quot;cell-list-item&quot;&gt;
+    &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;&quot; value&#x3D;&quot;&quot;&gt;
+    &lt;span class&#x3D;&quot;img-container&quot;&gt;
+      &lt;img src&#x3D;&quot;http://lorempixel.com/320/240/business/1/&quot; alt&#x3D;&quot;Morbi quis mi&quot;&gt;
+    &lt;/span&gt;
+  &lt;/label&gt;
+  &lt;label class&#x3D;&quot;cell-list-item&quot;&gt;
+    &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;&quot; value&#x3D;&quot;&quot;&gt;
+    &lt;span class&#x3D;&quot;img-container&quot;&gt;
+      &lt;img src&#x3D;&quot;http://lorempixel.com/320/120/city/1/&quot; alt&#x3D;&quot;Spanus efficitur&quot;&gt;
+    &lt;/label&gt;
+  &lt;/label&gt;
+  &lt;label class&#x3D;&quot;cell-list-item&quot;&gt;
+    &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;&quot; value&#x3D;&quot;&quot;&gt;
+    &lt;span class&#x3D;&quot;img-container&quot;&gt;
+      &lt;img src&#x3D;&quot;http://lorempixel.com/320/240/sport/1/&quot; alt&#x3D;&quot;Spanue quis&quot;&gt;
+    &lt;/label&gt;
+  &lt;/label&gt;
+  &lt;label class&#x3D;&quot;cell-list-item&quot;&gt;
+    &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;&quot; value&#x3D;&quot;&quot;&gt;
+    &lt;span class&#x3D;&quot;img-container&quot;&gt;
+      &lt;img src&#x3D;&quot;http://lorempixel.com/240/320/technics/1/&quot; alt&#x3D;&quot;Spanm facilisis&quot;&gt;
+    &lt;/label&gt;
+  &lt;/label&gt;
 &lt;/div&gt;
 </code>
             </pre>
           </details>
 
         <div class="kss-source kss-style">
-          Source: <code>carousel/_carousel.scss</code>, line 49
+          Source: <code>cell-list/_cell-list.scss</code>, line 202
         </div>
 
     </div>

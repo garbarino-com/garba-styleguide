@@ -234,9 +234,11 @@ usuario final.</p>
             <summary>
                 Markup: <code>../elements/palette.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div style&#x3D;&quot;background: {{modifier_class}}; border-radius: 3px; color: #FFF; padding: 1rem&quot;
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;div style&#x3D;&quot;background: {{modifier_class}}; border-radius: 3px; color: #FFF; padding: 1rem&quot;
   class&#x3D;&quot;styleguide-color&quot;&gt;{{modifier_class}}&lt;/div&gt;
-</code></pre>
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -404,9 +406,11 @@ usuario final.</p>
             <summary>
                 Markup: <code>../elements/palette.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div style&#x3D;&quot;background: {{modifier_class}}; border-radius: 3px; color: #FFF; padding: 1rem&quot;
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;div style&#x3D;&quot;background: {{modifier_class}}; border-radius: 3px; color: #FFF; padding: 1rem&quot;
   class&#x3D;&quot;styleguide-color&quot;&gt;{{modifier_class}}&lt;/div&gt;
-</code></pre>
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -562,9 +566,11 @@ usuario final.</p>
             <summary>
                 Markup: <code>../elements/palette.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div style&#x3D;&quot;background: {{modifier_class}}; border-radius: 3px; color: #FFF; padding: 1rem&quot;
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;div style&#x3D;&quot;background: {{modifier_class}}; border-radius: 3px; color: #FFF; padding: 1rem&quot;
   class&#x3D;&quot;styleguide-color&quot;&gt;{{modifier_class}}&lt;/div&gt;
-</code></pre>
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -705,7 +711,7 @@ para asegurar una visualización equivalente en todos los browsers.</p>
             </div>
 
           <div class="kss-modifier__example">
-            <a class="button " href="#0" role="button">Link</a>
+            <a class="button " href="/url/de/producto/" role="button">Link</a>
 <button class="button " type="submit">Button</button>
 <input class="button " type="button" value="Input">
 <input class="button " type="submit" value="Submit">
@@ -721,7 +727,7 @@ para asegurar una visualización equivalente en todos los browsers.</p>
               Cuando el cursor está posicionado sobre el elemento.
             </div>
             <div class="kss-modifier__example">
-              <a class="button pseudo-class-hover" href="#0" role="button">Link</a>
+              <a class="button pseudo-class-hover" href="/url/de/producto/" role="button">Link</a>
 <button class="button pseudo-class-hover" type="submit">Button</button>
 <input class="button pseudo-class-hover" type="button" value="Input">
 <input class="button pseudo-class-hover" type="submit" value="Submit">
@@ -736,7 +742,7 @@ para asegurar una visualización equivalente en todos los browsers.</p>
               Cuando es presionado.
             </div>
             <div class="kss-modifier__example">
-              <a class="button pseudo-class-focus" href="#0" role="button">Link</a>
+              <a class="button pseudo-class-focus" href="/url/de/producto/" role="button">Link</a>
 <button class="button pseudo-class-focus" type="submit">Button</button>
 <input class="button pseudo-class-focus" type="button" value="Input">
 <input class="button pseudo-class-focus" type="submit" value="Submit">
@@ -750,12 +756,14 @@ para asegurar una visualización equivalente en todos los browsers.</p>
             <summary>
                 Markup: <code>buttons/buttons.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;a class&#x3D;&quot;button {{modifier_class}}&quot; href&#x3D;&quot;#0&quot; role&#x3D;&quot;button&quot;&gt;Link&lt;/a&gt;
-&lt;button class&#x3D;&quot;button {{modifier_class}}&quot; type&#x3D;&quot;submit&quot;&gt;Button&lt;/button&gt;
-&lt;input class&#x3D;&quot;button {{modifier_class}}&quot; type&#x3D;&quot;button&quot; value&#x3D;&quot;Input&quot;&gt;
-&lt;input class&#x3D;&quot;button {{modifier_class}}&quot; type&#x3D;&quot;submit&quot; value&#x3D;&quot;Submit&quot;&gt;
-&lt;input class&#x3D;&quot;button {{modifier_class}}&quot; type&#x3D;&quot;reset&quot; value&#x3D;&quot;Reset&quot;&gt;
-</code></pre>
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;a class&#x3D;&quot;button {{modifier_class}}&quot; href&#x3D;&quot;{{url}}&quot; role&#x3D;&quot;button&quot;&gt;{{text_anchor}}&lt;/a&gt;
+&lt;button class&#x3D;&quot;button {{modifier_class}}&quot; type&#x3D;&quot;submit&quot;&gt;{{text_button}}&lt;/button&gt;
+&lt;input class&#x3D;&quot;button {{modifier_class}}&quot; type&#x3D;&quot;button&quot; value&#x3D;&quot;{{text_input}}&quot;&gt;
+&lt;input class&#x3D;&quot;button {{modifier_class}}&quot; type&#x3D;&quot;submit&quot; value&#x3D;&quot;{{text_submit}}&quot;&gt;
+&lt;input class&#x3D;&quot;button {{modifier_class}}&quot; type&#x3D;&quot;reset&quot; value&#x3D;&quot;{{text_reset}}&quot;&gt;
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -839,7 +847,9 @@ para asegurar una visualización equivalente en todos los browsers.</p>
             </div>
 
           <div class="kss-modifier__example">
-            <button class="button " type="button">Botón ejemplo</button>
+            <button class="button " type="button">
+  Botón ejemplo
+</button>
 
             <div class="kss-modifier__example-footer"></div>
           </div>
@@ -851,7 +861,9 @@ para asegurar una visualización equivalente en todos los browsers.</p>
               Se usa dentro de un conjunto de acciones una vez para la acción primaria.
             </div>
             <div class="kss-modifier__example">
-              <button class="button button--primary" type="button">Botón ejemplo</button>
+              <button class="button button--primary" type="button">
+  Botón ejemplo
+</button>
 
               <div class="kss-modifier__example-footer"></div>
             </div>
@@ -862,7 +874,9 @@ para asegurar una visualización equivalente en todos los browsers.</p>
               Está reservada sólo para la acción <strong>agregar al carrito</strong>. <em>No debe usarse para ninguna otra acción</em>
             </div>
             <div class="kss-modifier__example">
-              <button class="button button--main" type="button">Botón ejemplo</button>
+              <button class="button button--main" type="button">
+  Botón ejemplo
+</button>
 
               <div class="kss-modifier__example-footer"></div>
             </div>
@@ -873,7 +887,9 @@ para asegurar una visualización equivalente en todos los browsers.</p>
               Conserva el layout del botón pero le da el look &amp; feel de un <code>&lt;a&gt;</code> común.
             </div>
             <div class="kss-modifier__example">
-              <button class="button button--link" type="button">Botón ejemplo</button>
+              <button class="button button--link" type="button">
+  Botón ejemplo
+</button>
 
               <div class="kss-modifier__example-footer"></div>
             </div>
@@ -883,8 +899,12 @@ para asegurar una visualización equivalente en todos los browsers.</p>
             <summary>
                 Markup: <code>buttons/button.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class&#x3D;&quot;button {{modifier_class}}&quot; type&#x3D;&quot;button&quot;&gt;Botón ejemplo&lt;/button&gt;
-</code></pre>
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;button class&#x3D;&quot;button {{modifier_class}}&quot; type&#x3D;&quot;button&quot;&gt;
+  {{text}}
+&lt;/button&gt;
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -968,7 +988,9 @@ para asegurar una visualización equivalente en todos los browsers.</p>
             </div>
 
           <div class="kss-modifier__example">
-            <button class="button button__has-icon " type="button">Botón ejemplo</button>
+            <button class="button button__has-icon " type="button">
+  Botón ejemplo
+</button>
 
             <div class="kss-modifier__example-footer"></div>
           </div>
@@ -980,7 +1002,9 @@ para asegurar una visualización equivalente en todos los browsers.</p>
               Está reservado a usos relacionados con la red social <em>facebook</em> (compartir, loguearse, etc.).
             </div>
             <div class="kss-modifier__example">
-              <button class="button button__has-icon button--facebook" type="button">Botón ejemplo</button>
+              <button class="button button__has-icon button--facebook" type="button">
+  Botón ejemplo
+</button>
 
               <div class="kss-modifier__example-footer"></div>
             </div>
@@ -990,8 +1014,12 @@ para asegurar una visualización equivalente en todos los browsers.</p>
             <summary>
                 Markup: <code>buttons/button-has-icon.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class&#x3D;&quot;button button__has-icon {{modifier_class}}&quot; type&#x3D;&quot;button&quot;&gt;Botón ejemplo&lt;/button&gt;
-</code></pre>
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;button class&#x3D;&quot;button button__has-icon {{modifier_class}}&quot; type&#x3D;&quot;button&quot;&gt;
+  {{text}}
+&lt;/button&gt;
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -1084,7 +1112,9 @@ para asegurar una visualización equivalente en todos los browsers.</p>
             </div>
 
           <div class="kss-modifier__example">
-            <button class="button " type="button">Botón ejemplo</button>
+            <button class="button " type="button">
+  Botón ejemplo
+</button>
 
             <div class="kss-modifier__example-footer"></div>
           </div>
@@ -1096,7 +1126,9 @@ para asegurar una visualización equivalente en todos los browsers.</p>
               Variable de tamaño <em>más grande</em>.
             </div>
             <div class="kss-modifier__example">
-              <button class="button button--lg" type="button">Botón ejemplo</button>
+              <button class="button button--lg" type="button">
+  Botón ejemplo
+</button>
 
               <div class="kss-modifier__example-footer"></div>
             </div>
@@ -1107,7 +1139,9 @@ para asegurar una visualización equivalente en todos los browsers.</p>
               Variable de tamaño <em>más chica</em>.
             </div>
             <div class="kss-modifier__example">
-              <button class="button button--sm" type="button">Botón ejemplo</button>
+              <button class="button button--sm" type="button">
+  Botón ejemplo
+</button>
 
               <div class="kss-modifier__example-footer"></div>
             </div>
@@ -1118,7 +1152,9 @@ para asegurar una visualización equivalente en todos los browsers.</p>
               Cambia el valor de display del botón de `block.
             </div>
             <div class="kss-modifier__example">
-              <button class="button button--block" type="button">Botón ejemplo</button>
+              <button class="button button--block" type="button">
+  Botón ejemplo
+</button>
 
               <div class="kss-modifier__example-footer"></div>
             </div>
@@ -1128,8 +1164,12 @@ para asegurar una visualización equivalente en todos los browsers.</p>
             <summary>
                 Markup: <code>buttons/button.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class&#x3D;&quot;button {{modifier_class}}&quot; type&#x3D;&quot;button&quot;&gt;Botón ejemplo&lt;/button&gt;
-</code></pre>
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;button class&#x3D;&quot;button {{modifier_class}}&quot; type&#x3D;&quot;button&quot;&gt;
+  {{text}}
+&lt;/button&gt;
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -1218,7 +1258,9 @@ sólo disponible fijar abajo).</p>
             </div>
 
           <div class="kss-modifier__example">
-            <button class="button " type="button">Botón ejemplo</button>
+            <button class="button " type="button">
+  Botón ejemplo
+</button>
 
             <div class="kss-modifier__example-footer"></div>
           </div>
@@ -1230,7 +1272,9 @@ sólo disponible fijar abajo).</p>
               Cambia el valor de display del botón de <code>block</code>. (Se puede ver abajo pegado contra el borde de la pantalla.)
             </div>
             <div class="kss-modifier__example">
-              <button class="button button__is-fixed-to-bottom" type="button">Botón ejemplo</button>
+              <button class="button button__is-fixed-to-bottom" type="button">
+  Botón ejemplo
+</button>
 
               <div class="kss-modifier__example-footer"></div>
             </div>
@@ -1240,12 +1284,16 @@ sólo disponible fijar abajo).</p>
             <summary>
                 Markup: <code>buttons/button.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class&#x3D;&quot;button {{modifier_class}}&quot; type&#x3D;&quot;button&quot;&gt;Botón ejemplo&lt;/button&gt;
-</code></pre>
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;button class&#x3D;&quot;button {{modifier_class}}&quot; type&#x3D;&quot;button&quot;&gt;
+  {{text}}
+&lt;/button&gt;
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">
-          Source: <code>buttons/_buttons.scss</code>, line 176
+          Source: <code>buttons/_buttons.scss</code>, line 178
         </div>
 
     </section>
@@ -1325,7 +1373,9 @@ sólo disponible fijar abajo).</p>
             </div>
 
           <div class="kss-modifier__example">
-            <button class="button " type="button">Botón ejemplo</button>
+            <button class="button " type="button">
+  Botón ejemplo
+</button>
 
             <div class="kss-modifier__example-footer"></div>
           </div>
@@ -1337,7 +1387,9 @@ sólo disponible fijar abajo).</p>
               Cuando el mouse se desliza sobre el botón.
             </div>
             <div class="kss-modifier__example">
-              <button class="button pseudo-class-hover" type="button">Botón ejemplo</button>
+              <button class="button pseudo-class-hover" type="button">
+  Botón ejemplo
+</button>
 
               <div class="kss-modifier__example-footer"></div>
             </div>
@@ -1348,7 +1400,9 @@ sólo disponible fijar abajo).</p>
               Cuando es presionado.
             </div>
             <div class="kss-modifier__example">
-              <button class="button pseudo-class-focus" type="button">Botón ejemplo</button>
+              <button class="button pseudo-class-focus" type="button">
+  Botón ejemplo
+</button>
 
               <div class="kss-modifier__example-footer"></div>
             </div>
@@ -1359,7 +1413,9 @@ sólo disponible fijar abajo).</p>
               El elemento está <em>deshabilitado</em>.
             </div>
             <div class="kss-modifier__example">
-              <button class="button button__is-disabled" type="button">Botón ejemplo</button>
+              <button class="button button__is-disabled" type="button">
+  Botón ejemplo
+</button>
 
               <div class="kss-modifier__example-footer"></div>
             </div>
@@ -1370,7 +1426,9 @@ sólo disponible fijar abajo).</p>
               El elemento está procesando una acción.
             </div>
             <div class="kss-modifier__example">
-              <button class="button button__is-loading" type="button">Botón ejemplo</button>
+              <button class="button button__is-loading" type="button">
+  Botón ejemplo
+</button>
 
               <div class="kss-modifier__example-footer"></div>
             </div>
@@ -1381,7 +1439,9 @@ sólo disponible fijar abajo).</p>
               El elemento tiene un ícono.
             </div>
             <div class="kss-modifier__example">
-              <button class="button button__has-icon" type="button">Botón ejemplo</button>
+              <button class="button button__has-icon" type="button">
+  Botón ejemplo
+</button>
 
               <div class="kss-modifier__example-footer"></div>
             </div>
@@ -1391,12 +1451,16 @@ sólo disponible fijar abajo).</p>
             <summary>
                 Markup: <code>buttons/button.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class&#x3D;&quot;button {{modifier_class}}&quot; type&#x3D;&quot;button&quot;&gt;Botón ejemplo&lt;/button&gt;
-</code></pre>
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;button class&#x3D;&quot;button {{modifier_class}}&quot; type&#x3D;&quot;button&quot;&gt;
+  {{text}}
+&lt;/button&gt;
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">
-          Source: <code>buttons/_buttons.scss</code>, line 200
+          Source: <code>buttons/_buttons.scss</code>, line 203
         </div>
 
     </section>
@@ -1489,12 +1553,7 @@ por lo que se sugiere acompañar su utilización con un <em>tooltip</em> cumpla 
             </div>
 
           <div class="kss-modifier__example">
-            <button class="button--action " type="button"
-    data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
-  <i class="icon"></i>
-  Action
-</button>
-<a class="button--action " href="#0" role="button"
+            <a class="button--action " href="/url/de/producto/" role="button"
     data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
   <i class="icon"></i>
   Action
@@ -1510,12 +1569,7 @@ por lo que se sugiere acompañar su utilización con un <em>tooltip</em> cumpla 
               Ejecuta la acción primaria en un grupo de acciones (por el momento, está reservado a la acción de <em>Quitar del carrito</em>).
             </div>
             <div class="kss-modifier__example">
-              <button class="button--action button--action__primary" type="button"
-    data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
-  <i class="icon"></i>
-  Action
-</button>
-<a class="button--action button--action__primary" href="#0" role="button"
+              <a class="button--action button--action__primary" href="/url/de/producto/" role="button"
     data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
   <i class="icon"></i>
   Action
@@ -1530,12 +1584,7 @@ por lo que se sugiere acompañar su utilización con un <em>tooltip</em> cumpla 
               Marcar item como favorito.
             </div>
             <div class="kss-modifier__example">
-              <button class="button--action button--action__fav" type="button"
-    data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
-  <i class="icon"></i>
-  Action
-</button>
-<a class="button--action button--action__fav" href="#0" role="button"
+              <a class="button--action button--action__fav" href="/url/de/producto/" role="button"
     data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
   <i class="icon"></i>
   Action
@@ -1550,12 +1599,7 @@ por lo que se sugiere acompañar su utilización con un <em>tooltip</em> cumpla 
               Compartir item en Facebook.
             </div>
             <div class="kss-modifier__example">
-              <button class="button--action button--action__facebook" type="button"
-    data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
-  <i class="icon"></i>
-  Action
-</button>
-<a class="button--action button--action__facebook" href="#0" role="button"
+              <a class="button--action button--action__facebook" href="/url/de/producto/" role="button"
     data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
   <i class="icon"></i>
   Action
@@ -1570,12 +1614,7 @@ por lo que se sugiere acompañar su utilización con un <em>tooltip</em> cumpla 
               Compartir item en Twitter.
             </div>
             <div class="kss-modifier__example">
-              <button class="button--action button--action__twitter" type="button"
-    data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
-  <i class="icon"></i>
-  Action
-</button>
-<a class="button--action button--action__twitter" href="#0" role="button"
+              <a class="button--action button--action__twitter" href="/url/de/producto/" role="button"
     data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
   <i class="icon"></i>
   Action
@@ -1590,12 +1629,7 @@ por lo que se sugiere acompañar su utilización con un <em>tooltip</em> cumpla 
               Todos los modificadores tienen disponible su propia variable de la clase <code>button__is-active</code> para cuando sea necesario marcar que una acción ya se ha ejecutado (ej. /&quot;El producto se ha marcado como favorito&quot;/).
             </div>
             <div class="kss-modifier__example">
-              <button class="button--action button__is-active" type="button"
-    data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
-  <i class="icon"></i>
-  Action
-</button>
-<a class="button--action button__is-active" href="#0" role="button"
+              <a class="button--action button__is-active" href="/url/de/producto/" role="button"
     data-toggle="tooltip" data-placement="top" title="Nota informativa sobre la acción">
   <i class="icon"></i>
   Action
@@ -1609,17 +1643,14 @@ por lo que se sugiere acompañar su utilización con un <em>tooltip</em> cumpla 
             <summary>
                 Markup: <code>button-actions/button-actions.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class&#x3D;&quot;button--action {{modifier_class}}&quot; type&#x3D;&quot;button&quot;
-    data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;top&quot; title&#x3D;&quot;Nota informativa sobre la acción&quot;&gt;
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;a class&#x3D;&quot;button--action {{modifier_class}}&quot; href&#x3D;&quot;{{url}}&quot; role&#x3D;&quot;button&quot;
+    data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;top&quot; title&#x3D;&quot;{{note}}&quot;&gt;
   &lt;i class&#x3D;&quot;icon&quot;&gt;&lt;/i&gt;
-  Action
-&lt;/button&gt;
-&lt;a class&#x3D;&quot;button--action {{modifier_class}}&quot; href&#x3D;&quot;#0&quot; role&#x3D;&quot;button&quot;
-    data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;top&quot; title&#x3D;&quot;Nota informativa sobre la acción&quot;&gt;
-  &lt;i class&#x3D;&quot;icon&quot;&gt;&lt;/i&gt;
-  Action
+  {{text}}
 &lt;/a&gt;
-</code></pre>
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -1868,7 +1899,8 @@ que no se pueden modificar vía la propiedad <code>border-radius</code>.</p>
             <summary>
                 Markup: <code>forms/form-controls.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form&gt;
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;form&gt;
   &lt;div class&#x3D;&quot;form-block&quot;&gt;
     {{!-- Input básico de texto. --}}
     &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control {{modifier_class}}&quot; placeholder&#x3D;&quot;Text&quot;&gt;
@@ -1889,7 +1921,8 @@ que no se pueden modificar vía la propiedad <code>border-radius</code>.</p>
     &lt;textarea class&#x3D;&quot;form-control {{modifier_class}}&quot; rows&#x3D;&quot;3&quot;&gt;&lt;/textarea&gt;
   &lt;/div&gt;
 &lt;/form&gt;
-</code></pre>
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -2110,7 +2143,8 @@ deshabilitar el <code>&lt;fieldset&gt;</code>.</p>
             <summary>
                 Markup: <code>forms/basic-form.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form&gt;
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;form&gt;
   &lt;div class&#x3D;&quot;form-block {{modifier_class}}&quot;&gt;
     &lt;label for&#x3D;&quot;exampleInputEmail1&quot;&gt;Email address&lt;/label&gt;
 
@@ -2130,7 +2164,8 @@ deshabilitar el <code>&lt;fieldset&gt;</code>.</p>
     ¡Suscribirme!
   &lt;/button&gt;
 &lt;/form&gt;
-</code></pre>
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -2359,7 +2394,8 @@ deshabilitar el <code>&lt;fieldset&gt;</code>.</p>
             <summary>
                 Markup: <code>forms/checkbox-and-radio.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;checkbox {{modifier_class}}&quot;&gt;
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;div class&#x3D;&quot;checkbox {{modifier_class}}&quot;&gt;
   &lt;label&gt;
     &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;&quot; value&#x3D;&quot;&quot;&gt;
     Praesent sit amet egestas massa, pretium maximus nulla.
@@ -2400,7 +2436,8 @@ deshabilitar el <code>&lt;fieldset&gt;</code>.</p>
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
   &lt;/p&gt;
 &lt;/div&gt;
-</code></pre>
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -2606,7 +2643,8 @@ o radios en la misma línea.</p>
             <summary>
                 Markup: <code>forms/checkbox-and-radio--inline.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;checkbox {{modifier_class}}&quot;&gt;
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;div class&#x3D;&quot;checkbox {{modifier_class}}&quot;&gt;
   &lt;label class&#x3D;&quot;checkbox-inline&quot;&gt;
     &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;inlineCheckbox1&quot; value&#x3D;&quot;option1&quot;&gt; 1
   &lt;/label&gt;
@@ -2635,7 +2673,8 @@ o radios en la misma línea.</p>
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
   &lt;/p&gt;
 &lt;/div&gt;
-</code></pre>
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -2810,7 +2849,8 @@ clase <code>.control-label--sm</code> al <code>&lt;label&gt;</code> con clase <c
             <summary>
                 Markup: <code>forms/form-horizontal.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form class&#x3D;&quot;form-horizontal&quot; autocomplete&#x3D;&quot;off&quot;&gt;
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;form class&#x3D;&quot;form-horizontal&quot; autocomplete&#x3D;&quot;off&quot;&gt;
   &lt;div class&#x3D;&quot;form-block {{modifier_class}}&quot;&gt;
     &lt;label for&#x3D;&quot;inputEmail3&quot; class&#x3D;&quot;col-md-2 control-label&quot;&gt;Email&lt;/label&gt;
     &lt;div class&#x3D;&quot;col-md-10&quot;&gt;
@@ -2845,7 +2885,8 @@ clase <code>.control-label--sm</code> al <code>&lt;label&gt;</code> con clase <c
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/form&gt;
-</code></pre>
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -3070,7 +3111,8 @@ de las <em>Grid-list</em>&#39;s.</p>
             <summary>
                 Markup: <code>forms/checkbox-and-radio--boxed.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;checkbox {{modifier_class}}&quot;&gt;
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;div class&#x3D;&quot;checkbox {{modifier_class}}&quot;&gt;
   &lt;label class&#x3D;&quot;checkbox-box&quot;&gt;
     &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;inlineCheckbox1&quot; value&#x3D;&quot;option1&quot;&gt;
     Sed volutpat dignissim
@@ -3105,7 +3147,8 @@ de las <em>Grid-list</em>&#39;s.</p>
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
   &lt;/p&gt;
 &lt;/div&gt;
-</code></pre>
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -3235,7 +3278,8 @@ recurrir a los <em>Grid-list</em>&#39;s.</p>
             <summary>
                 Markup: <code>forms/checkbox-and-radio--boxed__has-images.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;radio {{modifier_class}}&quot;&gt;
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;div class&#x3D;&quot;radio {{modifier_class}}&quot;&gt;
   &lt;label class&#x3D;&quot;radio-box&quot; data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;bottom&quot;
       title&#x3D;&quot;Morbi pulvinar est arcu pulvinar est arcu&quot;&gt;
     &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;inlineRadioOptions&quot; id&#x3D;&quot;inlineRadio1&quot; value&#x3D;&quot;option1&quot;&gt;
@@ -3264,7 +3308,8 @@ recurrir a los <em>Grid-list</em>&#39;s.</p>
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
   &lt;/p&gt;
 &lt;/div&gt;
-</code></pre>
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -3605,7 +3650,8 @@ de error sólo muestra el mensaje con detalle del error.</li>
             <summary>
                 Markup: <code>forms/control-groups.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;form-block {{modifier_class}}&quot;&gt;
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;div class&#x3D;&quot;form-block {{modifier_class}}&quot;&gt;
   &lt;div class&#x3D;&quot;control-group&quot;&gt;
     &lt;span class&#x3D;&quot;control-group__addon&quot; id&#x3D;&quot;basic-addon1&quot;&gt;@&lt;/span&gt;
     &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Username&quot; aria-describedby&#x3D;&quot;basic-addon1&quot;&gt;
@@ -3665,7 +3711,8 @@ de error sólo muestra el mensaje con detalle del error.</li>
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
   &lt;/p&gt;
 &lt;/div&gt;
-</code></pre>
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -3953,7 +4000,8 @@ campo de form.</p>
             <summary>
                 Markup: <code>forms/control-helpers.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form&gt;
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;form&gt;
   &lt;div class&#x3D;&quot;form-block {{modifier_class}}&quot;&gt;
     {{!-- Es necesario que el helper tiene que aparecer previo al form-control
           para que funcionen bien los estilos --}}
@@ -4022,7 +4070,8 @@ campo de form.</p>
     &lt;/p&gt;
   &lt;/div&gt;
 &lt;/form&gt;
-</code></pre>
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -4326,7 +4375,8 @@ para un <code>&lt;input&gt;</code>), el helper en este contexto aparece inline.<
             <summary>
                 Markup: <code>forms/checkboxes-and-radiobuttons-control-helpers.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form&gt;
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;form&gt;
   &lt;div class&#x3D;&quot;checkbox {{modifier_class}}&quot;&gt;
     &lt;label&gt;
       &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;&quot; value&#x3D;&quot;&quot;&gt;
@@ -4387,7 +4437,8 @@ para un <code>&lt;input&gt;</code>), el helper en este contexto aparece inline.<
     &lt;/label&gt;
   &lt;/div&gt;
 &lt;/form&gt;
-</code></pre>
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -4507,7 +4558,8 @@ así como mixins para generar layouts más semánticos.</p>
             <summary>
                 Markup: <code>grid/grid.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">{{!-- La clase .grid-display no es necesaria para la hacer funcionar la grilla,
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">{{!-- La clase .grid-display no es necesaria para la hacer funcionar la grilla,
       Está usada acá para pintar un fondo que permita distinguir el contenido del
       padding.  --}}
 
@@ -4531,7 +4583,8 @@ así como mixins para generar layouts más semánticos.</p>
   &lt;div class&#x3D;&quot;col-sm-2&quot;&gt;&lt;/div&gt;
   &lt;div class&#x3D;&quot;col-sm-2&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -4652,7 +4705,8 @@ si se usa adentro de un <em>Form</em>.)</p>
             <summary>
                 Markup: <code>grid/grid-narrow.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">{{!-- La clase .grid-display no es necesaria para la hacer funcionar la grilla,
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">{{!-- La clase .grid-display no es necesaria para la hacer funcionar la grilla,
       Está usada acá para pintar un fondo que permita distinguir el contenido del
       padding.  --}}
 
@@ -4676,7 +4730,8 @@ si se usa adentro de un <em>Form</em>.)</p>
   &lt;div class&#x3D;&quot;col-sm-2&quot;&gt;&lt;/div&gt;
   &lt;div class&#x3D;&quot;col-sm-2&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -5729,8 +5784,10 @@ Es preferible usar <code>span</code>.</p>
             <summary>
                 Markup: <code>icons/icons.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;span class&#x3D;&quot;{{modifier_class}}&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/span&gt;
-</code></pre>
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;span class&#x3D;&quot;{{modifier_class}}&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/span&gt;
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -5862,12 +5919,14 @@ con dimensiones adecuadas.</li>
             <summary>
                 Markup: <code>image-container/image-container.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;img-container {{modifier_class}}&quot;&gt;
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;div class&#x3D;&quot;img-container {{modifier_class}}&quot;&gt;
   {{!-- Esta imágen está puesta solamente como demostración. --}}
   &lt;img itemprop&#x3D;&quot;image&quot; src&#x3D;&quot;http://lorempixel.com/800/600/sports/&quot;
     alt&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&quot; /&gt;
 &lt;/div&gt;
-</code></pre>
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -6000,10 +6059,12 @@ producto que posean el dicha característica).</p>
             <summary>
                 Markup: <code>labels/labels.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;span class&#x3D;&quot;label {{modifier_class}}&quot; title&#x3D;&quot;Interdum et malesuada fames&quot;&gt;
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;span class&#x3D;&quot;label {{modifier_class}}&quot; title&#x3D;&quot;Interdum et malesuada fames&quot;&gt;
   Interdum et malesuada fames.
 &lt;/span&gt;
-</code></pre>
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -6112,7 +6173,8 @@ con texto contextual.</p>
             <summary>
                 Markup: <code>media-object/media-object.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;media&quot;&gt;
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;div class&#x3D;&quot;media&quot;&gt;
   &lt;div class&#x3D;&quot;media-left&quot;&gt;
     &lt;a href&#x3D;&quot;#&quot;&gt;
       &lt;img class&#x3D;&quot;media-object&quot; src&#x3D;&quot;http://lorempixel.com/180/180/sports/&quot;
@@ -6123,7 +6185,8 @@ con texto contextual.</p>
     Fusce turpis est, sollicitudin sit amet massa at, ornare iaculis velit.
   &lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -6231,10 +6294,12 @@ línea que contiene los tags.</li>
             <summary>
                 Markup: <code>tags/tags.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;a href&#x3D;&quot;#0&quot; class&#x3D;&quot;tag&quot; title&#x3D;&quot;Interdum et malesuada fames&quot;&gt;
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;a href&#x3D;&quot;#0&quot; class&#x3D;&quot;tag&quot; title&#x3D;&quot;Interdum et malesuada fames&quot;&gt;
   Tag de ejemplo
 &lt;/a&gt;
-</code></pre>
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -6326,20 +6391,23 @@ o importes totales (no necesariamente aplica a los precios por unidad).</p>
             </div>
 
           <div class="kss-modifier__example">
-            <div class="value-container " itemprop="offers"
-    itemscope itemtype="http://schema.org/Offer">
+            <div class="value-container" itemprop="offers" itemscope
+    itemtype="http://schema.org/Offer">
   <span class="value-note">
-    Precio en 1 pago.
+      <del>$1299</del>
+      <span class="label label--main">
+        38% off
+      </span>
   </span>
-
-  <meta itemprop="priceCurrency" content={this.props.currency}>
+  <meta itemprop="priceCurrency" content="ARS">
   <span class="value-item">
-    $<span itemprop={this.props.itempropItem}>
-      119.99
+    $<span itemprop="price">
+      799
     </span>
   </span>
-
-  <link href="http://schema.org/InStock" itemprop="inStock">
+  <link
+      href="http://schema.org/InStock" itemprop="inStock"
+>
 </div>
 
             <div class="kss-modifier__example-footer"></div>
@@ -6352,20 +6420,23 @@ o importes totales (no necesariamente aplica a los precios por unidad).</p>
               Reservado para <em>Ficha de producto</em> y el bloque <em>Súper Oferta</em>.
             </div>
             <div class="kss-modifier__example">
-              <div class="value-container value-container--lg" itemprop="offers"
-    itemscope itemtype="http://schema.org/Offer">
+              <div class="value-container" itemprop="offers" itemscope
+    itemtype="http://schema.org/Offer">
   <span class="value-note">
-    Precio en 1 pago.
+      <del>$1299</del>
+      <span class="label label--main">
+        38% off
+      </span>
   </span>
-
-  <meta itemprop="priceCurrency" content={this.props.currency}>
+  <meta itemprop="priceCurrency" content="ARS">
   <span class="value-item">
-    $<span itemprop={this.props.itempropItem}>
-      119.99
+    $<span itemprop="price">
+      799
     </span>
   </span>
-
-  <link href="http://schema.org/InStock" itemprop="inStock">
+  <link
+      href="http://schema.org/InStock" itemprop="inStock"
+>
 </div>
 
               <div class="kss-modifier__example-footer"></div>
@@ -6377,20 +6448,23 @@ o importes totales (no necesariamente aplica a los precios por unidad).</p>
               Se utiliza para comunicar importes totales (p.ej: en el checkout).
             </div>
             <div class="kss-modifier__example">
-              <div class="value-container value-container--sm" itemprop="offers"
-    itemscope itemtype="http://schema.org/Offer">
+              <div class="value-container" itemprop="offers" itemscope
+    itemtype="http://schema.org/Offer">
   <span class="value-note">
-    Precio en 1 pago.
+      <del>$1299</del>
+      <span class="label label--main">
+        38% off
+      </span>
   </span>
-
-  <meta itemprop="priceCurrency" content={this.props.currency}>
+  <meta itemprop="priceCurrency" content="ARS">
   <span class="value-item">
-    $<span itemprop={this.props.itempropItem}>
-      119.99
+    $<span itemprop="price">
+      799
     </span>
   </span>
-
-  <link href="http://schema.org/InStock" itemprop="inStock">
+  <link
+      href="http://schema.org/InStock" itemprop="inStock"
+>
 </div>
 
               <div class="kss-modifier__example-footer"></div>
@@ -6401,22 +6475,32 @@ o importes totales (no necesariamente aplica a los precios por unidad).</p>
             <summary>
                 Markup: <code>value/value.hbs</code>
             </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;value-container {{modifier_class}}&quot; itemprop&#x3D;&quot;offers&quot;
-    itemscope itemtype&#x3D;&quot;http://schema.org/Offer&quot;&gt;
+            <pre class="prettyprint linenums lang-html">
+              <code data-language="html">&lt;div class&#x3D;&quot;value-container&quot; itemprop&#x3D;&quot;offers&quot; itemscope
+    itemtype&#x3D;&quot;http://schema.org/Offer&quot;&gt;
   &lt;span class&#x3D;&quot;value-note&quot;&gt;
-    Precio en 1 pago.
+    {{#if discount}}
+      &lt;del&gt;${{list_price}}&lt;/del&gt;
+      &lt;span class&#x3D;&quot;label label--main&quot;&gt;
+        {{discount}}% off
+      &lt;/span&gt;
+    {{/if}}
   &lt;/span&gt;
-
-  &lt;meta itemprop&#x3D;&quot;priceCurrency&quot; content&#x3D;{this.props.currency}&gt;
+  &lt;meta itemprop&#x3D;&quot;priceCurrency&quot; content&#x3D;&quot;ARS&quot;&gt;
   &lt;span class&#x3D;&quot;value-item&quot;&gt;
-    $&lt;span itemprop&#x3D;{this.props.itempropItem}&gt;
-      119.99
+    $&lt;span itemprop&#x3D;&quot;price&quot;&gt;
+      {{price}}
     &lt;/span&gt;
   &lt;/span&gt;
-
-  &lt;link href&#x3D;&quot;http://schema.org/InStock&quot; itemprop&#x3D;&quot;inStock&quot;&gt;
+  &lt;link
+    {{#if enabled_for_sale}}
+      href&#x3D;&quot;http://schema.org/InStock&quot; itemprop&#x3D;&quot;inStock&quot;
+    {{else}}
+      href&#x3D;&quot;http://schema.org/OutOfStock&quot; itemprop&#x3D;&quot;OutOfStock&quot;
+    {{/if}}&gt;
 &lt;/div&gt;
-</code></pre>
+</code>
+            </pre>
           </details>
 
         <div class="kss-source kss-style">

@@ -122,45 +122,36 @@ Usage:</p>
 
 
         <div class="kss-source kss-style">
-          Source: <code>_animations.scss</code>, line 1
+          Source: <code>_animation.scss</code>, line 1
         </div>
 
     </section>
-    <section id="kssref-helpers-animation-keyframes" class="kss-section kss-section--depth-3 ">
+    <section id="kssref-helpers-animation-opacity" class="kss-section kss-section--depth-3 ">
 
       <div class="kss-style">
         <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-helpers-animation-keyframes">
+          <a class="kss-title__permalink" href="#kssref-helpers-animation-opacity">
             <span class="kss-title__ref">
               4.1.1
               <span class="kss-title__permalink-hash">
-                  #Helpers.Animation.Keyframes
+                  #Helpers.Animation.Opacity
               </span>
             </span>
-            @keyframes($animationName)
+            @keyframes block-animation--opacity
           </a>
         </h3>
 
 
           <div class="kss-description">
-            <p>Generador de animación incluye diferentes vendor prefixes en el output.</p>
+            <p>Transición de opacidad de 0 a 1</p>
 
           </div>
 
-          <div class="kss-parameters__title">Parameters:</div>
-          <ul class="kss-parameters">
-            <li class="kss-parameters__item">
-              <div class="kss-parameters__name"><code>$animationName</code></div>
-              <div class="kss-parameters__description">
-                Nombre de la animación.
-              </div>
-            </li>
-          </ul>
       </div>
 
 
         <div class="kss-source kss-style">
-          Source: <code>_animations.scss</code>, line 8
+          Source: <code>_animation.scss</code>, line 8
         </div>
 
     </section>
@@ -828,35 +819,6 @@ referencia de uso).</p>
                   #Helpers.Misc.RemoveUnit
               </span>
             </span>
-            @strip-units($number)
-          </a>
-        </h3>
-
-
-          <div class="kss-description">
-            <p>Devuelve el número de una variable quitándole la unidad de medida.</p>
-
-          </div>
-
-      </div>
-
-
-        <div class="kss-source kss-style">
-          Source: <code>_px-to-rem.scss</code>, line 1
-        </div>
-
-    </section>
-    <section id="kssref-helpers-misc-removeunit" class="kss-section kss-section--depth-3 ">
-
-      <div class="kss-style">
-        <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-helpers-misc-removeunit">
-            <span class="kss-title__ref">
-              4.7.2
-              <span class="kss-title__permalink-hash">
-                  #Helpers.Misc.RemoveUnit
-              </span>
-            </span>
             @px-to-rem($pxval)
           </a>
         </h3>
@@ -874,6 +836,35 @@ a rem, escribir <code>px-to-rem(12)</code> o <code>px-to-rem(12px)</code>.</p>
 
         <div class="kss-source kss-style">
           Source: <code>_px-to-rem.scss</code>, line 18
+        </div>
+
+    </section>
+    <section id="kssref-helpers-misc-removeunit" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-helpers-misc-removeunit">
+            <span class="kss-title__ref">
+              4.7.2
+              <span class="kss-title__permalink-hash">
+                  #Helpers.Misc.RemoveUnit
+              </span>
+            </span>
+            @strip-units($number)
+          </a>
+        </h3>
+
+
+          <div class="kss-description">
+            <p>Devuelve el número de una variable quitándole la unidad de medida.</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>_px-to-rem.scss</code>, line 1
         </div>
 
     </section>
@@ -977,28 +968,24 @@ para el uso. Documentación para dichos mixins se puede encontrar en
         </div>
 
     </section>
-    <section id="kssref-helpers-states-addspinner" class="kss-section kss-section--depth-3 ">
+    <section id="kssref-helpers-states-appendspinnertoelement" class="kss-section kss-section--depth-3 ">
 
       <div class="kss-style">
         <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-helpers-states-addspinner">
+          <a class="kss-title__permalink" href="#kssref-helpers-states-appendspinnertoelement">
             <span class="kss-title__ref">
               4.9.1
               <span class="kss-title__permalink-hash">
-                  #Helpers.States.AddSpinner
+                  #Helpers.States.AppendSpinnerToElement
               </span>
             </span>
-            @add-spinner($params)
+            @append-spinner-to-element($size)
           </a>
         </h3>
 
 
           <div class="kss-description">
-            <p>Genera un spinner animado y lo hace girar. Se usa para indicar el estado <code>loading</code>
-al usuario.</p>
-<blockquote>
-<p>Este helper no genera el elemento (se debe usar adentro de uno) ni le fija posición.</p>
-</blockquote>
+            <p>Agrega un spinner mediano en un elemento.</p>
 
           </div>
 
@@ -1010,30 +997,12 @@ al usuario.</p>
                 Tamaño del spinner.
               </div>
             </li>
-            <li class="kss-parameters__item">
-              <div class="kss-parameters__name"><code>$spinner-width</code></div>
-              <div class="kss-parameters__description">
-                Ancho del spinner.
-              </div>
-            </li>
-            <li class="kss-parameters__item">
-              <div class="kss-parameters__name"><code>$spinner-color-inactive</code></div>
-              <div class="kss-parameters__description">
-                Color de los tres cuartos de círculo que son del color inactivo.
-              </div>
-            </li>
-            <li class="kss-parameters__item">
-              <div class="kss-parameters__name"><code>$spinner-color-active</code></div>
-              <div class="kss-parameters__description">
-                Color del cuarto de círculo que es del color activo.
-              </div>
-            </li>
           </ul>
       </div>
 
 
         <div class="kss-source kss-style">
-          Source: <code>_spinners.scss</code>, line 14
+          Source: <code>_spinners.scss</code>, line 68
         </div>
 
     </section>
@@ -1076,13 +1045,64 @@ que sufre un componente cuando cambia al estado <code>:focus</code>.</p>
         </div>
 
     </section>
+    <section id="kssref-helpers-states-generateloaderelement" class="kss-section kss-section--depth-3 ">
+
+      <div class="kss-style">
+        <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-helpers-states-generateloaderelement">
+            <span class="kss-title__ref">
+              4.9.3
+              <span class="kss-title__permalink-hash">
+                  #Helpers.States.GenerateLoaderElement
+              </span>
+            </span>
+            @generate-loading-state-for-element($size, $overlayColor, $startPointVertical)
+          </a>
+        </h3>
+
+
+          <div class="kss-description">
+            <p>Usa <code>pseudo-elementos</code> para generar un overlay y un spinner centrado dentro
+del elemento contenedor.</p>
+
+          </div>
+
+          <div class="kss-parameters__title">Parameters:</div>
+          <ul class="kss-parameters">
+            <li class="kss-parameters__item">
+              <div class="kss-parameters__name"><code>$size</code></div>
+              <div class="kss-parameters__description">
+                Tamaño del spinner. Acepta dos valores: <code>&quot;medium&quot;</code> o <code>&quot;large&quot;</code>
+              </div>
+            </li>
+            <li class="kss-parameters__item">
+              <div class="kss-parameters__name"><code>$overlayColor</code></div>
+              <div class="kss-parameters__description">
+                Color de fondo del overlay. Default: Blanco
+              </div>
+            </li>
+            <li class="kss-parameters__item">
+              <div class="kss-parameters__name"><code>$startPointVertical</code></div>
+              <div class="kss-parameters__description">
+                El punto de orígen vertical del overlay. Default: 0
+              </div>
+            </li>
+          </ul>
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>_spinners.scss</code>, line 1
+        </div>
+
+    </section>
     <section id="kssref-helpers-states-hoverstate" class="kss-section kss-section--depth-3 ">
 
       <div class="kss-style">
         <h3 class="kss-title kss-title--level-3">
           <a class="kss-title__permalink" href="#kssref-helpers-states-hoverstate">
             <span class="kss-title__ref">
-              4.9.3
+              4.9.4
               <span class="kss-title__permalink-hash">
                   #Helpers.States.HoverState
               </span>
@@ -1409,9 +1429,9 @@ luego como un elemento de DOM.</p>
             </li>
             <li class="kss-nav__menu-item">
               <a class="kss-nav__menu-link kss-nav__grand-child"
-                  href="section-helpers.html#kssref-helpers-animation-keyframes">
+                  href="section-helpers.html#kssref-helpers-animation-opacity">
                 <span class="kss-nav__ref kss-nav__ref-child">4.1.1</span
-                ><span class="kss-nav__name">@keyframes($animationName)</span>
+                ><span class="kss-nav__name">@keyframes block-animation--opacity</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
@@ -1544,14 +1564,14 @@ luego como un elemento de DOM.</p>
               <a class="kss-nav__menu-link kss-nav__grand-child"
                   href="section-helpers.html#kssref-helpers-misc-removeunit">
                 <span class="kss-nav__ref kss-nav__ref-child">4.7.2</span
-                ><span class="kss-nav__name">@strip-units($number)</span>
+                ><span class="kss-nav__name">@px-to-rem($pxval)</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
               <a class="kss-nav__menu-link kss-nav__grand-child"
                   href="section-helpers.html#kssref-helpers-misc-removeunit">
                 <span class="kss-nav__ref kss-nav__ref-child">4.7.2</span
-                ><span class="kss-nav__name">@px-to-rem($pxval)</span>
+                ><span class="kss-nav__name">@strip-units($number)</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
@@ -1577,9 +1597,9 @@ luego como un elemento de DOM.</p>
             </li>
             <li class="kss-nav__menu-item">
               <a class="kss-nav__menu-link kss-nav__grand-child"
-                  href="section-helpers.html#kssref-helpers-states-addspinner">
+                  href="section-helpers.html#kssref-helpers-states-appendspinnertoelement">
                 <span class="kss-nav__ref kss-nav__ref-child">4.9.1</span
-                ><span class="kss-nav__name">@add-spinner($params)</span>
+                ><span class="kss-nav__name">@append-spinner-to-element($size)</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
@@ -1591,8 +1611,15 @@ luego como un elemento de DOM.</p>
             </li>
             <li class="kss-nav__menu-item">
               <a class="kss-nav__menu-link kss-nav__grand-child"
-                  href="section-helpers.html#kssref-helpers-states-hoverstate">
+                  href="section-helpers.html#kssref-helpers-states-generateloaderelement">
                 <span class="kss-nav__ref kss-nav__ref-child">4.9.3</span
+                ><span class="kss-nav__name">@generate-loading-state-for-element($size, $overlayColor, $startPointVertical)</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a class="kss-nav__menu-link kss-nav__grand-child"
+                  href="section-helpers.html#kssref-helpers-states-hoverstate">
+                <span class="kss-nav__ref kss-nav__ref-child">4.9.4</span
                 ><span class="kss-nav__name">@state-hover-modifier($color)</span>
               </a>
             </li>
