@@ -148,15 +148,16 @@ que no se pueden modificar vía la propiedad <code>border-radius</code>.</p>
           <div class="kss-modifier__example">
             <form>
   <div class="form-block">
-    <input type="text" class="form-control " placeholder="Text">
+    <input type="text" class="form-control "
+      placeholder="Text">
   </div>
 
   <div class="form-block">
     <select class="form-control ">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
+      <option value="Volvo">Volvo</option>
+      <option value="Saab">Saab</option>
+      <option value="Mercedes">Mercedes</option>
+      <option value="Audi">Audi</option>
     </select>
   </div>
 
@@ -177,15 +178,16 @@ que no se pueden modificar vía la propiedad <code>border-radius</code>.</p>
             <div class="kss-modifier__example">
               <form>
   <div class="form-block">
-    <input type="text" class="form-control pseudo-class-focus" placeholder="Text">
+    <input type="text" class="form-control pseudo-class-focus"
+      placeholder="Text">
   </div>
 
   <div class="form-block">
     <select class="form-control pseudo-class-focus">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
+      <option value="Volvo">Volvo</option>
+      <option value="Saab">Saab</option>
+      <option value="Mercedes">Mercedes</option>
+      <option value="Audi">Audi</option>
     </select>
   </div>
 
@@ -205,15 +207,16 @@ que no se pueden modificar vía la propiedad <code>border-radius</code>.</p>
             <div class="kss-modifier__example">
               <form>
   <div class="form-block">
-    <input type="text" class="form-control control__is-disabled" placeholder="Text">
+    <input type="text" class="form-control control__is-disabled"
+      placeholder="Text">
   </div>
 
   <div class="form-block">
     <select class="form-control control__is-disabled">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
+      <option value="Volvo">Volvo</option>
+      <option value="Saab">Saab</option>
+      <option value="Mercedes">Mercedes</option>
+      <option value="Audi">Audi</option>
     </select>
   </div>
 
@@ -233,15 +236,16 @@ que no se pueden modificar vía la propiedad <code>border-radius</code>.</p>
             <div class="kss-modifier__example">
               <form>
   <div class="form-block">
-    <input type="text" class="form-control form-control--sm" placeholder="Text">
+    <input type="text" class="form-control form-control--sm"
+      placeholder="Text">
   </div>
 
   <div class="form-block">
     <select class="form-control form-control--sm">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
+      <option value="Volvo">Volvo</option>
+      <option value="Saab">Saab</option>
+      <option value="Mercedes">Mercedes</option>
+      <option value="Audi">Audi</option>
     </select>
   </div>
 
@@ -261,17 +265,18 @@ que no se pueden modificar vía la propiedad <code>border-radius</code>.</p>
             <pre class="prettyprint linenums lang-html">
               <code data-language="html">&lt;form&gt;
   &lt;div class&#x3D;&quot;form-block&quot;&gt;
-    {{!-- Input básico de texto. --}}
-    &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control {{modifier_class}}&quot; placeholder&#x3D;&quot;Text&quot;&gt;
+    {{!-- Text input. --}}
+    &lt;input type&#x3D;&quot;{{control1.type}}&quot; class&#x3D;&quot;form-control {{modifier_class}}&quot;
+      placeholder&#x3D;&quot;{{control1.placeholder}}&quot;&gt;
   &lt;/div&gt;
 
   &lt;div class&#x3D;&quot;form-block&quot;&gt;
     {{!-- Select --}}
     &lt;select class&#x3D;&quot;form-control {{modifier_class}}&quot;&gt;
-      &lt;option value&#x3D;&quot;volvo&quot;&gt;Volvo&lt;/option&gt;
-      &lt;option value&#x3D;&quot;saab&quot;&gt;Saab&lt;/option&gt;
-      &lt;option value&#x3D;&quot;mercedes&quot;&gt;Mercedes&lt;/option&gt;
-      &lt;option value&#x3D;&quot;audi&quot;&gt;Audi&lt;/option&gt;
+      &lt;option value&#x3D;&quot;{{control2.select.option1}}&quot;&gt;{{control2.select.option1}}&lt;/option&gt;
+      &lt;option value&#x3D;&quot;{{control2.select.option2}}&quot;&gt;{{control2.select.option2}}&lt;/option&gt;
+      &lt;option value&#x3D;&quot;{{control2.select.option3}}&quot;&gt;{{control2.select.option3}}&lt;/option&gt;
+      &lt;option value&#x3D;&quot;{{control2.select.option4}}&quot;&gt;{{control2.select.option4}}&lt;/option&gt;
     &lt;/select&gt;
   &lt;/div&gt;
 

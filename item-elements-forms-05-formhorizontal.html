@@ -129,24 +129,27 @@ clase <code>.control-label--sm</code> al <code>&lt;label&gt;</code> con clase <c
           <div class="kss-modifier__example">
             <form class="form-horizontal" autocomplete="off">
   <div class="form-block ">
-    <label for="inputEmail3" class="col-md-2 control-label">Email</label>
+    <label for="inputEmail3" class="col-md-2 control-label">
+      Email
+    </label>
     <div class="col-md-10">
-      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+      <input type="email" class="form-control" id="inputEmail3"
+        placeholder="Ingrese su email">
 
       <span class="form-block__feedback"></span>
-
       <p class="form-block__note">
         Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
       </p>
     </div>
   </div>
   <div class="form-block ">
-    <label for="inputPassword3" class="col-md-2 control-label control-label--sm">Password</label>
+    <label for="inputPassword4" class="col-md-2 control-label control-label--sm">
+      Password
+    </label>
     <div class="col-md-10">
-      <input type="password" class="form-control form-control--sm" id="inputPassword3" placeholder="Password">
+      <input type="password" class="form-control form-control--sm" id="inputPassword4" placeholder="Ingrese su password">
 
       <span class="form-block__feedback"></span>
-
       <p class="form-block__note">
         Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
       </p>
@@ -154,7 +157,9 @@ clase <code>.control-label--sm</code> al <code>&lt;label&gt;</code> con clase <c
   </div>
   <div class="form-block">
     <div class="col-md-offset-2 col-md-10">
-      <button type="submit" class="button button--primary">Sign in</button>
+      <button type="submit" class="button button--primary">
+        Sign in
+      </button>
     </div>
   </div>
 </form>
@@ -171,24 +176,27 @@ clase <code>.control-label--sm</code> al <code>&lt;label&gt;</code> con clase <c
             <div class="kss-modifier__example">
               <form class="form-horizontal" autocomplete="off">
   <div class="form-block block__has-error">
-    <label for="inputEmail3" class="col-md-2 control-label">Email</label>
+    <label for="inputEmail3" class="col-md-2 control-label">
+      Email
+    </label>
     <div class="col-md-10">
-      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+      <input type="email" class="form-control" id="inputEmail3"
+        placeholder="Ingrese su email">
 
       <span class="form-block__feedback"></span>
-
       <p class="form-block__note">
         Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
       </p>
     </div>
   </div>
   <div class="form-block block__has-error">
-    <label for="inputPassword3" class="col-md-2 control-label control-label--sm">Password</label>
+    <label for="inputPassword4" class="col-md-2 control-label control-label--sm">
+      Password
+    </label>
     <div class="col-md-10">
-      <input type="password" class="form-control form-control--sm" id="inputPassword3" placeholder="Password">
+      <input type="password" class="form-control form-control--sm" id="inputPassword4" placeholder="Ingrese su password">
 
       <span class="form-block__feedback"></span>
-
       <p class="form-block__note">
         Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
       </p>
@@ -196,7 +204,9 @@ clase <code>.control-label--sm</code> al <code>&lt;label&gt;</code> con clase <c
   </div>
   <div class="form-block">
     <div class="col-md-offset-2 col-md-10">
-      <button type="submit" class="button button--primary">Sign in</button>
+      <button type="submit" class="button button--primary">
+        Sign in
+      </button>
     </div>
   </div>
 </form>
@@ -212,36 +222,39 @@ clase <code>.control-label--sm</code> al <code>&lt;label&gt;</code> con clase <c
             <pre class="prettyprint linenums lang-html">
               <code data-language="html">&lt;form class&#x3D;&quot;form-horizontal&quot; autocomplete&#x3D;&quot;off&quot;&gt;
   &lt;div class&#x3D;&quot;form-block {{modifier_class}}&quot;&gt;
-    &lt;label for&#x3D;&quot;inputEmail3&quot; class&#x3D;&quot;col-md-2 control-label&quot;&gt;Email&lt;/label&gt;
+    &lt;label for&#x3D;&quot;{{block1.id}}&quot; class&#x3D;&quot;col-md-2 control-label&quot;&gt;
+      {{block1.label}}
+    &lt;/label&gt;
     &lt;div class&#x3D;&quot;col-md-10&quot;&gt;
-      &lt;input type&#x3D;&quot;email&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;inputEmail3&quot; placeholder&#x3D;&quot;Email&quot;&gt;
+      &lt;input type&#x3D;&quot;{{block1.type}}&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;{{block1.id}}&quot;
+        placeholder&#x3D;&quot;{{block1.placeholder}}&quot;&gt;
 
-      {{!-- El ícono y el mensaje se muestran sólo cuando el padre recibe una de las clases
-            de validación, de lo contrario permanece oculto. --}}
+      {{!-- Validation block (hidden by default) --}}
       &lt;span class&#x3D;&quot;form-block__feedback&quot;&gt;&lt;/span&gt;
-
       &lt;p class&#x3D;&quot;form-block__note&quot;&gt;
-        Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+        {{block1.note}}
       &lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class&#x3D;&quot;form-block {{modifier_class}}&quot;&gt;
-    &lt;label for&#x3D;&quot;inputPassword3&quot; class&#x3D;&quot;col-md-2 control-label control-label--sm&quot;&gt;Password&lt;/label&gt;
+    &lt;label for&#x3D;&quot;{{block2.id}}&quot; class&#x3D;&quot;col-md-2 control-label control-label--sm&quot;&gt;
+      {{block2.label}}
+    &lt;/label&gt;
     &lt;div class&#x3D;&quot;col-md-10&quot;&gt;
-      &lt;input type&#x3D;&quot;password&quot; class&#x3D;&quot;form-control form-control--sm&quot; id&#x3D;&quot;inputPassword3&quot; placeholder&#x3D;&quot;Password&quot;&gt;
+      &lt;input type&#x3D;&quot;{{block2.type}}&quot; class&#x3D;&quot;form-control form-control--sm&quot; id&#x3D;&quot;{{block2.id}}&quot; placeholder&#x3D;&quot;{{block2.placeholder}}&quot;&gt;
 
-      {{!-- El ícono y el mensaje se muestran sólo cuando el padre recibe una de las clases
-            de validación, de lo contrario permanece oculto. --}}
+      {{!-- Validation block (hidden by default) --}}
       &lt;span class&#x3D;&quot;form-block__feedback&quot;&gt;&lt;/span&gt;
-
       &lt;p class&#x3D;&quot;form-block__note&quot;&gt;
-        Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+        {{block2.note}}
       &lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class&#x3D;&quot;form-block&quot;&gt;
     &lt;div class&#x3D;&quot;col-md-offset-2 col-md-10&quot;&gt;
-      &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;button button--primary&quot;&gt;Sign in&lt;/button&gt;
+      &lt;button type&#x3D;&quot;{{block3.type}}&quot; class&#x3D;&quot;button button--primary&quot;&gt;
+        {{block3.action}}
+      &lt;/button&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/form&gt;

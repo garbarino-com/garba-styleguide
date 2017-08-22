@@ -137,11 +137,9 @@ campo de form.</p>
       <span class="icon-question-mark-circle"></span>
     </span>
 
-    <input type="text" class="form-control" placeholder="Text">
-
+    <input type="text" class="form-control" placeholder="Username">
 
     <span class="form-block__feedback"></span>
-
     <p class="form-block__note">
       Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
     </p>
@@ -154,15 +152,13 @@ campo de form.</p>
     </span>
 
     <select class="form-control">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
+      <option value="Volvo">Volvo</option>
+      <option value="Saab">Saab</option>
+      <option value="Mercedes">Mercedes</option>
+      <option value="Audi">Audi</option>
     </select>
 
-
     <span class="form-block__feedback"></span>
-
     <p class="form-block__note">
       Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
     </p>
@@ -176,9 +172,7 @@ campo de form.</p>
 
     <textarea class="form-control" rows="3"></textarea>
 
-
     <span class="form-block__feedback"></span>
-
     <p class="form-block__note">
       Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
     </p>
@@ -202,11 +196,9 @@ campo de form.</p>
       <span class="icon-question-mark-circle"></span>
     </span>
 
-    <input type="text" class="form-control" placeholder="Text">
-
+    <input type="text" class="form-control" placeholder="Username">
 
     <span class="form-block__feedback"></span>
-
     <p class="form-block__note">
       Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
     </p>
@@ -219,15 +211,13 @@ campo de form.</p>
     </span>
 
     <select class="form-control">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
+      <option value="Volvo">Volvo</option>
+      <option value="Saab">Saab</option>
+      <option value="Mercedes">Mercedes</option>
+      <option value="Audi">Audi</option>
     </select>
 
-
     <span class="form-block__feedback"></span>
-
     <p class="form-block__note">
       Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
     </p>
@@ -241,9 +231,7 @@ campo de form.</p>
 
     <textarea class="form-control" rows="3"></textarea>
 
-
     <span class="form-block__feedback"></span>
-
     <p class="form-block__note">
       Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
     </p>
@@ -266,11 +254,9 @@ campo de form.</p>
       <span class="icon-question-mark-circle"></span>
     </span>
 
-    <input type="text" class="form-control" placeholder="Text">
-
+    <input type="text" class="form-control" placeholder="Username">
 
     <span class="form-block__feedback"></span>
-
     <p class="form-block__note">
       Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
     </p>
@@ -283,15 +269,13 @@ campo de form.</p>
     </span>
 
     <select class="form-control">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
+      <option value="Volvo">Volvo</option>
+      <option value="Saab">Saab</option>
+      <option value="Mercedes">Mercedes</option>
+      <option value="Audi">Audi</option>
     </select>
 
-
     <span class="form-block__feedback"></span>
-
     <p class="form-block__note">
       Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
     </p>
@@ -305,9 +289,7 @@ campo de form.</p>
 
     <textarea class="form-control" rows="3"></textarea>
 
-
     <span class="form-block__feedback"></span>
-
     <p class="form-block__note">
       Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
     </p>
@@ -325,70 +307,58 @@ campo de form.</p>
             <pre class="prettyprint linenums lang-html">
               <code data-language="html">&lt;form&gt;
   &lt;div class&#x3D;&quot;form-block {{modifier_class}}&quot;&gt;
-    {{!-- Es necesario que el helper tiene que aparecer previo al form-control
-          para que funcionen bien los estilos --}}
+    {{!-- Helper is required to appear before control in array. --}}
     &lt;span class&#x3D;&quot;form-block__helper&quot; data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;bottom&quot;
-        title&#x3D;&quot;Fusce ac luctus sem.&quot;&gt;
+        title&#x3D;&quot;{{block1.helper}}&quot;&gt;
       &lt;span class&#x3D;&quot;icon-question-mark-circle&quot;&gt;&lt;/span&gt;
     &lt;/span&gt;
 
-    {{!-- Input básico de texto. --}}
-    &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Text&quot;&gt;
+    {{!-- Form control --}}
+    &lt;input type&#x3D;&quot;{{block1.type}}&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;{{block1.placeholder}}&quot;&gt;
 
-    {{!-- El ícono y el mensaje se muestran sólo cuando el padre recibe una de las clases
-          de validación, de lo contrario permanece oculto. --}}
-
+    {{!-- Validation block (hidden by default) --}}
     &lt;span class&#x3D;&quot;form-block__feedback&quot;&gt;&lt;/span&gt;
-
     &lt;p class&#x3D;&quot;form-block__note&quot;&gt;
-      Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+      {{block1.note}}
     &lt;/p&gt;
   &lt;/div&gt;
 
   &lt;div class&#x3D;&quot;form-block {{modifier_class}}&quot;&gt;
-    {{!-- Es necesario que el helper tiene que aparecer previo al form-control
-          para que funcionen bien los estilos --}}
+    {{!-- Helper is required to appear before control in array. --}}
     &lt;span class&#x3D;&quot;form-block__helper&quot; data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;bottom&quot;
-        title&#x3D;&quot;Fusce ac luctus sem.&quot;&gt;
+        title&#x3D;&quot;{{block2.helper}}&quot;&gt;
       &lt;span class&#x3D;&quot;icon-question-mark-circle&quot;&gt;&lt;/span&gt;
     &lt;/span&gt;
 
-    {{!-- Select --}}
+    {{!-- Form control --}}
     &lt;select class&#x3D;&quot;form-control&quot;&gt;
-      &lt;option value&#x3D;&quot;volvo&quot;&gt;Volvo&lt;/option&gt;
-      &lt;option value&#x3D;&quot;saab&quot;&gt;Saab&lt;/option&gt;
-      &lt;option value&#x3D;&quot;mercedes&quot;&gt;Mercedes&lt;/option&gt;
-      &lt;option value&#x3D;&quot;audi&quot;&gt;Audi&lt;/option&gt;
+      &lt;option value&#x3D;&quot;{{block2.select.option1}}&quot;&gt;{{block2.select.option1}}&lt;/option&gt;
+      &lt;option value&#x3D;&quot;{{block2.select.option2}}&quot;&gt;{{block2.select.option2}}&lt;/option&gt;
+      &lt;option value&#x3D;&quot;{{block2.select.option3}}&quot;&gt;{{block2.select.option3}}&lt;/option&gt;
+      &lt;option value&#x3D;&quot;{{block2.select.option4}}&quot;&gt;{{block2.select.option4}}&lt;/option&gt;
     &lt;/select&gt;
 
-    {{!-- El ícono y el mensaje se muestran sólo cuando el padre recibe una de las clases
-          de validación, de lo contrario permanece oculto. --}}
-
+    {{!-- Validation block (hidden by default) --}}
     &lt;span class&#x3D;&quot;form-block__feedback&quot;&gt;&lt;/span&gt;
-
     &lt;p class&#x3D;&quot;form-block__note&quot;&gt;
-      Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+      {{block2.note}}
     &lt;/p&gt;
   &lt;/div&gt;
 
   &lt;div class&#x3D;&quot;form-block {{modifier_class}}&quot;&gt;
-    {{!-- Es necesario que el helper tiene que aparecer previo al form-control
-          para que funcionen bien los estilos --}}
+    {{!-- Helper is required to appear before control in array. --}}
     &lt;span class&#x3D;&quot;form-block__helper&quot; data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;bottom&quot;
-        title&#x3D;&quot;Fusce ac luctus sem.&quot;&gt;
+        title&#x3D;&quot;{{block3.helper}}&quot;&gt;
       &lt;span class&#x3D;&quot;icon-question-mark-circle&quot;&gt;&lt;/span&gt;
     &lt;/span&gt;
 
-    {{!-- Textarea --}}
+    {{!-- Form control --}}
     &lt;textarea class&#x3D;&quot;form-control&quot; rows&#x3D;&quot;3&quot;&gt;&lt;/textarea&gt;
 
-    {{!-- El ícono y el mensaje se muestran sólo cuando el padre recibe una de las clases
-          de validación, de lo contrario permanece oculto. --}}
-
+    {{!-- Validation block (hidden by default) --}}
     &lt;span class&#x3D;&quot;form-block__feedback&quot;&gt;&lt;/span&gt;
-
     &lt;p class&#x3D;&quot;form-block__note&quot;&gt;
-      Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+      {{block3.note}}
     &lt;/p&gt;
   &lt;/div&gt;
 &lt;/form&gt;

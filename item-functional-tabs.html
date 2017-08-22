@@ -129,45 +129,45 @@ mismos métodos y eventos.</p>
           <div class="kss-modifier__example">
             <div>
   <ul class="navbar navbar__justified navbar__with-icons" role="tablist">
-    <li role="presentation" class="active">
-      <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
-        <span class="icon-home" aria-hidden="true"></span>
-        Home
-      </a>
-    </li>
-    <li role="presentation">
-      <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
-        <span class="icon-user" aria-hidden="true"></span>
-        Profile
-      </a>
-    </li>
-    <li role="presentation">
-      <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">
-        <span class="icon-preferences" aria-hidden="true"></span>
-        Settings
-      </a>
-    </li>
-    <li role="presentation">
-      <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">
-        <span class="icon-email" aria-hidden="true"></span>
-        Messages
-      </a>
-    </li>
+      <li role="presentation" class="active">
+        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+          <span class="icon-home" aria-hidden="true"></span>
+          Home
+        </a>
+      </li>
+      <li role="presentation" class="">
+        <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
+          <span class="icon-user" aria-hidden="true"></span>
+          Profile
+        </a>
+      </li>
+      <li role="presentation" class="">
+        <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">
+          <span class="icon-preferences" aria-hidden="true"></span>
+          Settings
+        </a>
+      </li>
+      <li role="presentation" class="">
+        <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">
+          <span class="icon-email" aria-hidden="true"></span>
+          Messages
+        </a>
+      </li>
   </ul>
 
   <div class="tab-content">
-    <div role="tabpanel" class="tab-pane fade active in" id="home">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quam ipsum, elementum ac egestas ac, feugiat id turpis. Mauris iaculis, massa non malesuada dignissim, turpis felis consectetur magna, a tincidunt turpis nisi at massa. Duis scelerisque maximus felis in fermentum. Nunc eu nisl ac tortor mattis dapibus sit amet sed libero.</p>
-    </div>
-    <div role="tabpanel" class="tab-pane fade" id="profile">
-      <p>Phasellus molestie, enim sit amet sagittis vestibulum, ligula orci gravida ipsum, id efficitur ex tortor sed ante. Morbi metus velit, consequat eget facilisis id, congue in leo. Aenean vestibulum tristique nulla a aliquet.</p>
-    </div>
-    <div role="tabpanel" class="tab-pane fade" id="messages">
-      <p>Fusce eu dolor lacus. Phasellus at accumsan sapien, non pulvinar orci. Aliquam commodo finibus porta. Vestibulum convallis ac turpis a pulvinar. Integer quis velit nec enim pretium interdum. Quisque fringilla luctus dui sit amet malesuada.</p>
-    </div>
-    <div role="tabpanel" class="tab-pane fade" id="settings">
-      <p>Proin pulvinar gravida odio. Proin sed velit augue. Mauris sollicitudin eros sit amet orci pulvinar varius. Integer quis ante quis libero tristique dictum sit amet eget libero. Nulla mi turpis, tempor quis egestas et, tristique sed metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-    </div>
+      <div role="tabpanel" class="tab-pane fade active in" id="home">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quam ipsum, elementum ac egestas ac, feugiat id turpis. Mauris iaculis, massa non malesuada dignissim, turpis felis consectetur magna, a tincidunt turpis nisi at massa. Duis scelerisque maximus felis in fermentum. Nunc eu nisl ac tortor mattis dapibus sit amet sed libero.</p>
+      </div>
+      <div role="tabpanel" class="tab-pane fade  " id="profile">
+        <p>Phasellus molestie, enim sit amet sagittis vestibulum, ligula orci gravida ipsum, id efficitur ex tortor sed ante. Morbi metus velit, consequat eget facilisis id, congue in leo. Aenean vestibulum tristique nulla a aliquet.</p>
+      </div>
+      <div role="tabpanel" class="tab-pane fade  " id="messages">
+        <p>Fusce eu dolor lacus. Phasellus at accumsan sapien, non pulvinar orci. Aliquam commodo finibus porta. Vestibulum convallis ac turpis a pulvinar. Integer quis velit nec enim pretium interdum. Quisque fringilla luctus dui sit amet malesuada.</p>
+      </div>
+      <div role="tabpanel" class="tab-pane fade  " id="settings">
+        <p>Proin pulvinar gravida odio. Proin sed velit augue. Mauris sollicitudin eros sit amet orci pulvinar varius. Integer quis ante quis libero tristique dictum sit amet eget libero. Nulla mi turpis, tempor quis egestas et, tristique sed metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+      </div>
   </div>
 </div>
 
@@ -178,10 +178,32 @@ mismos métodos y eventos.</p>
 
           <details class="kss-markup kss-style">
             <summary>
-                Markup: <code>tabs.hbs</code>
+                Markup: <code>tabs/tabs.hbs</code>
             </summary>
             <pre class="prettyprint linenums lang-html">
-              <code data-language="html">{{! Cannot be an empty string. }}</code>
+              <code data-language="html">&lt;div&gt;
+  {{!-- Nav tabs --}}
+  &lt;ul class&#x3D;&quot;navbar navbar__justified navbar__with-icons&quot; role&#x3D;&quot;tablist&quot;&gt;
+    {{#each .}}
+      &lt;li role&#x3D;&quot;presentation&quot; class&#x3D;&quot;{{state}}&quot;&gt;
+        &lt;a href&#x3D;&quot;#{{id}}&quot; aria-controls&#x3D;&quot;{{id}}&quot; role&#x3D;&quot;tab&quot; data-toggle&#x3D;&quot;tab&quot;&gt;
+          &lt;span class&#x3D;&quot;{{icon}}&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/span&gt;
+          {{title}}
+        &lt;/a&gt;
+      &lt;/li&gt;
+    {{/each}}
+  &lt;/ul&gt;
+
+  {{!-- Tab panes --}}
+  &lt;div class&#x3D;&quot;tab-content&quot;&gt;
+    {{#each .}}
+      &lt;div role&#x3D;&quot;tabpanel&quot; class&#x3D;&quot;tab-pane fade {{state}} {{visible}}&quot; id&#x3D;&quot;{{id}}&quot;&gt;
+        &lt;p&gt;{{content}}&lt;/p&gt;
+      &lt;/div&gt;
+    {{/each}}
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
             </pre>
           </details>
 

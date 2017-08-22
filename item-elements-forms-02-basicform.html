@@ -147,15 +147,11 @@ deshabilitar el <code>&lt;fieldset&gt;</code>.</p>
   <div class="form-block ">
     <label for="exampleInputEmail1">Email address</label>
 
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-
+    <input type="email" class="form-control" id="exampleInputEmail1"
+      placeholder="Inserte su email.">
 
     <span class="form-block__feedback"></span>
-
-    <p class="form-block__note">
-      Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
-    </p>
-
+    <p class="form-block__note">Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.</p>
   </div>
   <button type="submit" class="button">
     ¡Suscribirme!
@@ -176,15 +172,11 @@ deshabilitar el <code>&lt;fieldset&gt;</code>.</p>
   <div class="form-block block__is-disabled">
     <label for="exampleInputEmail1">Email address</label>
 
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-
+    <input type="email" class="form-control" id="exampleInputEmail1"
+      placeholder="Inserte su email.">
 
     <span class="form-block__feedback"></span>
-
-    <p class="form-block__note">
-      Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
-    </p>
-
+    <p class="form-block__note">Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.</p>
   </div>
   <button type="submit" class="button">
     ¡Suscribirme!
@@ -204,15 +196,11 @@ deshabilitar el <code>&lt;fieldset&gt;</code>.</p>
   <div class="form-block block__is-required">
     <label for="exampleInputEmail1">Email address</label>
 
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-
+    <input type="email" class="form-control" id="exampleInputEmail1"
+      placeholder="Inserte su email.">
 
     <span class="form-block__feedback"></span>
-
-    <p class="form-block__note">
-      Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
-    </p>
-
+    <p class="form-block__note">Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.</p>
   </div>
   <button type="submit" class="button">
     ¡Suscribirme!
@@ -232,15 +220,11 @@ deshabilitar el <code>&lt;fieldset&gt;</code>.</p>
   <div class="form-block block__has-error">
     <label for="exampleInputEmail1">Email address</label>
 
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-
+    <input type="email" class="form-control" id="exampleInputEmail1"
+      placeholder="Inserte su email.">
 
     <span class="form-block__feedback"></span>
-
-    <p class="form-block__note">
-      Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
-    </p>
-
+    <p class="form-block__note">Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.</p>
   </div>
   <button type="submit" class="button">
     ¡Suscribirme!
@@ -258,22 +242,17 @@ deshabilitar el <code>&lt;fieldset&gt;</code>.</p>
             <pre class="prettyprint linenums lang-html">
               <code data-language="html">&lt;form&gt;
   &lt;div class&#x3D;&quot;form-block {{modifier_class}}&quot;&gt;
-    &lt;label for&#x3D;&quot;exampleInputEmail1&quot;&gt;Email address&lt;/label&gt;
+    &lt;label for&#x3D;&quot;exampleInputEmail1&quot;&gt;{{label}}&lt;/label&gt;
 
-    &lt;input type&#x3D;&quot;email&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;exampleInputEmail1&quot; placeholder&#x3D;&quot;Email&quot;&gt;
+    &lt;input type&#x3D;&quot;{{input_type}}&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;{{input_id}}&quot;
+      placeholder&#x3D;&quot;{{input_placeholder}}&quot;&gt;
 
-    {{!-- El ícono y el mensaje se muestran sólo cuando el padre recibe una de las clases
-          de validación, de lo contrario permanece oculto. --}}
-
+    {{!-- Validation block (hidden by default) --}}
     &lt;span class&#x3D;&quot;form-block__feedback&quot;&gt;&lt;/span&gt;
-
-    &lt;p class&#x3D;&quot;form-block__note&quot;&gt;
-      Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
-    &lt;/p&gt;
-
+    &lt;p class&#x3D;&quot;form-block__note&quot;&gt;{{note}}&lt;/p&gt;
   &lt;/div&gt;
-  &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;button&quot;&gt;
-    ¡Suscribirme!
+  &lt;button type&#x3D;&quot;{{action_type}}&quot; class&#x3D;&quot;button&quot;&gt;
+    {{action}}
   &lt;/button&gt;
 &lt;/form&gt;
 </code>
@@ -281,7 +260,7 @@ deshabilitar el <code>&lt;fieldset&gt;</code>.</p>
           </details>
 
         <div class="kss-source kss-style">
-          Source: <code>forms/_forms.scss</code>, line 69
+          Source: <code>forms/_forms.scss</code>, line 71
         </div>
 
     </div>

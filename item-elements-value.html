@@ -126,7 +126,7 @@ o importes totales (no necesariamente aplica a los precios por unidad).</p>
             </div>
 
           <div class="kss-modifier__example">
-            <div class="value-container" itemprop="offers" itemscope
+            <div class="value-container " itemprop="offers" itemscope
     itemtype="http://schema.org/Offer">
   <span class="value-note">
       <del>$1299</del>
@@ -155,7 +155,7 @@ o importes totales (no necesariamente aplica a los precios por unidad).</p>
               Reservado para <em>Ficha de producto</em> y el bloque <em>Súper Oferta</em>.
             </div>
             <div class="kss-modifier__example">
-              <div class="value-container" itemprop="offers" itemscope
+              <div class="value-container value-container--lg" itemprop="offers" itemscope
     itemtype="http://schema.org/Offer">
   <span class="value-note">
       <del>$1299</del>
@@ -183,7 +183,7 @@ o importes totales (no necesariamente aplica a los precios por unidad).</p>
               Se utiliza para comunicar importes totales (p.ej: en el checkout).
             </div>
             <div class="kss-modifier__example">
-              <div class="value-container" itemprop="offers" itemscope
+              <div class="value-container value-container--sm" itemprop="offers" itemscope
     itemtype="http://schema.org/Offer">
   <span class="value-note">
       <del>$1299</del>
@@ -211,7 +211,7 @@ o importes totales (no necesariamente aplica a los precios por unidad).</p>
                 Markup: <code>value/value.hbs</code>
             </summary>
             <pre class="prettyprint linenums lang-html">
-              <code data-language="html">&lt;div class&#x3D;&quot;value-container&quot; itemprop&#x3D;&quot;offers&quot; itemscope
+              <code data-language="html">&lt;div class&#x3D;&quot;value-container {{modifier_class}}&quot; itemprop&#x3D;&quot;offers&quot; itemscope
     itemtype&#x3D;&quot;http://schema.org/Offer&quot;&gt;
   &lt;span class&#x3D;&quot;value-note&quot;&gt;
     {{#if discount}}

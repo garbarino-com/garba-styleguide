@@ -129,7 +129,7 @@ línea que contiene los tags.</li>
 
 
           <div class="kss-modifier__example">
-            <a href="#0" class="tag" title="Interdum et malesuada fames">
+            <a href="#0" class="tag " title="Interdum et malesuada fames">
   Tag de ejemplo
 </a>
 
@@ -143,8 +143,8 @@ línea que contiene los tags.</li>
                 Markup: <code>tags/tags.hbs</code>
             </summary>
             <pre class="prettyprint linenums lang-html">
-              <code data-language="html">&lt;a href&#x3D;&quot;#0&quot; class&#x3D;&quot;tag&quot; title&#x3D;&quot;Interdum et malesuada fames&quot;&gt;
-  Tag de ejemplo
+              <code data-language="html">&lt;a href&#x3D;&quot;{{link}}&quot; class&#x3D;&quot;tag {{modifier_class}}&quot; title&#x3D;&quot;{{title}}&quot;&gt;
+  {{text}}
 &lt;/a&gt;
 </code>
             </pre>

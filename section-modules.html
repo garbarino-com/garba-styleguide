@@ -200,13 +200,7 @@ ya tienen definidos un estilo visual para dichos estados.</p>
             </div>
 
           <div class="kss-modifier__example">
-            <style>
-  .placeholder-class img {
-    max-width: 100%;
-  }
-</style>
-
-<div class="placeholder-class ">
+            <div class="placeholder-class ">
   <img src="./kss-assets/images/component-placeholder.jpg" alt="Component placeholder">
 </div>
 
@@ -220,13 +214,7 @@ ya tienen definidos un estilo visual para dichos estados.</p>
               El elemento está <em>active</em>.
             </div>
             <div class="kss-modifier__example">
-              <style>
-  .placeholder-class img {
-    max-width: 100%;
-  }
-</style>
-
-<div class="placeholder-class module__is-active">
+              <div class="placeholder-class module__is-active">
   <img src="./kss-assets/images/component-placeholder.jpg" alt="Component placeholder">
 </div>
 
@@ -239,13 +227,7 @@ ya tienen definidos un estilo visual para dichos estados.</p>
               El elemento está <em>cargando</em>.
             </div>
             <div class="kss-modifier__example">
-              <style>
-  .placeholder-class img {
-    max-width: 100%;
-  }
-</style>
-
-<div class="placeholder-class module__is-loading">
+              <div class="placeholder-class module__is-loading">
   <img src="./kss-assets/images/component-placeholder.jpg" alt="Component placeholder">
 </div>
 
@@ -258,13 +240,7 @@ ya tienen definidos un estilo visual para dichos estados.</p>
               El elemento está <em>deshabilitado</em>.
             </div>
             <div class="kss-modifier__example">
-              <style>
-  .placeholder-class img {
-    max-width: 100%;
-  }
-</style>
-
-<div class="placeholder-class module__is-disabled">
+              <div class="placeholder-class module__is-disabled">
   <img src="./kss-assets/images/component-placeholder.jpg" alt="Component placeholder">
 </div>
 
@@ -274,17 +250,11 @@ ya tienen definidos un estilo visual para dichos estados.</p>
 
           <details class="kss-markup kss-style">
             <summary>
-                Markup: <code>generic-states/generic-element.hbs</code>
+                Markup: <code>generic-states/generic-states.hbs</code>
             </summary>
             <pre class="prettyprint linenums lang-html">
-              <code data-language="html">&lt;style&gt;
-  .placeholder-class img {
-    max-width: 100%;
-  }
-&lt;/style&gt;
-
-&lt;div class&#x3D;&quot;placeholder-class {{modifier_class}}&quot;&gt;
-  &lt;img src&#x3D;&quot;./kss-assets/images/component-placeholder.jpg&quot; alt&#x3D;&quot;Component placeholder&quot;&gt;
+              <code data-language="html">&lt;div class&#x3D;&quot;placeholder-class {{modifier_class}}&quot;&gt;
+  &lt;img src&#x3D;&quot;{{image}}&quot; alt&#x3D;&quot;{{alt}}&quot;&gt;
 &lt;/div&gt;
 </code>
             </pre>

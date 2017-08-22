@@ -1789,15 +1789,16 @@ que no se pueden modificar vía la propiedad <code>border-radius</code>.</p>
           <div class="kss-modifier__example">
             <form>
   <div class="form-block">
-    <input type="text" class="form-control " placeholder="Text">
+    <input type="text" class="form-control "
+      placeholder="Text">
   </div>
 
   <div class="form-block">
     <select class="form-control ">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
+      <option value="Volvo">Volvo</option>
+      <option value="Saab">Saab</option>
+      <option value="Mercedes">Mercedes</option>
+      <option value="Audi">Audi</option>
     </select>
   </div>
 
@@ -1818,15 +1819,16 @@ que no se pueden modificar vía la propiedad <code>border-radius</code>.</p>
             <div class="kss-modifier__example">
               <form>
   <div class="form-block">
-    <input type="text" class="form-control pseudo-class-focus" placeholder="Text">
+    <input type="text" class="form-control pseudo-class-focus"
+      placeholder="Text">
   </div>
 
   <div class="form-block">
     <select class="form-control pseudo-class-focus">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
+      <option value="Volvo">Volvo</option>
+      <option value="Saab">Saab</option>
+      <option value="Mercedes">Mercedes</option>
+      <option value="Audi">Audi</option>
     </select>
   </div>
 
@@ -1846,15 +1848,16 @@ que no se pueden modificar vía la propiedad <code>border-radius</code>.</p>
             <div class="kss-modifier__example">
               <form>
   <div class="form-block">
-    <input type="text" class="form-control control__is-disabled" placeholder="Text">
+    <input type="text" class="form-control control__is-disabled"
+      placeholder="Text">
   </div>
 
   <div class="form-block">
     <select class="form-control control__is-disabled">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
+      <option value="Volvo">Volvo</option>
+      <option value="Saab">Saab</option>
+      <option value="Mercedes">Mercedes</option>
+      <option value="Audi">Audi</option>
     </select>
   </div>
 
@@ -1874,15 +1877,16 @@ que no se pueden modificar vía la propiedad <code>border-radius</code>.</p>
             <div class="kss-modifier__example">
               <form>
   <div class="form-block">
-    <input type="text" class="form-control form-control--sm" placeholder="Text">
+    <input type="text" class="form-control form-control--sm"
+      placeholder="Text">
   </div>
 
   <div class="form-block">
     <select class="form-control form-control--sm">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
+      <option value="Volvo">Volvo</option>
+      <option value="Saab">Saab</option>
+      <option value="Mercedes">Mercedes</option>
+      <option value="Audi">Audi</option>
     </select>
   </div>
 
@@ -1902,17 +1906,18 @@ que no se pueden modificar vía la propiedad <code>border-radius</code>.</p>
             <pre class="prettyprint linenums lang-html">
               <code data-language="html">&lt;form&gt;
   &lt;div class&#x3D;&quot;form-block&quot;&gt;
-    {{!-- Input básico de texto. --}}
-    &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control {{modifier_class}}&quot; placeholder&#x3D;&quot;Text&quot;&gt;
+    {{!-- Text input. --}}
+    &lt;input type&#x3D;&quot;{{control1.type}}&quot; class&#x3D;&quot;form-control {{modifier_class}}&quot;
+      placeholder&#x3D;&quot;{{control1.placeholder}}&quot;&gt;
   &lt;/div&gt;
 
   &lt;div class&#x3D;&quot;form-block&quot;&gt;
     {{!-- Select --}}
     &lt;select class&#x3D;&quot;form-control {{modifier_class}}&quot;&gt;
-      &lt;option value&#x3D;&quot;volvo&quot;&gt;Volvo&lt;/option&gt;
-      &lt;option value&#x3D;&quot;saab&quot;&gt;Saab&lt;/option&gt;
-      &lt;option value&#x3D;&quot;mercedes&quot;&gt;Mercedes&lt;/option&gt;
-      &lt;option value&#x3D;&quot;audi&quot;&gt;Audi&lt;/option&gt;
+      &lt;option value&#x3D;&quot;{{control2.select.option1}}&quot;&gt;{{control2.select.option1}}&lt;/option&gt;
+      &lt;option value&#x3D;&quot;{{control2.select.option2}}&quot;&gt;{{control2.select.option2}}&lt;/option&gt;
+      &lt;option value&#x3D;&quot;{{control2.select.option3}}&quot;&gt;{{control2.select.option3}}&lt;/option&gt;
+      &lt;option value&#x3D;&quot;{{control2.select.option4}}&quot;&gt;{{control2.select.option4}}&lt;/option&gt;
     &lt;/select&gt;
   &lt;/div&gt;
 
@@ -2035,15 +2040,11 @@ deshabilitar el <code>&lt;fieldset&gt;</code>.</p>
   <div class="form-block ">
     <label for="exampleInputEmail1">Email address</label>
 
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-
+    <input type="email" class="form-control" id="exampleInputEmail1"
+      placeholder="Inserte su email.">
 
     <span class="form-block__feedback"></span>
-
-    <p class="form-block__note">
-      Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
-    </p>
-
+    <p class="form-block__note">Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.</p>
   </div>
   <button type="submit" class="button">
     ¡Suscribirme!
@@ -2064,15 +2065,11 @@ deshabilitar el <code>&lt;fieldset&gt;</code>.</p>
   <div class="form-block block__is-disabled">
     <label for="exampleInputEmail1">Email address</label>
 
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-
+    <input type="email" class="form-control" id="exampleInputEmail1"
+      placeholder="Inserte su email.">
 
     <span class="form-block__feedback"></span>
-
-    <p class="form-block__note">
-      Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
-    </p>
-
+    <p class="form-block__note">Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.</p>
   </div>
   <button type="submit" class="button">
     ¡Suscribirme!
@@ -2092,15 +2089,11 @@ deshabilitar el <code>&lt;fieldset&gt;</code>.</p>
   <div class="form-block block__is-required">
     <label for="exampleInputEmail1">Email address</label>
 
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-
+    <input type="email" class="form-control" id="exampleInputEmail1"
+      placeholder="Inserte su email.">
 
     <span class="form-block__feedback"></span>
-
-    <p class="form-block__note">
-      Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
-    </p>
-
+    <p class="form-block__note">Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.</p>
   </div>
   <button type="submit" class="button">
     ¡Suscribirme!
@@ -2120,15 +2113,11 @@ deshabilitar el <code>&lt;fieldset&gt;</code>.</p>
   <div class="form-block block__has-error">
     <label for="exampleInputEmail1">Email address</label>
 
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-
+    <input type="email" class="form-control" id="exampleInputEmail1"
+      placeholder="Inserte su email.">
 
     <span class="form-block__feedback"></span>
-
-    <p class="form-block__note">
-      Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
-    </p>
-
+    <p class="form-block__note">Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.</p>
   </div>
   <button type="submit" class="button">
     ¡Suscribirme!
@@ -2146,22 +2135,17 @@ deshabilitar el <code>&lt;fieldset&gt;</code>.</p>
             <pre class="prettyprint linenums lang-html">
               <code data-language="html">&lt;form&gt;
   &lt;div class&#x3D;&quot;form-block {{modifier_class}}&quot;&gt;
-    &lt;label for&#x3D;&quot;exampleInputEmail1&quot;&gt;Email address&lt;/label&gt;
+    &lt;label for&#x3D;&quot;exampleInputEmail1&quot;&gt;{{label}}&lt;/label&gt;
 
-    &lt;input type&#x3D;&quot;email&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;exampleInputEmail1&quot; placeholder&#x3D;&quot;Email&quot;&gt;
+    &lt;input type&#x3D;&quot;{{input_type}}&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;{{input_id}}&quot;
+      placeholder&#x3D;&quot;{{input_placeholder}}&quot;&gt;
 
-    {{!-- El ícono y el mensaje se muestran sólo cuando el padre recibe una de las clases
-          de validación, de lo contrario permanece oculto. --}}
-
+    {{!-- Validation block (hidden by default) --}}
     &lt;span class&#x3D;&quot;form-block__feedback&quot;&gt;&lt;/span&gt;
-
-    &lt;p class&#x3D;&quot;form-block__note&quot;&gt;
-      Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
-    &lt;/p&gt;
-
+    &lt;p class&#x3D;&quot;form-block__note&quot;&gt;{{note}}&lt;/p&gt;
   &lt;/div&gt;
-  &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;button&quot;&gt;
-    ¡Suscribirme!
+  &lt;button type&#x3D;&quot;{{action_type}}&quot; class&#x3D;&quot;button&quot;&gt;
+    {{action}}
   &lt;/button&gt;
 &lt;/form&gt;
 </code>
@@ -2169,7 +2153,7 @@ deshabilitar el <code>&lt;fieldset&gt;</code>.</p>
           </details>
 
         <div class="kss-source kss-style">
-          Source: <code>forms/_forms.scss</code>, line 69
+          Source: <code>forms/_forms.scss</code>, line 71
         </div>
 
     </section>
@@ -2255,15 +2239,18 @@ deshabilitar el <code>&lt;fieldset&gt;</code>.</p>
           <div class="kss-modifier__example">
             <div class="checkbox ">
   <label>
-    <input type="checkbox" id="" value="">
+    <input type="checkbox" id=""
+      value="">
     Praesent sit amet egestas massa, pretium maximus nulla.
   </label>
   <label>
-    <input type="checkbox" id="" value="">
+    <input type="checkbox" id=""
+      value="">
     Vivamus lacinia nulla nibh, sed rhoncus ex euismod ut. Fusce fermentum eros urna, sed vestibulum ligula tempor non. Fusce interdum molestie augue sit amet porta.
   </label>
   <label>
-    <input type="checkbox" id="" value="">
+    <input type="checkbox" id=""
+      value="">
     Donec dapibus nunc erat, non imperdiet risus tincidunt ac.
   </label>
 
@@ -2274,16 +2261,19 @@ deshabilitar el <code>&lt;fieldset&gt;</code>.</p>
 
 <div class="radio ">
   <label>
-    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-    Vestibulum sagittis placerat est et pellentesque.
+    <input type="radio" name="optionsRadios" id="optionsRadios1"
+      value="option1" >
+    Praesent sit amet egestas massa, pretium maximus nulla.
   </label>
   <label>
-    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-    Morbi iaculis vel leo id tempor.
+    <input type="radio" name="optionsRadios" id="optionsRadios2"
+      value="option2" >
+    Vivamus lacinia nulla nibh, sed rhoncus ex euismod ut. Fusce fermentum eros urna, sed vestibulum ligula tempor non. Fusce interdum molestie augue sit amet porta.
   </label>
   <label>
-    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-    Duis quis magna semper, egestas mi euismod, dapibus ex.
+    <input type="radio" name="optionsRadios" id="optionsRadios3"
+      value="option3" >
+    Donec dapibus nunc erat, non imperdiet risus tincidunt ac.
   </label>
 
   <p class="form-block__note">
@@ -2303,15 +2293,18 @@ deshabilitar el <code>&lt;fieldset&gt;</code>.</p>
             <div class="kss-modifier__example">
               <div class="checkbox block__is-disabled">
   <label>
-    <input type="checkbox" id="" value="">
+    <input type="checkbox" id=""
+      value="">
     Praesent sit amet egestas massa, pretium maximus nulla.
   </label>
   <label>
-    <input type="checkbox" id="" value="">
+    <input type="checkbox" id=""
+      value="">
     Vivamus lacinia nulla nibh, sed rhoncus ex euismod ut. Fusce fermentum eros urna, sed vestibulum ligula tempor non. Fusce interdum molestie augue sit amet porta.
   </label>
   <label>
-    <input type="checkbox" id="" value="">
+    <input type="checkbox" id=""
+      value="">
     Donec dapibus nunc erat, non imperdiet risus tincidunt ac.
   </label>
 
@@ -2322,16 +2315,19 @@ deshabilitar el <code>&lt;fieldset&gt;</code>.</p>
 
 <div class="radio block__is-disabled">
   <label>
-    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-    Vestibulum sagittis placerat est et pellentesque.
+    <input type="radio" name="optionsRadios" id="optionsRadios1"
+      value="option1" >
+    Praesent sit amet egestas massa, pretium maximus nulla.
   </label>
   <label>
-    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-    Morbi iaculis vel leo id tempor.
+    <input type="radio" name="optionsRadios" id="optionsRadios2"
+      value="option2" >
+    Vivamus lacinia nulla nibh, sed rhoncus ex euismod ut. Fusce fermentum eros urna, sed vestibulum ligula tempor non. Fusce interdum molestie augue sit amet porta.
   </label>
   <label>
-    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-    Duis quis magna semper, egestas mi euismod, dapibus ex.
+    <input type="radio" name="optionsRadios" id="optionsRadios3"
+      value="option3" >
+    Donec dapibus nunc erat, non imperdiet risus tincidunt ac.
   </label>
 
   <p class="form-block__note">
@@ -2350,15 +2346,18 @@ deshabilitar el <code>&lt;fieldset&gt;</code>.</p>
             <div class="kss-modifier__example">
               <div class="checkbox block__has-error">
   <label>
-    <input type="checkbox" id="" value="">
+    <input type="checkbox" id=""
+      value="">
     Praesent sit amet egestas massa, pretium maximus nulla.
   </label>
   <label>
-    <input type="checkbox" id="" value="">
+    <input type="checkbox" id=""
+      value="">
     Vivamus lacinia nulla nibh, sed rhoncus ex euismod ut. Fusce fermentum eros urna, sed vestibulum ligula tempor non. Fusce interdum molestie augue sit amet porta.
   </label>
   <label>
-    <input type="checkbox" id="" value="">
+    <input type="checkbox" id=""
+      value="">
     Donec dapibus nunc erat, non imperdiet risus tincidunt ac.
   </label>
 
@@ -2369,16 +2368,19 @@ deshabilitar el <code>&lt;fieldset&gt;</code>.</p>
 
 <div class="radio block__has-error">
   <label>
-    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-    Vestibulum sagittis placerat est et pellentesque.
+    <input type="radio" name="optionsRadios" id="optionsRadios1"
+      value="option1" >
+    Praesent sit amet egestas massa, pretium maximus nulla.
   </label>
   <label>
-    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-    Morbi iaculis vel leo id tempor.
+    <input type="radio" name="optionsRadios" id="optionsRadios2"
+      value="option2" >
+    Vivamus lacinia nulla nibh, sed rhoncus ex euismod ut. Fusce fermentum eros urna, sed vestibulum ligula tempor non. Fusce interdum molestie augue sit amet porta.
   </label>
   <label>
-    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-    Duis quis magna semper, egestas mi euismod, dapibus ex.
+    <input type="radio" name="optionsRadios" id="optionsRadios3"
+      value="option3" >
+    Donec dapibus nunc erat, non imperdiet risus tincidunt ac.
   </label>
 
   <p class="form-block__note">
@@ -2397,43 +2399,47 @@ deshabilitar el <code>&lt;fieldset&gt;</code>.</p>
             <pre class="prettyprint linenums lang-html">
               <code data-language="html">&lt;div class&#x3D;&quot;checkbox {{modifier_class}}&quot;&gt;
   &lt;label&gt;
-    &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;&quot; value&#x3D;&quot;&quot;&gt;
-    Praesent sit amet egestas massa, pretium maximus nulla.
+    &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;{{checkbox.checkbox1.id}}&quot;
+      value&#x3D;&quot;{{checkbox.checkbox1.value}}&quot;&gt;
+    {{checkbox.checkbox1.label}}
   &lt;/label&gt;
   &lt;label&gt;
-    &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;&quot; value&#x3D;&quot;&quot;&gt;
-    Vivamus lacinia nulla nibh, sed rhoncus ex euismod ut. Fusce fermentum eros urna, sed vestibulum ligula tempor non. Fusce interdum molestie augue sit amet porta.
+    &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;{{checkbox.checkbox2.id}}&quot;
+      value&#x3D;&quot;{{checkbox.checkbox2.value}}&quot;&gt;
+    {{checkbox.checkbox2.label}}
   &lt;/label&gt;
   &lt;label&gt;
-    &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;&quot; value&#x3D;&quot;&quot;&gt;
-    Donec dapibus nunc erat, non imperdiet risus tincidunt ac.
+    &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;{{checkbox.checkbox3.id}}&quot;
+      value&#x3D;&quot;{{checkbox.checkbox3.value}}&quot;&gt;
+    {{checkbox.checkbox3.label}}
   &lt;/label&gt;
 
-  {{!-- Aunque esté presente, el mensaje se muestra sólo cuando el contenedor padre
-        recibe una de las clases de validación. De lo contrario permanece oculto. --}}
+  {{!-- Validation block (hidden by default) --}}
   &lt;p class&#x3D;&quot;form-block__note&quot;&gt;
-    Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+    {{checkbox.note}}
   &lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class&#x3D;&quot;radio {{modifier_class}}&quot;&gt;
   &lt;label&gt;
-    &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;optionsRadios&quot; id&#x3D;&quot;optionsRadios1&quot; value&#x3D;&quot;option1&quot; checked&gt;
-    Vestibulum sagittis placerat est et pellentesque.
+    &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;{{radio.name}}&quot; id&#x3D;&quot;{{radio.radio1.id}}&quot;
+      value&#x3D;&quot;{{radio.radio1.value}}&quot; {{radio.radio1.checked}}&gt;
+    {{radio.radio1.label}}
   &lt;/label&gt;
   &lt;label&gt;
-    &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;optionsRadios&quot; id&#x3D;&quot;optionsRadios2&quot; value&#x3D;&quot;option2&quot;&gt;
-    Morbi iaculis vel leo id tempor.
+    &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;{{radio.name}}&quot; id&#x3D;&quot;{{radio.radio2.id}}&quot;
+      value&#x3D;&quot;{{radio.radio2.value}}&quot; {{radio.radio2.checked}}&gt;
+    {{radio.radio2.label}}
   &lt;/label&gt;
   &lt;label&gt;
-    &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;optionsRadios&quot; id&#x3D;&quot;optionsRadios3&quot; value&#x3D;&quot;option3&quot;&gt;
-    Duis quis magna semper, egestas mi euismod, dapibus ex.
+    &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;{{radio.name}}&quot; id&#x3D;&quot;{{radio.radio3.id}}&quot;
+      value&#x3D;&quot;{{radio.radio3.value}}&quot; {{radio.radio3.checked}}&gt;
+    {{radio.radio3.label}}
   &lt;/label&gt;
 
-  {{!-- Aunque esté presente, el mensaje se muestra sólo cuando el contenedor padre
-        recibe una de las clases de validación. De lo contrario permanece oculto. --}}
+  {{!-- Validation block (hidden by default) --}}
   &lt;p class&#x3D;&quot;form-block__note&quot;&gt;
-    Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+    {{radio.note}}
   &lt;/p&gt;
 &lt;/div&gt;
 </code>
@@ -2528,13 +2534,19 @@ o radios en la misma línea.</p>
           <div class="kss-modifier__example">
             <div class="checkbox ">
   <label class="checkbox-inline">
-    <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+    <input type="checkbox" id="inlineCheckbox1"
+      value="option1">
+    1
   </label>
   <label class="checkbox-inline">
-    <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+    <input type="checkbox" id="inlineCheckbox2"
+      value="option2">
+    2
   </label>
   <label class="checkbox-inline">
-    <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+    <input type="checkbox" id="inlineCheckbox3"
+      value="option3">
+    3
   </label>
   <p class="form-block__note">
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
@@ -2543,13 +2555,19 @@ o radios en la misma línea.</p>
 
 <div class="radio ">
   <label class="radio-inline">
-    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+    <input type="radio" name="Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna." id="inlineRadio1"
+      value="option1">
+    1
   </label>
   <label class="radio-inline">
-    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+    <input type="radio" name="Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna." id="inlineCheckbox2"
+      value="option2">
+    2
   </label>
   <label class="radio-inline">
-    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+    <input type="radio" name="Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna." id="inlineCheckbox3"
+      value="option3">
+    3
   </label>
   <p class="form-block__note">
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
@@ -2568,13 +2586,19 @@ o radios en la misma línea.</p>
             <div class="kss-modifier__example">
               <div class="checkbox block__is-disabled">
   <label class="checkbox-inline">
-    <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+    <input type="checkbox" id="inlineCheckbox1"
+      value="option1">
+    1
   </label>
   <label class="checkbox-inline">
-    <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+    <input type="checkbox" id="inlineCheckbox2"
+      value="option2">
+    2
   </label>
   <label class="checkbox-inline">
-    <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+    <input type="checkbox" id="inlineCheckbox3"
+      value="option3">
+    3
   </label>
   <p class="form-block__note">
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
@@ -2583,13 +2607,19 @@ o radios en la misma línea.</p>
 
 <div class="radio block__is-disabled">
   <label class="radio-inline">
-    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+    <input type="radio" name="Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna." id="inlineRadio1"
+      value="option1">
+    1
   </label>
   <label class="radio-inline">
-    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+    <input type="radio" name="Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna." id="inlineCheckbox2"
+      value="option2">
+    2
   </label>
   <label class="radio-inline">
-    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+    <input type="radio" name="Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna." id="inlineCheckbox3"
+      value="option3">
+    3
   </label>
   <p class="form-block__note">
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
@@ -2607,13 +2637,19 @@ o radios en la misma línea.</p>
             <div class="kss-modifier__example">
               <div class="checkbox block__has-error">
   <label class="checkbox-inline">
-    <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+    <input type="checkbox" id="inlineCheckbox1"
+      value="option1">
+    1
   </label>
   <label class="checkbox-inline">
-    <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+    <input type="checkbox" id="inlineCheckbox2"
+      value="option2">
+    2
   </label>
   <label class="checkbox-inline">
-    <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+    <input type="checkbox" id="inlineCheckbox3"
+      value="option3">
+    3
   </label>
   <p class="form-block__note">
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
@@ -2622,13 +2658,19 @@ o radios en la misma línea.</p>
 
 <div class="radio block__has-error">
   <label class="radio-inline">
-    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+    <input type="radio" name="Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna." id="inlineRadio1"
+      value="option1">
+    1
   </label>
   <label class="radio-inline">
-    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+    <input type="radio" name="Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna." id="inlineCheckbox2"
+      value="option2">
+    2
   </label>
   <label class="radio-inline">
-    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+    <input type="radio" name="Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna." id="inlineCheckbox3"
+      value="option3">
+    3
   </label>
   <p class="form-block__note">
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
@@ -2646,31 +2688,43 @@ o radios en la misma línea.</p>
             <pre class="prettyprint linenums lang-html">
               <code data-language="html">&lt;div class&#x3D;&quot;checkbox {{modifier_class}}&quot;&gt;
   &lt;label class&#x3D;&quot;checkbox-inline&quot;&gt;
-    &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;inlineCheckbox1&quot; value&#x3D;&quot;option1&quot;&gt; 1
+    &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;{{checkbox.checkbox1.id}}&quot;
+      value&#x3D;&quot;{{checkbox.checkbox1.value}}&quot;&gt;
+    {{checkbox.checkbox1.label}}
   &lt;/label&gt;
   &lt;label class&#x3D;&quot;checkbox-inline&quot;&gt;
-    &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;inlineCheckbox2&quot; value&#x3D;&quot;option2&quot;&gt; 2
+    &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;{{checkbox.checkbox2.id}}&quot;
+      value&#x3D;&quot;{{checkbox.checkbox2.value}}&quot;&gt;
+    {{checkbox.checkbox2.label}}
   &lt;/label&gt;
   &lt;label class&#x3D;&quot;checkbox-inline&quot;&gt;
-    &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;inlineCheckbox3&quot; value&#x3D;&quot;option3&quot;&gt; 3
+    &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;{{checkbox.checkbox3.id}}&quot;
+      value&#x3D;&quot;{{checkbox.checkbox3.value}}&quot;&gt;
+    {{checkbox.checkbox3.label}}
   &lt;/label&gt;
   &lt;p class&#x3D;&quot;form-block__note&quot;&gt;
-    Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+    {{checkbox.note}}
   &lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class&#x3D;&quot;radio {{modifier_class}}&quot;&gt;
   &lt;label class&#x3D;&quot;radio-inline&quot;&gt;
-    &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;inlineRadioOptions&quot; id&#x3D;&quot;inlineRadio1&quot; value&#x3D;&quot;option1&quot;&gt; 1
+    &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;{{radio.note}}&quot; id&#x3D;&quot;{{radio.radio1.id}}&quot;
+      value&#x3D;&quot;{{radio.radio1.value}}&quot;&gt;
+    {{radio.radio1.label}}
   &lt;/label&gt;
   &lt;label class&#x3D;&quot;radio-inline&quot;&gt;
-    &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;inlineRadioOptions&quot; id&#x3D;&quot;inlineRadio2&quot; value&#x3D;&quot;option2&quot;&gt; 2
+    &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;{{radio.note}}&quot; id&#x3D;&quot;{{radio.radio2.id}}&quot;
+      value&#x3D;&quot;{{radio.radio2.value}}&quot;&gt;
+    {{radio.radio2.label}}
   &lt;/label&gt;
   &lt;label class&#x3D;&quot;radio-inline&quot;&gt;
-    &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;inlineRadioOptions&quot; id&#x3D;&quot;inlineRadio3&quot; value&#x3D;&quot;option3&quot;&gt; 3
+    &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;{{radio.note}}&quot; id&#x3D;&quot;{{radio.radio3.id}}&quot;
+      value&#x3D;&quot;{{radio.radio3.value}}&quot;&gt;
+    {{radio.radio3.label}}
   &lt;/label&gt;
   &lt;p class&#x3D;&quot;form-block__note&quot;&gt;
-    Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+    {{radio.note}}
   &lt;/p&gt;
 &lt;/div&gt;
 </code>
@@ -2769,24 +2823,27 @@ clase <code>.control-label--sm</code> al <code>&lt;label&gt;</code> con clase <c
           <div class="kss-modifier__example">
             <form class="form-horizontal" autocomplete="off">
   <div class="form-block ">
-    <label for="inputEmail3" class="col-md-2 control-label">Email</label>
+    <label for="inputEmail3" class="col-md-2 control-label">
+      Email
+    </label>
     <div class="col-md-10">
-      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+      <input type="email" class="form-control" id="inputEmail3"
+        placeholder="Ingrese su email">
 
       <span class="form-block__feedback"></span>
-
       <p class="form-block__note">
         Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
       </p>
     </div>
   </div>
   <div class="form-block ">
-    <label for="inputPassword3" class="col-md-2 control-label control-label--sm">Password</label>
+    <label for="inputPassword4" class="col-md-2 control-label control-label--sm">
+      Password
+    </label>
     <div class="col-md-10">
-      <input type="password" class="form-control form-control--sm" id="inputPassword3" placeholder="Password">
+      <input type="password" class="form-control form-control--sm" id="inputPassword4" placeholder="Ingrese su password">
 
       <span class="form-block__feedback"></span>
-
       <p class="form-block__note">
         Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
       </p>
@@ -2794,7 +2851,9 @@ clase <code>.control-label--sm</code> al <code>&lt;label&gt;</code> con clase <c
   </div>
   <div class="form-block">
     <div class="col-md-offset-2 col-md-10">
-      <button type="submit" class="button button--primary">Sign in</button>
+      <button type="submit" class="button button--primary">
+        Sign in
+      </button>
     </div>
   </div>
 </form>
@@ -2811,24 +2870,27 @@ clase <code>.control-label--sm</code> al <code>&lt;label&gt;</code> con clase <c
             <div class="kss-modifier__example">
               <form class="form-horizontal" autocomplete="off">
   <div class="form-block block__has-error">
-    <label for="inputEmail3" class="col-md-2 control-label">Email</label>
+    <label for="inputEmail3" class="col-md-2 control-label">
+      Email
+    </label>
     <div class="col-md-10">
-      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+      <input type="email" class="form-control" id="inputEmail3"
+        placeholder="Ingrese su email">
 
       <span class="form-block__feedback"></span>
-
       <p class="form-block__note">
         Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
       </p>
     </div>
   </div>
   <div class="form-block block__has-error">
-    <label for="inputPassword3" class="col-md-2 control-label control-label--sm">Password</label>
+    <label for="inputPassword4" class="col-md-2 control-label control-label--sm">
+      Password
+    </label>
     <div class="col-md-10">
-      <input type="password" class="form-control form-control--sm" id="inputPassword3" placeholder="Password">
+      <input type="password" class="form-control form-control--sm" id="inputPassword4" placeholder="Ingrese su password">
 
       <span class="form-block__feedback"></span>
-
       <p class="form-block__note">
         Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
       </p>
@@ -2836,7 +2898,9 @@ clase <code>.control-label--sm</code> al <code>&lt;label&gt;</code> con clase <c
   </div>
   <div class="form-block">
     <div class="col-md-offset-2 col-md-10">
-      <button type="submit" class="button button--primary">Sign in</button>
+      <button type="submit" class="button button--primary">
+        Sign in
+      </button>
     </div>
   </div>
 </form>
@@ -2852,36 +2916,39 @@ clase <code>.control-label--sm</code> al <code>&lt;label&gt;</code> con clase <c
             <pre class="prettyprint linenums lang-html">
               <code data-language="html">&lt;form class&#x3D;&quot;form-horizontal&quot; autocomplete&#x3D;&quot;off&quot;&gt;
   &lt;div class&#x3D;&quot;form-block {{modifier_class}}&quot;&gt;
-    &lt;label for&#x3D;&quot;inputEmail3&quot; class&#x3D;&quot;col-md-2 control-label&quot;&gt;Email&lt;/label&gt;
+    &lt;label for&#x3D;&quot;{{block1.id}}&quot; class&#x3D;&quot;col-md-2 control-label&quot;&gt;
+      {{block1.label}}
+    &lt;/label&gt;
     &lt;div class&#x3D;&quot;col-md-10&quot;&gt;
-      &lt;input type&#x3D;&quot;email&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;inputEmail3&quot; placeholder&#x3D;&quot;Email&quot;&gt;
+      &lt;input type&#x3D;&quot;{{block1.type}}&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;{{block1.id}}&quot;
+        placeholder&#x3D;&quot;{{block1.placeholder}}&quot;&gt;
 
-      {{!-- El ícono y el mensaje se muestran sólo cuando el padre recibe una de las clases
-            de validación, de lo contrario permanece oculto. --}}
+      {{!-- Validation block (hidden by default) --}}
       &lt;span class&#x3D;&quot;form-block__feedback&quot;&gt;&lt;/span&gt;
-
       &lt;p class&#x3D;&quot;form-block__note&quot;&gt;
-        Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+        {{block1.note}}
       &lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class&#x3D;&quot;form-block {{modifier_class}}&quot;&gt;
-    &lt;label for&#x3D;&quot;inputPassword3&quot; class&#x3D;&quot;col-md-2 control-label control-label--sm&quot;&gt;Password&lt;/label&gt;
+    &lt;label for&#x3D;&quot;{{block2.id}}&quot; class&#x3D;&quot;col-md-2 control-label control-label--sm&quot;&gt;
+      {{block2.label}}
+    &lt;/label&gt;
     &lt;div class&#x3D;&quot;col-md-10&quot;&gt;
-      &lt;input type&#x3D;&quot;password&quot; class&#x3D;&quot;form-control form-control--sm&quot; id&#x3D;&quot;inputPassword3&quot; placeholder&#x3D;&quot;Password&quot;&gt;
+      &lt;input type&#x3D;&quot;{{block2.type}}&quot; class&#x3D;&quot;form-control form-control--sm&quot; id&#x3D;&quot;{{block2.id}}&quot; placeholder&#x3D;&quot;{{block2.placeholder}}&quot;&gt;
 
-      {{!-- El ícono y el mensaje se muestran sólo cuando el padre recibe una de las clases
-            de validación, de lo contrario permanece oculto. --}}
+      {{!-- Validation block (hidden by default) --}}
       &lt;span class&#x3D;&quot;form-block__feedback&quot;&gt;&lt;/span&gt;
-
       &lt;p class&#x3D;&quot;form-block__note&quot;&gt;
-        Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+        {{block2.note}}
       &lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class&#x3D;&quot;form-block&quot;&gt;
     &lt;div class&#x3D;&quot;col-md-offset-2 col-md-10&quot;&gt;
-      &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;button button--primary&quot;&gt;Sign in&lt;/button&gt;
+      &lt;button type&#x3D;&quot;{{block3.type}}&quot; class&#x3D;&quot;button button--primary&quot;&gt;
+        {{block3.action}}
+      &lt;/button&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/form&gt;
@@ -2978,15 +3045,18 @@ de las <em>Grid-list</em>&#39;s.</p>
           <div class="kss-modifier__example">
             <div class="checkbox ">
   <label class="checkbox-box">
-    <input type="checkbox" id="inlineCheckbox1" value="option1">
+    <input type="checkbox" id="inlineCheckbox1"
+      value="option1">
     Sed volutpat dignissim
   </label>
   <label class="checkbox-box">
-    <input type="checkbox" id="inlineCheckbox2" value="option2">
+    <input type="checkbox" id="inlineCheckbox2"
+      value="option2">
     Nullam pellentesque
   </label>
   <label class="checkbox-box">
-    <input type="checkbox" id="inlineCheckbox3" value="option3">
+    <input type="checkbox" id="inlineCheckbox3"
+      value="option3">
     Mauris pulvinar aliquet
   </label>
   <p class="form-block__note">
@@ -2996,16 +3066,16 @@ de las <em>Grid-list</em>&#39;s.</p>
 
 <div class="radio ">
   <label class="radio-box">
-    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-    Morbi pulvinar est arcu pulvinar est arcu
+    <input type="radio" name="inlineRadioOptions" id="inlineCheckbox1" value="option1">
+    Sed volutpat dignissim
   </label>
   <label class="radio-box">
-    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-    Aenean vel aliquet
+    <input type="radio" name="inlineRadioOptions" id="inlineCheckbox2" value="option2">
+    Nullam pellentesque
   </label>
   <label class="radio-box">
-    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-    Phasellus mi justo
+    <input type="radio" name="inlineRadioOptions" id="inlineCheckbox3" value="option3">
+    Mauris pulvinar aliquet
   </label>
   <p class="form-block__note">
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
@@ -3024,15 +3094,18 @@ de las <em>Grid-list</em>&#39;s.</p>
             <div class="kss-modifier__example">
               <div class="checkbox block__is-disabled">
   <label class="checkbox-box">
-    <input type="checkbox" id="inlineCheckbox1" value="option1">
+    <input type="checkbox" id="inlineCheckbox1"
+      value="option1">
     Sed volutpat dignissim
   </label>
   <label class="checkbox-box">
-    <input type="checkbox" id="inlineCheckbox2" value="option2">
+    <input type="checkbox" id="inlineCheckbox2"
+      value="option2">
     Nullam pellentesque
   </label>
   <label class="checkbox-box">
-    <input type="checkbox" id="inlineCheckbox3" value="option3">
+    <input type="checkbox" id="inlineCheckbox3"
+      value="option3">
     Mauris pulvinar aliquet
   </label>
   <p class="form-block__note">
@@ -3042,16 +3115,16 @@ de las <em>Grid-list</em>&#39;s.</p>
 
 <div class="radio block__is-disabled">
   <label class="radio-box">
-    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-    Morbi pulvinar est arcu pulvinar est arcu
+    <input type="radio" name="inlineRadioOptions" id="inlineCheckbox1" value="option1">
+    Sed volutpat dignissim
   </label>
   <label class="radio-box">
-    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-    Aenean vel aliquet
+    <input type="radio" name="inlineRadioOptions" id="inlineCheckbox2" value="option2">
+    Nullam pellentesque
   </label>
   <label class="radio-box">
-    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-    Phasellus mi justo
+    <input type="radio" name="inlineRadioOptions" id="inlineCheckbox3" value="option3">
+    Mauris pulvinar aliquet
   </label>
   <p class="form-block__note">
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
@@ -3069,15 +3142,18 @@ de las <em>Grid-list</em>&#39;s.</p>
             <div class="kss-modifier__example">
               <div class="checkbox block__has-error">
   <label class="checkbox-box">
-    <input type="checkbox" id="inlineCheckbox1" value="option1">
+    <input type="checkbox" id="inlineCheckbox1"
+      value="option1">
     Sed volutpat dignissim
   </label>
   <label class="checkbox-box">
-    <input type="checkbox" id="inlineCheckbox2" value="option2">
+    <input type="checkbox" id="inlineCheckbox2"
+      value="option2">
     Nullam pellentesque
   </label>
   <label class="checkbox-box">
-    <input type="checkbox" id="inlineCheckbox3" value="option3">
+    <input type="checkbox" id="inlineCheckbox3"
+      value="option3">
     Mauris pulvinar aliquet
   </label>
   <p class="form-block__note">
@@ -3087,16 +3163,16 @@ de las <em>Grid-list</em>&#39;s.</p>
 
 <div class="radio block__has-error">
   <label class="radio-box">
-    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-    Morbi pulvinar est arcu pulvinar est arcu
+    <input type="radio" name="inlineRadioOptions" id="inlineCheckbox1" value="option1">
+    Sed volutpat dignissim
   </label>
   <label class="radio-box">
-    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-    Aenean vel aliquet
+    <input type="radio" name="inlineRadioOptions" id="inlineCheckbox2" value="option2">
+    Nullam pellentesque
   </label>
   <label class="radio-box">
-    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-    Phasellus mi justo
+    <input type="radio" name="inlineRadioOptions" id="inlineCheckbox3" value="option3">
+    Mauris pulvinar aliquet
   </label>
   <p class="form-block__note">
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
@@ -3114,37 +3190,40 @@ de las <em>Grid-list</em>&#39;s.</p>
             <pre class="prettyprint linenums lang-html">
               <code data-language="html">&lt;div class&#x3D;&quot;checkbox {{modifier_class}}&quot;&gt;
   &lt;label class&#x3D;&quot;checkbox-box&quot;&gt;
-    &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;inlineCheckbox1&quot; value&#x3D;&quot;option1&quot;&gt;
-    Sed volutpat dignissim
+    &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;{{checkbox.checkbox1.id}}&quot;
+      value&#x3D;&quot;{{checkbox.checkbox1.value}}&quot;&gt;
+    {{checkbox.checkbox1.label}}
   &lt;/label&gt;
   &lt;label class&#x3D;&quot;checkbox-box&quot;&gt;
-    &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;inlineCheckbox2&quot; value&#x3D;&quot;option2&quot;&gt;
-    Nullam pellentesque
+    &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;{{checkbox.checkbox2.id}}&quot;
+      value&#x3D;&quot;{{checkbox.checkbox2.value}}&quot;&gt;
+    {{checkbox.checkbox2.label}}
   &lt;/label&gt;
   &lt;label class&#x3D;&quot;checkbox-box&quot;&gt;
-    &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;inlineCheckbox3&quot; value&#x3D;&quot;option3&quot;&gt;
-    Mauris pulvinar aliquet
+    &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;{{checkbox.checkbox3.id}}&quot;
+      value&#x3D;&quot;{{checkbox.checkbox3.value}}&quot;&gt;
+    {{checkbox.checkbox3.label}}
   &lt;/label&gt;
   &lt;p class&#x3D;&quot;form-block__note&quot;&gt;
-    Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+    {{checkbox.note}}
   &lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class&#x3D;&quot;radio {{modifier_class}}&quot;&gt;
   &lt;label class&#x3D;&quot;radio-box&quot;&gt;
-    &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;inlineRadioOptions&quot; id&#x3D;&quot;inlineRadio1&quot; value&#x3D;&quot;option1&quot;&gt;
-    Morbi pulvinar est arcu pulvinar est arcu
+    &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;{{radio.name}}&quot; id&#x3D;&quot;{{radio.radio1.id}}&quot; value&#x3D;&quot;{{radio.radio1.value}}&quot;&gt;
+    {{radio.radio1.label}}
   &lt;/label&gt;
   &lt;label class&#x3D;&quot;radio-box&quot;&gt;
-    &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;inlineRadioOptions&quot; id&#x3D;&quot;inlineRadio2&quot; value&#x3D;&quot;option2&quot;&gt;
-    Aenean vel aliquet
+    &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;{{radio.name}}&quot; id&#x3D;&quot;{{radio.radio2.id}}&quot; value&#x3D;&quot;{{radio.radio2.value}}&quot;&gt;
+    {{radio.radio2.label}}
   &lt;/label&gt;
   &lt;label class&#x3D;&quot;radio-box&quot;&gt;
-    &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;inlineRadioOptions&quot; id&#x3D;&quot;inlineRadio3&quot; value&#x3D;&quot;option3&quot;&gt;
-    Phasellus mi justo
+    &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;{{radio.name}}&quot; id&#x3D;&quot;{{radio.radio3.id}}&quot; value&#x3D;&quot;{{radio.radio3.value}}&quot;&gt;
+    {{radio.radio3.label}}
   &lt;/label&gt;
   &lt;p class&#x3D;&quot;form-block__note&quot;&gt;
-    Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+    {{radio.note}}
   &lt;/p&gt;
 &lt;/div&gt;
 </code>
@@ -3242,27 +3321,27 @@ recurrir a los <em>Grid-list</em>&#39;s.</p>
             <div class="radio ">
   <label class="radio-box" data-toggle="tooltip" data-placement="bottom"
       title="Morbi pulvinar est arcu pulvinar est arcu">
-    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-    <img src="http://tarjetasdecredito.org.mx/wp-content/uploads/2015/04/logotipo-visa-300x190.png"
-      alt="Morbi pulvinar est arcu pulvinar est arcu">
+    <input type="radio" name="inlineRadioOptions" id="inlineRadio1"
+      value="option1">
+    <img src="http://tarjetasdecredito.org.mx/wp-content/uploads/2015/04/logotipo-visa-300x190.png" alt="Morbi pulvinar est arcu pulvinar est arcu">
   </label>
   <label class="radio-box" data-toggle="tooltip" data-placement="bottom"
-      title="Aenean vel aliquet">
-    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-    <img src="http://amdocspartnerscatalog.com/wp-content/uploads/2017/04/Mastercard.png"
-      alt="Aenean vel aliquet">
+      title="Aenean vel aliquet.">
+    <input type="radio" name="inlineRadioOptions" id="inlineRadio2"
+      value="option2">
+    <img src="http://amdocspartnerscatalog.com/wp-content/uploads/2017/04/Mastercard.png" alt="Aenean vel aliquet.">
   </label>
   <label class="radio-box" data-toggle="tooltip" data-placement="bottom"
-      title="Phasellus mi justo">
-    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-    <img src="http://static.hotukdeals.com/images/threads/high-res/1925826_1.jpg"
-      alt="Phasellus mi justo">
+      title="Phasellus mi justo.">
+    <input type="radio" name="inlineRadioOptions" id="inlineRadio3"
+      value="option3">
+    <img src="http://static.hotukdeals.com/images/threads/high-res/1925826_1.jpg" alt="Phasellus mi justo.">
   </label>
   <label class="radio-box" data-toggle="tooltip" data-placement="bottom"
-      title="Pulvinar est arcu">
-    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-    <img src="https://infonegocios.info/uploads/LogoInstitucional-naranja.jpg"
-      alt="Pulvinar est arcu">
+      title="Pulvinar est arcu.">
+    <input type="radio" name="inlineRadioOptions" id="inlineRadio4"
+      value="option4">
+    <img src="https://infonegocios.info/uploads/LogoInstitucional-naranja.jpg" alt="Pulvinar est arcu.">
   </label>
   <p class="form-block__note">
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
@@ -3281,28 +3360,28 @@ recurrir a los <em>Grid-list</em>&#39;s.</p>
             <pre class="prettyprint linenums lang-html">
               <code data-language="html">&lt;div class&#x3D;&quot;radio {{modifier_class}}&quot;&gt;
   &lt;label class&#x3D;&quot;radio-box&quot; data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;bottom&quot;
-      title&#x3D;&quot;Morbi pulvinar est arcu pulvinar est arcu&quot;&gt;
-    &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;inlineRadioOptions&quot; id&#x3D;&quot;inlineRadio1&quot; value&#x3D;&quot;option1&quot;&gt;
-    &lt;img src&#x3D;&quot;http://tarjetasdecredito.org.mx/wp-content/uploads/2015/04/logotipo-visa-300x190.png&quot;
-      alt&#x3D;&quot;Morbi pulvinar est arcu pulvinar est arcu&quot;&gt;
+      title&#x3D;&quot;{{radio1.summary}}&quot;&gt;
+    &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;inlineRadioOptions&quot; id&#x3D;&quot;{{radio1.id}}&quot;
+      value&#x3D;&quot;{{radio1.value}}&quot;&gt;
+    &lt;img src&#x3D;&quot;{{radio1.img}}&quot; alt&#x3D;&quot;{{radio1.summary}}&quot;&gt;
   &lt;/label&gt;
   &lt;label class&#x3D;&quot;radio-box&quot; data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;bottom&quot;
-      title&#x3D;&quot;Aenean vel aliquet&quot;&gt;
-    &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;inlineRadioOptions&quot; id&#x3D;&quot;inlineRadio2&quot; value&#x3D;&quot;option2&quot;&gt;
-    &lt;img src&#x3D;&quot;http://amdocspartnerscatalog.com/wp-content/uploads/2017/04/Mastercard.png&quot;
-      alt&#x3D;&quot;Aenean vel aliquet&quot;&gt;
+      title&#x3D;&quot;{{radio2.summary}}&quot;&gt;
+    &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;inlineRadioOptions&quot; id&#x3D;&quot;{{radio2.id}}&quot;
+      value&#x3D;&quot;{{radio2.value}}&quot;&gt;
+    &lt;img src&#x3D;&quot;{{radio2.img}}&quot; alt&#x3D;&quot;{{radio2.summary}}&quot;&gt;
   &lt;/label&gt;
   &lt;label class&#x3D;&quot;radio-box&quot; data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;bottom&quot;
-      title&#x3D;&quot;Phasellus mi justo&quot;&gt;
-    &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;inlineRadioOptions&quot; id&#x3D;&quot;inlineRadio3&quot; value&#x3D;&quot;option3&quot;&gt;
-    &lt;img src&#x3D;&quot;http://static.hotukdeals.com/images/threads/high-res/1925826_1.jpg&quot;
-      alt&#x3D;&quot;Phasellus mi justo&quot;&gt;
+      title&#x3D;&quot;{{radio3.summary}}&quot;&gt;
+    &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;inlineRadioOptions&quot; id&#x3D;&quot;{{radio3.id}}&quot;
+      value&#x3D;&quot;{{radio3.value}}&quot;&gt;
+    &lt;img src&#x3D;&quot;{{radio3.img}}&quot; alt&#x3D;&quot;{{radio3.summary}}&quot;&gt;
   &lt;/label&gt;
   &lt;label class&#x3D;&quot;radio-box&quot; data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;bottom&quot;
-      title&#x3D;&quot;Pulvinar est arcu&quot;&gt;
-    &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;inlineRadioOptions&quot; id&#x3D;&quot;inlineRadio3&quot; value&#x3D;&quot;option3&quot;&gt;
-    &lt;img src&#x3D;&quot;https://infonegocios.info/uploads/LogoInstitucional-naranja.jpg&quot;
-      alt&#x3D;&quot;Pulvinar est arcu&quot;&gt;
+      title&#x3D;&quot;{{radio4.summary}}&quot;&gt;
+    &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;inlineRadioOptions&quot; id&#x3D;&quot;{{radio4.id}}&quot;
+      value&#x3D;&quot;{{radio4.value}}&quot;&gt;
+    &lt;img src&#x3D;&quot;{{radio4.img}}&quot; alt&#x3D;&quot;{{radio4.summary}}&quot;&gt;
   &lt;/label&gt;
   &lt;p class&#x3D;&quot;form-block__note&quot;&gt;
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
@@ -3404,10 +3483,10 @@ de error sólo muestra el mensaje con detalle del error.</li>
           <div class="kss-modifier__example">
             <div class="form-block ">
   <div class="control-group">
-    <span class="control-group__addon" id="basic-addon1">@</span>
-    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+    <span class="control-group__addon" id="exampleAddon1">@</span>
+    <input type="text" class="form-control" placeholder="Username"
+      aria-describedby="exampleAddon1">
   </div>
-
 
   <p class="form-block__note">
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
@@ -3416,13 +3495,12 @@ de error sólo muestra el mensaje con detalle del error.</li>
 
 <div class="form-block ">
   <div class="control-group">
-    <span class="control-group__addon" id="basic-addon1">
-      <span class="icon-calendar" data-toggle="tooltip" data-placement="top"
-        title="Texto de ayuda para el input."></span>
+    <span class="control-group__addon" id="exampleAddon2">
+      <span class="icon-calendar"></span>
     </span>
-    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+    <input type="text" class="form-control"
+      placeholder="Username" aria-describedby="exampleAddon2">
   </div>
-
 
   <p class="form-block__note">
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
@@ -3431,11 +3509,10 @@ de error sólo muestra el mensaje con detalle del error.</li>
 
 <div class="form-block ">
   <div class="control-group">
-    <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
-    <span class="control-group__addon" id="basic-addon2">@example.com</span>
+    <input type="text" class="form-control"
+      placeholder="Recipient&#x27;s username" aria-describedby="exampleAddon3">
+    <span class="control-group__addon" id="exampleAddon3">@example.com</span>
   </div>
-
-
 
   <p class="form-block__note">
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
@@ -3443,12 +3520,11 @@ de error sólo muestra el mensaje con detalle del error.</li>
 </div>
 
 <div class="form-block ">
-  <label for="basic-url">Your vanity URL</label>
   <div class="control-group">
-    <span class="control-group__addon" id="basic-addon3">https://example.com/users/</span>
-    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+    <span class="control-group__addon" id="exampleAddon4">https://example.com/users/</span>
+    <input type="text" class="form-control"
+      placeholder="Username" aria-describedby="exampleAddon4">
   </div>
-
 
   <p class="form-block__note">
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
@@ -3467,10 +3543,10 @@ de error sólo muestra el mensaje con detalle del error.</li>
             <div class="kss-modifier__example">
               <div class="form-block block__is-disabled">
   <div class="control-group">
-    <span class="control-group__addon" id="basic-addon1">@</span>
-    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+    <span class="control-group__addon" id="exampleAddon1">@</span>
+    <input type="text" class="form-control" placeholder="Username"
+      aria-describedby="exampleAddon1">
   </div>
-
 
   <p class="form-block__note">
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
@@ -3479,13 +3555,12 @@ de error sólo muestra el mensaje con detalle del error.</li>
 
 <div class="form-block block__is-disabled">
   <div class="control-group">
-    <span class="control-group__addon" id="basic-addon1">
-      <span class="icon-calendar" data-toggle="tooltip" data-placement="top"
-        title="Texto de ayuda para el input."></span>
+    <span class="control-group__addon" id="exampleAddon2">
+      <span class="icon-calendar"></span>
     </span>
-    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+    <input type="text" class="form-control"
+      placeholder="Username" aria-describedby="exampleAddon2">
   </div>
-
 
   <p class="form-block__note">
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
@@ -3494,11 +3569,10 @@ de error sólo muestra el mensaje con detalle del error.</li>
 
 <div class="form-block block__is-disabled">
   <div class="control-group">
-    <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
-    <span class="control-group__addon" id="basic-addon2">@example.com</span>
+    <input type="text" class="form-control"
+      placeholder="Recipient&#x27;s username" aria-describedby="exampleAddon3">
+    <span class="control-group__addon" id="exampleAddon3">@example.com</span>
   </div>
-
-
 
   <p class="form-block__note">
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
@@ -3506,12 +3580,11 @@ de error sólo muestra el mensaje con detalle del error.</li>
 </div>
 
 <div class="form-block block__is-disabled">
-  <label for="basic-url">Your vanity URL</label>
   <div class="control-group">
-    <span class="control-group__addon" id="basic-addon3">https://example.com/users/</span>
-    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+    <span class="control-group__addon" id="exampleAddon4">https://example.com/users/</span>
+    <input type="text" class="form-control"
+      placeholder="Username" aria-describedby="exampleAddon4">
   </div>
-
 
   <p class="form-block__note">
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
@@ -3529,10 +3602,10 @@ de error sólo muestra el mensaje con detalle del error.</li>
             <div class="kss-modifier__example">
               <div class="form-block block__has-error">
   <div class="control-group">
-    <span class="control-group__addon" id="basic-addon1">@</span>
-    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+    <span class="control-group__addon" id="exampleAddon1">@</span>
+    <input type="text" class="form-control" placeholder="Username"
+      aria-describedby="exampleAddon1">
   </div>
-
 
   <p class="form-block__note">
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
@@ -3541,13 +3614,12 @@ de error sólo muestra el mensaje con detalle del error.</li>
 
 <div class="form-block block__has-error">
   <div class="control-group">
-    <span class="control-group__addon" id="basic-addon1">
-      <span class="icon-calendar" data-toggle="tooltip" data-placement="top"
-        title="Texto de ayuda para el input."></span>
+    <span class="control-group__addon" id="exampleAddon2">
+      <span class="icon-calendar"></span>
     </span>
-    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+    <input type="text" class="form-control"
+      placeholder="Username" aria-describedby="exampleAddon2">
   </div>
-
 
   <p class="form-block__note">
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
@@ -3556,11 +3628,10 @@ de error sólo muestra el mensaje con detalle del error.</li>
 
 <div class="form-block block__has-error">
   <div class="control-group">
-    <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
-    <span class="control-group__addon" id="basic-addon2">@example.com</span>
+    <input type="text" class="form-control"
+      placeholder="Recipient&#x27;s username" aria-describedby="exampleAddon3">
+    <span class="control-group__addon" id="exampleAddon3">@example.com</span>
   </div>
-
-
 
   <p class="form-block__note">
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
@@ -3568,12 +3639,11 @@ de error sólo muestra el mensaje con detalle del error.</li>
 </div>
 
 <div class="form-block block__has-error">
-  <label for="basic-url">Your vanity URL</label>
   <div class="control-group">
-    <span class="control-group__addon" id="basic-addon3">https://example.com/users/</span>
-    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+    <span class="control-group__addon" id="exampleAddon4">https://example.com/users/</span>
+    <input type="text" class="form-control"
+      placeholder="Username" aria-describedby="exampleAddon4">
   </div>
-
 
   <p class="form-block__note">
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
@@ -3591,10 +3661,10 @@ de error sólo muestra el mensaje con detalle del error.</li>
             <div class="kss-modifier__example">
               <div class="form-block control-group--sm">
   <div class="control-group">
-    <span class="control-group__addon" id="basic-addon1">@</span>
-    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+    <span class="control-group__addon" id="exampleAddon1">@</span>
+    <input type="text" class="form-control" placeholder="Username"
+      aria-describedby="exampleAddon1">
   </div>
-
 
   <p class="form-block__note">
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
@@ -3603,13 +3673,12 @@ de error sólo muestra el mensaje con detalle del error.</li>
 
 <div class="form-block control-group--sm">
   <div class="control-group">
-    <span class="control-group__addon" id="basic-addon1">
-      <span class="icon-calendar" data-toggle="tooltip" data-placement="top"
-        title="Texto de ayuda para el input."></span>
+    <span class="control-group__addon" id="exampleAddon2">
+      <span class="icon-calendar"></span>
     </span>
-    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+    <input type="text" class="form-control"
+      placeholder="Username" aria-describedby="exampleAddon2">
   </div>
-
 
   <p class="form-block__note">
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
@@ -3618,11 +3687,10 @@ de error sólo muestra el mensaje con detalle del error.</li>
 
 <div class="form-block control-group--sm">
   <div class="control-group">
-    <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
-    <span class="control-group__addon" id="basic-addon2">@example.com</span>
+    <input type="text" class="form-control"
+      placeholder="Recipient&#x27;s username" aria-describedby="exampleAddon3">
+    <span class="control-group__addon" id="exampleAddon3">@example.com</span>
   </div>
-
-
 
   <p class="form-block__note">
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
@@ -3630,12 +3698,11 @@ de error sólo muestra el mensaje con detalle del error.</li>
 </div>
 
 <div class="form-block control-group--sm">
-  <label for="basic-url">Your vanity URL</label>
   <div class="control-group">
-    <span class="control-group__addon" id="basic-addon3">https://example.com/users/</span>
-    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+    <span class="control-group__addon" id="exampleAddon4">https://example.com/users/</span>
+    <input type="text" class="form-control"
+      placeholder="Username" aria-describedby="exampleAddon4">
   </div>
-
 
   <p class="form-block__note">
     Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
@@ -3653,62 +3720,55 @@ de error sólo muestra el mensaje con detalle del error.</li>
             <pre class="prettyprint linenums lang-html">
               <code data-language="html">&lt;div class&#x3D;&quot;form-block {{modifier_class}}&quot;&gt;
   &lt;div class&#x3D;&quot;control-group&quot;&gt;
-    &lt;span class&#x3D;&quot;control-group__addon&quot; id&#x3D;&quot;basic-addon1&quot;&gt;@&lt;/span&gt;
-    &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Username&quot; aria-describedby&#x3D;&quot;basic-addon1&quot;&gt;
+    &lt;span class&#x3D;&quot;control-group__addon&quot; id&#x3D;&quot;{{input1.id}}&quot;&gt;{{input1.addon}}&lt;/span&gt;
+    &lt;input type&#x3D;&quot;{{input1.type}}&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;{{input1.placeholder}}&quot;
+      aria-describedby&#x3D;&quot;{{input1.id}}&quot;&gt;
   &lt;/div&gt;
 
-  {{!-- El mensaje se muestran sólo cuando el padre recibe una de las clases
-        de validación, de lo contrario permanece oculto. --}}
-
+  {{!-- Validation block (hidden by default) --}}
   &lt;p class&#x3D;&quot;form-block__note&quot;&gt;
-    Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+    {{input1.note}}
   &lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class&#x3D;&quot;form-block {{modifier_class}}&quot;&gt;
   &lt;div class&#x3D;&quot;control-group&quot;&gt;
-    &lt;span class&#x3D;&quot;control-group__addon&quot; id&#x3D;&quot;basic-addon1&quot;&gt;
-      &lt;span class&#x3D;&quot;icon-calendar&quot; data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;top&quot;
-        title&#x3D;&quot;Texto de ayuda para el input.&quot;&gt;&lt;/span&gt;
+    &lt;span class&#x3D;&quot;control-group__addon&quot; id&#x3D;&quot;{{input2.id}}&quot;&gt;
+      &lt;span class&#x3D;&quot;{{input2.addon}}&quot;&gt;&lt;/span&gt;
     &lt;/span&gt;
-    &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Username&quot; aria-describedby&#x3D;&quot;basic-addon1&quot;&gt;
+    &lt;input type&#x3D;&quot;{{input2.type}}&quot; class&#x3D;&quot;form-control&quot;
+      placeholder&#x3D;&quot;{{input2.placeholder}}&quot; aria-describedby&#x3D;&quot;{{input2.id}}&quot;&gt;
   &lt;/div&gt;
 
-  {{!-- El mensaje se muestran sólo cuando el padre recibe una de las clases
-        de validación, de lo contrario permanece oculto. --}}
-
+  {{!-- Validation block (hidden by default) --}}
   &lt;p class&#x3D;&quot;form-block__note&quot;&gt;
-    Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+    {{input2.note}}
   &lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class&#x3D;&quot;form-block {{modifier_class}}&quot;&gt;
   &lt;div class&#x3D;&quot;control-group&quot;&gt;
-    &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Recipient&#x27;s username&quot; aria-describedby&#x3D;&quot;basic-addon2&quot;&gt;
-    &lt;span class&#x3D;&quot;control-group__addon&quot; id&#x3D;&quot;basic-addon2&quot;&gt;@example.com&lt;/span&gt;
+    &lt;input type&#x3D;&quot;{{input3.type}}&quot; class&#x3D;&quot;form-control&quot;
+      placeholder&#x3D;&quot;{{input3.placeholder}}&quot; aria-describedby&#x3D;&quot;{{input3.id}}&quot;&gt;
+    &lt;span class&#x3D;&quot;control-group__addon&quot; id&#x3D;&quot;{{input3.id}}&quot;&gt;{{input3.addon}}&lt;/span&gt;
   &lt;/div&gt;
 
-
-  {{!-- El mensaje se muestran sólo cuando el padre recibe una de las clases
-        de validación, de lo contrario permanece oculto. --}}
-
+  {{!-- Validation block (hidden by default) --}}
   &lt;p class&#x3D;&quot;form-block__note&quot;&gt;
-    Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+    {{input3.note}}
   &lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class&#x3D;&quot;form-block {{modifier_class}}&quot;&gt;
-  &lt;label for&#x3D;&quot;basic-url&quot;&gt;Your vanity URL&lt;/label&gt;
   &lt;div class&#x3D;&quot;control-group&quot;&gt;
-    &lt;span class&#x3D;&quot;control-group__addon&quot; id&#x3D;&quot;basic-addon3&quot;&gt;https://example.com/users/&lt;/span&gt;
-    &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;basic-url&quot; aria-describedby&#x3D;&quot;basic-addon3&quot;&gt;
+    &lt;span class&#x3D;&quot;control-group__addon&quot; id&#x3D;&quot;{{input4.id}}&quot;&gt;{{input4.addon}}&lt;/span&gt;
+    &lt;input type&#x3D;&quot;{{input4.type}}&quot; class&#x3D;&quot;form-control&quot;
+      placeholder&#x3D;&quot;{{input4.placeholder}}&quot; aria-describedby&#x3D;&quot;{{input4.id}}&quot;&gt;
   &lt;/div&gt;
 
-  {{!-- El mensaje se muestran sólo cuando el padre recibe una de las clases
-        de validación, de lo contrario permanece oculto. --}}
-
+  {{!-- Validation block (hidden by default) --}}
   &lt;p class&#x3D;&quot;form-block__note&quot;&gt;
-    Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+    {{input4.note}}
   &lt;/p&gt;
 &lt;/div&gt;
 </code>
@@ -3815,11 +3875,9 @@ campo de form.</p>
       <span class="icon-question-mark-circle"></span>
     </span>
 
-    <input type="text" class="form-control" placeholder="Text">
-
+    <input type="text" class="form-control" placeholder="Username">
 
     <span class="form-block__feedback"></span>
-
     <p class="form-block__note">
       Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
     </p>
@@ -3832,15 +3890,13 @@ campo de form.</p>
     </span>
 
     <select class="form-control">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
+      <option value="Volvo">Volvo</option>
+      <option value="Saab">Saab</option>
+      <option value="Mercedes">Mercedes</option>
+      <option value="Audi">Audi</option>
     </select>
 
-
     <span class="form-block__feedback"></span>
-
     <p class="form-block__note">
       Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
     </p>
@@ -3854,9 +3910,7 @@ campo de form.</p>
 
     <textarea class="form-control" rows="3"></textarea>
 
-
     <span class="form-block__feedback"></span>
-
     <p class="form-block__note">
       Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
     </p>
@@ -3880,11 +3934,9 @@ campo de form.</p>
       <span class="icon-question-mark-circle"></span>
     </span>
 
-    <input type="text" class="form-control" placeholder="Text">
-
+    <input type="text" class="form-control" placeholder="Username">
 
     <span class="form-block__feedback"></span>
-
     <p class="form-block__note">
       Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
     </p>
@@ -3897,15 +3949,13 @@ campo de form.</p>
     </span>
 
     <select class="form-control">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
+      <option value="Volvo">Volvo</option>
+      <option value="Saab">Saab</option>
+      <option value="Mercedes">Mercedes</option>
+      <option value="Audi">Audi</option>
     </select>
 
-
     <span class="form-block__feedback"></span>
-
     <p class="form-block__note">
       Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
     </p>
@@ -3919,9 +3969,7 @@ campo de form.</p>
 
     <textarea class="form-control" rows="3"></textarea>
 
-
     <span class="form-block__feedback"></span>
-
     <p class="form-block__note">
       Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
     </p>
@@ -3944,11 +3992,9 @@ campo de form.</p>
       <span class="icon-question-mark-circle"></span>
     </span>
 
-    <input type="text" class="form-control" placeholder="Text">
-
+    <input type="text" class="form-control" placeholder="Username">
 
     <span class="form-block__feedback"></span>
-
     <p class="form-block__note">
       Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
     </p>
@@ -3961,15 +4007,13 @@ campo de form.</p>
     </span>
 
     <select class="form-control">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
+      <option value="Volvo">Volvo</option>
+      <option value="Saab">Saab</option>
+      <option value="Mercedes">Mercedes</option>
+      <option value="Audi">Audi</option>
     </select>
 
-
     <span class="form-block__feedback"></span>
-
     <p class="form-block__note">
       Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
     </p>
@@ -3983,9 +4027,7 @@ campo de form.</p>
 
     <textarea class="form-control" rows="3"></textarea>
 
-
     <span class="form-block__feedback"></span>
-
     <p class="form-block__note">
       Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
     </p>
@@ -4003,70 +4045,58 @@ campo de form.</p>
             <pre class="prettyprint linenums lang-html">
               <code data-language="html">&lt;form&gt;
   &lt;div class&#x3D;&quot;form-block {{modifier_class}}&quot;&gt;
-    {{!-- Es necesario que el helper tiene que aparecer previo al form-control
-          para que funcionen bien los estilos --}}
+    {{!-- Helper is required to appear before control in array. --}}
     &lt;span class&#x3D;&quot;form-block__helper&quot; data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;bottom&quot;
-        title&#x3D;&quot;Fusce ac luctus sem.&quot;&gt;
+        title&#x3D;&quot;{{block1.helper}}&quot;&gt;
       &lt;span class&#x3D;&quot;icon-question-mark-circle&quot;&gt;&lt;/span&gt;
     &lt;/span&gt;
 
-    {{!-- Input básico de texto. --}}
-    &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Text&quot;&gt;
+    {{!-- Form control --}}
+    &lt;input type&#x3D;&quot;{{block1.type}}&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;{{block1.placeholder}}&quot;&gt;
 
-    {{!-- El ícono y el mensaje se muestran sólo cuando el padre recibe una de las clases
-          de validación, de lo contrario permanece oculto. --}}
-
+    {{!-- Validation block (hidden by default) --}}
     &lt;span class&#x3D;&quot;form-block__feedback&quot;&gt;&lt;/span&gt;
-
     &lt;p class&#x3D;&quot;form-block__note&quot;&gt;
-      Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+      {{block1.note}}
     &lt;/p&gt;
   &lt;/div&gt;
 
   &lt;div class&#x3D;&quot;form-block {{modifier_class}}&quot;&gt;
-    {{!-- Es necesario que el helper tiene que aparecer previo al form-control
-          para que funcionen bien los estilos --}}
+    {{!-- Helper is required to appear before control in array. --}}
     &lt;span class&#x3D;&quot;form-block__helper&quot; data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;bottom&quot;
-        title&#x3D;&quot;Fusce ac luctus sem.&quot;&gt;
+        title&#x3D;&quot;{{block2.helper}}&quot;&gt;
       &lt;span class&#x3D;&quot;icon-question-mark-circle&quot;&gt;&lt;/span&gt;
     &lt;/span&gt;
 
-    {{!-- Select --}}
+    {{!-- Form control --}}
     &lt;select class&#x3D;&quot;form-control&quot;&gt;
-      &lt;option value&#x3D;&quot;volvo&quot;&gt;Volvo&lt;/option&gt;
-      &lt;option value&#x3D;&quot;saab&quot;&gt;Saab&lt;/option&gt;
-      &lt;option value&#x3D;&quot;mercedes&quot;&gt;Mercedes&lt;/option&gt;
-      &lt;option value&#x3D;&quot;audi&quot;&gt;Audi&lt;/option&gt;
+      &lt;option value&#x3D;&quot;{{block2.select.option1}}&quot;&gt;{{block2.select.option1}}&lt;/option&gt;
+      &lt;option value&#x3D;&quot;{{block2.select.option2}}&quot;&gt;{{block2.select.option2}}&lt;/option&gt;
+      &lt;option value&#x3D;&quot;{{block2.select.option3}}&quot;&gt;{{block2.select.option3}}&lt;/option&gt;
+      &lt;option value&#x3D;&quot;{{block2.select.option4}}&quot;&gt;{{block2.select.option4}}&lt;/option&gt;
     &lt;/select&gt;
 
-    {{!-- El ícono y el mensaje se muestran sólo cuando el padre recibe una de las clases
-          de validación, de lo contrario permanece oculto. --}}
-
+    {{!-- Validation block (hidden by default) --}}
     &lt;span class&#x3D;&quot;form-block__feedback&quot;&gt;&lt;/span&gt;
-
     &lt;p class&#x3D;&quot;form-block__note&quot;&gt;
-      Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+      {{block2.note}}
     &lt;/p&gt;
   &lt;/div&gt;
 
   &lt;div class&#x3D;&quot;form-block {{modifier_class}}&quot;&gt;
-    {{!-- Es necesario que el helper tiene que aparecer previo al form-control
-          para que funcionen bien los estilos --}}
+    {{!-- Helper is required to appear before control in array. --}}
     &lt;span class&#x3D;&quot;form-block__helper&quot; data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;bottom&quot;
-        title&#x3D;&quot;Fusce ac luctus sem.&quot;&gt;
+        title&#x3D;&quot;{{block3.helper}}&quot;&gt;
       &lt;span class&#x3D;&quot;icon-question-mark-circle&quot;&gt;&lt;/span&gt;
     &lt;/span&gt;
 
-    {{!-- Textarea --}}
+    {{!-- Form control --}}
     &lt;textarea class&#x3D;&quot;form-control&quot; rows&#x3D;&quot;3&quot;&gt;&lt;/textarea&gt;
 
-    {{!-- El ícono y el mensaje se muestran sólo cuando el padre recibe una de las clases
-          de validación, de lo contrario permanece oculto. --}}
-
+    {{!-- Validation block (hidden by default) --}}
     &lt;span class&#x3D;&quot;form-block__feedback&quot;&gt;&lt;/span&gt;
-
     &lt;p class&#x3D;&quot;form-block__note&quot;&gt;
-      Nulla vestibulum nunc fringilla, bibendum arcu id, imperdiet magna.
+      {{block3.note}}
     &lt;/p&gt;
   &lt;/div&gt;
 &lt;/form&gt;
@@ -4165,7 +4195,8 @@ para un <code>&lt;input&gt;</code>), el helper en este contexto aparece inline.<
             <form>
   <div class="checkbox ">
     <label>
-      <input type="checkbox" id="" value="">
+      <input type="checkbox" id=""
+        value="">
       Praesent sit amet egestas massa, pretium maximus nulla.
 
       <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
@@ -4174,7 +4205,8 @@ para un <code>&lt;input&gt;</code>), el helper en este contexto aparece inline.<
       </span>
     </label>
     <label>
-      <input type="checkbox" id="" value="">
+      <input type="checkbox" id=""
+        value="">
       Vivamus lacinia nulla nibh, sed rhoncus ex euismod ut. Fusce fermentum eros urna, sed vestibulum ligula tempor non. Fusce interdum molestie augue sit amet porta.
 
       <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
@@ -4183,7 +4215,8 @@ para un <code>&lt;input&gt;</code>), el helper en este contexto aparece inline.<
       </span>
     </label>
     <label>
-      <input type="checkbox" id="" value="">
+      <input type="checkbox" id=""
+        value="">
       Donec dapibus nunc erat, non imperdiet risus tincidunt ac.
 
       <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
@@ -4195,29 +4228,32 @@ para un <code>&lt;input&gt;</code>), el helper en este contexto aparece inline.<
 
   <div class="radio ">
     <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+      <input type="radio" name="optionsRadios" id="optionsRadios1"
+        value="option1" checked>
       Vestibulum sagittis placerat est et pellentesque.
 
       <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
-          title="Morbi iaculis vel leo id tempor.">
+          title="Fusce ac luctus sem.">
         <span class="icon-question-mark-circle"></span>
       </span>
     </label>
     <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-      Morbi iaculis vel leo id tempor.
+      <input type="radio" name="optionsRadios" id="optionsRadios2"
+        value="option2" >
+      Vivamus lacinia nulla nibh, sed rhoncus ex euismod ut. Fusce fermentum eros urna, sed vestibulum ligula tempor non. Fusce interdum molestie augue sit amet porta.
 
       <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
-          title="Morbi iaculis vel leo id tempor.">
+          title="Fusce ac luctus sem.">
         <span class="icon-question-mark-circle"></span>
       </span>
     </label>
     <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-      Duis quis magna semper, egestas mi euismod, dapibus ex.
+      <input type="radio" name="optionsRadios" id="optionsRadios3"
+        value="option3" >
+      Donec dapibus nunc erat, non imperdiet risus tincidunt ac.
 
       <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
-          title="Morbi iaculis vel leo id tempor.">
+          title="Fusce ac luctus sem.">
         <span class="icon-question-mark-circle"></span>
       </span>
     </label>
@@ -4237,7 +4273,8 @@ para un <code>&lt;input&gt;</code>), el helper en este contexto aparece inline.<
               <form>
   <div class="checkbox block__is-disabled">
     <label>
-      <input type="checkbox" id="" value="">
+      <input type="checkbox" id=""
+        value="">
       Praesent sit amet egestas massa, pretium maximus nulla.
 
       <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
@@ -4246,7 +4283,8 @@ para un <code>&lt;input&gt;</code>), el helper en este contexto aparece inline.<
       </span>
     </label>
     <label>
-      <input type="checkbox" id="" value="">
+      <input type="checkbox" id=""
+        value="">
       Vivamus lacinia nulla nibh, sed rhoncus ex euismod ut. Fusce fermentum eros urna, sed vestibulum ligula tempor non. Fusce interdum molestie augue sit amet porta.
 
       <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
@@ -4255,7 +4293,8 @@ para un <code>&lt;input&gt;</code>), el helper en este contexto aparece inline.<
       </span>
     </label>
     <label>
-      <input type="checkbox" id="" value="">
+      <input type="checkbox" id=""
+        value="">
       Donec dapibus nunc erat, non imperdiet risus tincidunt ac.
 
       <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
@@ -4267,29 +4306,32 @@ para un <code>&lt;input&gt;</code>), el helper en este contexto aparece inline.<
 
   <div class="radio block__is-disabled">
     <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+      <input type="radio" name="optionsRadios" id="optionsRadios1"
+        value="option1" checked>
       Vestibulum sagittis placerat est et pellentesque.
 
       <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
-          title="Morbi iaculis vel leo id tempor.">
+          title="Fusce ac luctus sem.">
         <span class="icon-question-mark-circle"></span>
       </span>
     </label>
     <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-      Morbi iaculis vel leo id tempor.
+      <input type="radio" name="optionsRadios" id="optionsRadios2"
+        value="option2" >
+      Vivamus lacinia nulla nibh, sed rhoncus ex euismod ut. Fusce fermentum eros urna, sed vestibulum ligula tempor non. Fusce interdum molestie augue sit amet porta.
 
       <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
-          title="Morbi iaculis vel leo id tempor.">
+          title="Fusce ac luctus sem.">
         <span class="icon-question-mark-circle"></span>
       </span>
     </label>
     <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-      Duis quis magna semper, egestas mi euismod, dapibus ex.
+      <input type="radio" name="optionsRadios" id="optionsRadios3"
+        value="option3" >
+      Donec dapibus nunc erat, non imperdiet risus tincidunt ac.
 
       <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
-          title="Morbi iaculis vel leo id tempor.">
+          title="Fusce ac luctus sem.">
         <span class="icon-question-mark-circle"></span>
       </span>
     </label>
@@ -4308,7 +4350,8 @@ para un <code>&lt;input&gt;</code>), el helper en este contexto aparece inline.<
               <form>
   <div class="checkbox block__has-error">
     <label>
-      <input type="checkbox" id="" value="">
+      <input type="checkbox" id=""
+        value="">
       Praesent sit amet egestas massa, pretium maximus nulla.
 
       <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
@@ -4317,7 +4360,8 @@ para un <code>&lt;input&gt;</code>), el helper en este contexto aparece inline.<
       </span>
     </label>
     <label>
-      <input type="checkbox" id="" value="">
+      <input type="checkbox" id=""
+        value="">
       Vivamus lacinia nulla nibh, sed rhoncus ex euismod ut. Fusce fermentum eros urna, sed vestibulum ligula tempor non. Fusce interdum molestie augue sit amet porta.
 
       <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
@@ -4326,7 +4370,8 @@ para un <code>&lt;input&gt;</code>), el helper en este contexto aparece inline.<
       </span>
     </label>
     <label>
-      <input type="checkbox" id="" value="">
+      <input type="checkbox" id=""
+        value="">
       Donec dapibus nunc erat, non imperdiet risus tincidunt ac.
 
       <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
@@ -4338,29 +4383,32 @@ para un <code>&lt;input&gt;</code>), el helper en este contexto aparece inline.<
 
   <div class="radio block__has-error">
     <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+      <input type="radio" name="optionsRadios" id="optionsRadios1"
+        value="option1" checked>
       Vestibulum sagittis placerat est et pellentesque.
 
       <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
-          title="Morbi iaculis vel leo id tempor.">
+          title="Fusce ac luctus sem.">
         <span class="icon-question-mark-circle"></span>
       </span>
     </label>
     <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-      Morbi iaculis vel leo id tempor.
+      <input type="radio" name="optionsRadios" id="optionsRadios2"
+        value="option2" >
+      Vivamus lacinia nulla nibh, sed rhoncus ex euismod ut. Fusce fermentum eros urna, sed vestibulum ligula tempor non. Fusce interdum molestie augue sit amet porta.
 
       <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
-          title="Morbi iaculis vel leo id tempor.">
+          title="Fusce ac luctus sem.">
         <span class="icon-question-mark-circle"></span>
       </span>
     </label>
     <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-      Duis quis magna semper, egestas mi euismod, dapibus ex.
+      <input type="radio" name="optionsRadios" id="optionsRadios3"
+        value="option3" >
+      Donec dapibus nunc erat, non imperdiet risus tincidunt ac.
 
       <span class="form-block__helper" data-toggle="tooltip" data-placement="bottom"
-          title="Morbi iaculis vel leo id tempor.">
+          title="Fusce ac luctus sem.">
         <span class="icon-question-mark-circle"></span>
       </span>
     </label>
@@ -4379,29 +4427,32 @@ para un <code>&lt;input&gt;</code>), el helper en este contexto aparece inline.<
               <code data-language="html">&lt;form&gt;
   &lt;div class&#x3D;&quot;checkbox {{modifier_class}}&quot;&gt;
     &lt;label&gt;
-      &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;&quot; value&#x3D;&quot;&quot;&gt;
-      Praesent sit amet egestas massa, pretium maximus nulla.
+      &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;{{checkbox.checkbox1.id}}&quot;
+        value&#x3D;&quot;{{checkbox.checkbox1.value}}&quot;&gt;
+      {{checkbox.checkbox1.label}}
 
       &lt;span class&#x3D;&quot;form-block__helper&quot; data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;bottom&quot;
-          title&#x3D;&quot;Fusce ac luctus sem.&quot;&gt;
+          title&#x3D;&quot;{{checkbox.checkbox2.helper}}&quot;&gt;
         &lt;span class&#x3D;&quot;icon-question-mark-circle&quot;&gt;&lt;/span&gt;
       &lt;/span&gt;
     &lt;/label&gt;
     &lt;label&gt;
-      &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;&quot; value&#x3D;&quot;&quot;&gt;
-      Vivamus lacinia nulla nibh, sed rhoncus ex euismod ut. Fusce fermentum eros urna, sed vestibulum ligula tempor non. Fusce interdum molestie augue sit amet porta.
+      &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;{{checkbox.checkbox2.id}}&quot;
+        value&#x3D;&quot;{{checkbox.checkbox2.value}}&quot;&gt;
+      {{checkbox.checkbox2.label}}
 
       &lt;span class&#x3D;&quot;form-block__helper&quot; data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;bottom&quot;
-          title&#x3D;&quot;Fusce ac luctus sem.&quot;&gt;
+          title&#x3D;&quot;{{checkbox.checkbox2.helper}}&quot;&gt;
         &lt;span class&#x3D;&quot;icon-question-mark-circle&quot;&gt;&lt;/span&gt;
       &lt;/span&gt;
     &lt;/label&gt;
     &lt;label&gt;
-      &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;&quot; value&#x3D;&quot;&quot;&gt;
-      Donec dapibus nunc erat, non imperdiet risus tincidunt ac.
+      &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;{{checkbox.checkbox3.id}}&quot;
+        value&#x3D;&quot;{{checkbox.checkbox3.value}}&quot;&gt;
+      {{checkbox.checkbox3.label}}
 
       &lt;span class&#x3D;&quot;form-block__helper&quot; data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;bottom&quot;
-          title&#x3D;&quot;Fusce ac luctus sem.&quot;&gt;
+          title&#x3D;&quot;{{checkbox.checkbox3.helper}}&quot;&gt;
         &lt;span class&#x3D;&quot;icon-question-mark-circle&quot;&gt;&lt;/span&gt;
       &lt;/span&gt;
     &lt;/label&gt;
@@ -4409,29 +4460,32 @@ para un <code>&lt;input&gt;</code>), el helper en este contexto aparece inline.<
 
   &lt;div class&#x3D;&quot;radio {{modifier_class}}&quot;&gt;
     &lt;label&gt;
-      &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;optionsRadios&quot; id&#x3D;&quot;optionsRadios1&quot; value&#x3D;&quot;option1&quot; checked&gt;
-      Vestibulum sagittis placerat est et pellentesque.
+      &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;{{radio.name}}&quot; id&#x3D;&quot;{{radio.radio1.id}}&quot;
+        value&#x3D;&quot;{{radio.radio1.value}}&quot; {{radio.radio1.state}}&gt;
+      {{radio.radio1.label}}
 
       &lt;span class&#x3D;&quot;form-block__helper&quot; data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;bottom&quot;
-          title&#x3D;&quot;Morbi iaculis vel leo id tempor.&quot;&gt;
+          title&#x3D;&quot;{{radio.radio1.helper}}&quot;&gt;
         &lt;span class&#x3D;&quot;icon-question-mark-circle&quot;&gt;&lt;/span&gt;
       &lt;/span&gt;
     &lt;/label&gt;
     &lt;label&gt;
-      &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;optionsRadios&quot; id&#x3D;&quot;optionsRadios2&quot; value&#x3D;&quot;option2&quot;&gt;
-      Morbi iaculis vel leo id tempor.
+      &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;{{radio.name}}&quot; id&#x3D;&quot;{{radio.radio2.id}}&quot;
+        value&#x3D;&quot;{{radio.radio2.value}}&quot; {{radio.radio2.state}}&gt;
+      {{radio.radio2.label}}
 
       &lt;span class&#x3D;&quot;form-block__helper&quot; data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;bottom&quot;
-          title&#x3D;&quot;Morbi iaculis vel leo id tempor.&quot;&gt;
+          title&#x3D;&quot;{{radio.radio2.helper}}&quot;&gt;
         &lt;span class&#x3D;&quot;icon-question-mark-circle&quot;&gt;&lt;/span&gt;
       &lt;/span&gt;
     &lt;/label&gt;
     &lt;label&gt;
-      &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;optionsRadios&quot; id&#x3D;&quot;optionsRadios3&quot; value&#x3D;&quot;option3&quot;&gt;
-      Duis quis magna semper, egestas mi euismod, dapibus ex.
+      &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;{{radio.name}}&quot; id&#x3D;&quot;{{radio.radio3.id}}&quot;
+        value&#x3D;&quot;{{radio.radio3.value}}&quot; {{radio.radio3.state}}&gt;
+      {{radio.radio3.label}}
 
       &lt;span class&#x3D;&quot;form-block__helper&quot; data-toggle&#x3D;&quot;tooltip&quot; data-placement&#x3D;&quot;bottom&quot;
-          title&#x3D;&quot;Morbi iaculis vel leo id tempor.&quot;&gt;
+          title&#x3D;&quot;{{radio.radio3.helper}}&quot;&gt;
         &lt;span class&#x3D;&quot;icon-question-mark-circle&quot;&gt;&lt;/span&gt;
       &lt;/span&gt;
     &lt;/label&gt;
@@ -5892,8 +5946,7 @@ con dimensiones adecuadas.</li>
 
           <div class="kss-modifier__example">
             <div class="img-container ">
-  <img itemprop="image" src="http://lorempixel.com/800/600/sports/"
-    alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+  <img itemprop="image" src="http://lorempixel.com/800/600/sports/" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
 </div>
 
             <div class="kss-modifier__example-footer"></div>
@@ -5907,8 +5960,7 @@ con dimensiones adecuadas.</li>
             </div>
             <div class="kss-modifier__example">
               <div class="img-container img-container__is-loading">
-  <img itemprop="image" src="http://lorempixel.com/800/600/sports/"
-    alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+  <img itemprop="image" src="http://lorempixel.com/800/600/sports/" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
 </div>
 
               <div class="kss-modifier__example-footer"></div>
@@ -5921,9 +5973,7 @@ con dimensiones adecuadas.</li>
             </summary>
             <pre class="prettyprint linenums lang-html">
               <code data-language="html">&lt;div class&#x3D;&quot;img-container {{modifier_class}}&quot;&gt;
-  {{!-- Esta imágen está puesta solamente como demostración. --}}
-  &lt;img itemprop&#x3D;&quot;image&quot; src&#x3D;&quot;http://lorempixel.com/800/600/sports/&quot;
-    alt&#x3D;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&quot; /&gt;
+  &lt;img itemprop&#x3D;&quot;image&quot; src&#x3D;&quot;{{image.url}}&quot; alt&#x3D;&quot;{{image.alt}}&quot;&gt;
 &lt;/div&gt;
 </code>
             </pre>
@@ -6021,7 +6071,7 @@ producto que posean el dicha característica).</p>
 
           <div class="kss-modifier__example">
             <span class="label " title="Interdum et malesuada fames">
-  Interdum et malesuada fames.
+  Interdum et malesuada fames
 </span>
 
             <div class="kss-modifier__example-footer"></div>
@@ -6035,7 +6085,7 @@ producto que posean el dicha característica).</p>
             </div>
             <div class="kss-modifier__example">
               <span class="label pseudo-class-hover" title="Interdum et malesuada fames">
-  Interdum et malesuada fames.
+  Interdum et malesuada fames
 </span>
 
               <div class="kss-modifier__example-footer"></div>
@@ -6048,7 +6098,7 @@ producto que posean el dicha característica).</p>
             </div>
             <div class="kss-modifier__example">
               <span class="label label--main" title="Interdum et malesuada fames">
-  Interdum et malesuada fames.
+  Interdum et malesuada fames
 </span>
 
               <div class="kss-modifier__example-footer"></div>
@@ -6060,8 +6110,8 @@ producto que posean el dicha característica).</p>
                 Markup: <code>labels/labels.hbs</code>
             </summary>
             <pre class="prettyprint linenums lang-html">
-              <code data-language="html">&lt;span class&#x3D;&quot;label {{modifier_class}}&quot; title&#x3D;&quot;Interdum et malesuada fames&quot;&gt;
-  Interdum et malesuada fames.
+              <code data-language="html">&lt;span class&#x3D;&quot;label {{modifier_class}}&quot; title&#x3D;&quot;{{title}}&quot;&gt;
+  {{text}}
 &lt;/span&gt;
 </code>
             </pre>
@@ -6281,7 +6331,7 @@ línea que contiene los tags.</li>
 
 
           <div class="kss-modifier__example">
-            <a href="#0" class="tag" title="Interdum et malesuada fames">
+            <a href="#0" class="tag " title="Interdum et malesuada fames">
   Tag de ejemplo
 </a>
 
@@ -6295,8 +6345,8 @@ línea que contiene los tags.</li>
                 Markup: <code>tags/tags.hbs</code>
             </summary>
             <pre class="prettyprint linenums lang-html">
-              <code data-language="html">&lt;a href&#x3D;&quot;#0&quot; class&#x3D;&quot;tag&quot; title&#x3D;&quot;Interdum et malesuada fames&quot;&gt;
-  Tag de ejemplo
+              <code data-language="html">&lt;a href&#x3D;&quot;{{link}}&quot; class&#x3D;&quot;tag {{modifier_class}}&quot; title&#x3D;&quot;{{title}}&quot;&gt;
+  {{text}}
 &lt;/a&gt;
 </code>
             </pre>
@@ -6391,7 +6441,7 @@ o importes totales (no necesariamente aplica a los precios por unidad).</p>
             </div>
 
           <div class="kss-modifier__example">
-            <div class="value-container" itemprop="offers" itemscope
+            <div class="value-container " itemprop="offers" itemscope
     itemtype="http://schema.org/Offer">
   <span class="value-note">
       <del>$1299</del>
@@ -6420,7 +6470,7 @@ o importes totales (no necesariamente aplica a los precios por unidad).</p>
               Reservado para <em>Ficha de producto</em> y el bloque <em>Súper Oferta</em>.
             </div>
             <div class="kss-modifier__example">
-              <div class="value-container" itemprop="offers" itemscope
+              <div class="value-container value-container--lg" itemprop="offers" itemscope
     itemtype="http://schema.org/Offer">
   <span class="value-note">
       <del>$1299</del>
@@ -6448,7 +6498,7 @@ o importes totales (no necesariamente aplica a los precios por unidad).</p>
               Se utiliza para comunicar importes totales (p.ej: en el checkout).
             </div>
             <div class="kss-modifier__example">
-              <div class="value-container" itemprop="offers" itemscope
+              <div class="value-container value-container--sm" itemprop="offers" itemscope
     itemtype="http://schema.org/Offer">
   <span class="value-note">
       <del>$1299</del>
@@ -6476,7 +6526,7 @@ o importes totales (no necesariamente aplica a los precios por unidad).</p>
                 Markup: <code>value/value.hbs</code>
             </summary>
             <pre class="prettyprint linenums lang-html">
-              <code data-language="html">&lt;div class&#x3D;&quot;value-container&quot; itemprop&#x3D;&quot;offers&quot; itemscope
+              <code data-language="html">&lt;div class&#x3D;&quot;value-container {{modifier_class}}&quot; itemprop&#x3D;&quot;offers&quot; itemscope
     itemtype&#x3D;&quot;http://schema.org/Offer&quot;&gt;
   &lt;span class&#x3D;&quot;value-note&quot;&gt;
     {{#if discount}}
