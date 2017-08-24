@@ -68,24 +68,39 @@
 
 <article role="main" class="kss-main">
 
-    <div id="kssref-helpers-list-listunstyled" class="kss-section kss-section--depth-3 is-fullscreen">
+    <div id="kssref-functional-namespacedfunction" class="kss-section kss-section--depth-2 is-fullscreen">
 
       <div class="kss-style">
-        <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-helpers-list-listunstyled">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-functional-namespacedfunction">
             <span class="kss-title__ref">
-              4.6.2
+              3.2
               <span class="kss-title__permalink-hash">
-                  #Helpers.List.ListUnstyled
+                  #Functional.NamespacedFunction
               </span>
             </span>
-            @list-unstyled
+            Namespaced Function
           </a>
-        </h3>
+        </h2>
 
 
           <div class="kss-description">
-            <p>Conserva el estado block pero remueve estilos default del browser como padding y list-style.</p>
+            <p>Algunas funciones como los [carouseles]{@link module:kss.KssConfig} están disponibles globalmente a través
+del objeto <code>gb_ui</code>.</p>
+<p><strong>Usage</strong></p>
+<pre><code>gb_ui = {
+ carousel: {
+   carouselBillboard: {
+     init: {},
+     settings: {}
+   },
+   carouselShelf: {
+     init: {},
+     settings: {}
+   }
+ }
+};
+</code></pre><p>@module Functional/carousel</p>
 
           </div>
 
@@ -93,7 +108,7 @@
 
 
         <div class="kss-source kss-style">
-          Source: <code>_lists.scss</code>, line 8
+          Source: <code>garbaui.main.js</code>, line 31
         </div>
 
     </div>

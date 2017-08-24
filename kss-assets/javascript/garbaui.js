@@ -3,50 +3,75 @@
 // Import framework dependencies
 
 // Import plugin shim
-var $ = (typeof window !== "undefined" ? window['$'] : typeof global !== "undefined" ? global['$'] : null);
+var $                    = (typeof window !== "undefined" ? window['$'] : typeof global !== "undefined" ? global['$'] : null);
 
 // Bootstrap plugins (http://getbootstrap.com/javascript/)
-var modal = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal');
-var tooltip = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip');
-var tab = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab');
-var transition = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition');
+var modal                = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal');
+var tooltip              = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip');
+var tab                  = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab');
+var transition           = require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition');
 
 // Miscelaneous plugins
-var firstPurchase = require('./scripts/first-purchase');
-var cookie = require('./scripts/cookie');
-var offersHunter = require('./scripts/offers-hunter');
+var firstPurchase        = require('./scripts/first-purchase');
+var cookie               = require('./scripts/cookie');
+var offersHunter         = require('./scripts/offers-hunter');
 
 // Carousel Plugin (http://kenwheeler.github.io/slick/)
-var slick = require('../../node_modules/slick-carousel/slick/slick');
-
-
+var slick                = require('../../node_modules/slick-carousel/slick/slick');
 
 // Initialize bootstrap plugins
 // Styleguide section-functional.html#kssref-functional-tooltips
-var initializaTooltip = require('./scripts/components/tooltip');
-
-
+var initializeTooltip    = require('./scripts/components/tooltip');
 
 // Le pone la clase `.item__is-checked` al label padre cuando el usuario hace
 // click en un ítem
-var listGrid = require('./scripts/components/carousel-billboard');
+// Styleguide section-functional.html#kssref-components-celllist-3-checkboxcelllist
+var listGrid             = require('./scripts/components/carousel-billboard');
 
+
+
+// Objeto Global
+//
+// Algunas funciones como por ejemplo los
+// [carouseles](/section-functional.html#kssref-functional-carousel) están
+// disponibles globalmente a través del objeto `gb_ui`.
+//
+// **Usage**
+// ```
+// gb_ui: {
+//  carousel: {
+//    carouselBillboard: {...},
+//    carouselShelf: {...}
+//  }
+// };
+// ```
+//
+// Styleguide Functional.1-GlobalObject
+
+window.gb_ui = {
+  carousel: {
+    carouselBillboard: {},
+    carouselShelf: {}
+  }
+};
 
 
 // Carousel Plugin (http://kenwheeler.github.io/slick/)
-var carouselBillboard = require('./scripts/components/carousel-billboard');
-var carouselShelf = require('./scripts/components/carousel-shelf');
+
+// Styleguide section-functional.html#kssref-functional-carousel-1-simplecarousel
+carouselBillboard  = require('./scripts/components/carousel-billboard');
+
+// Styleguide section-functional.html#kssref-functional-carousel-2-shelfcarousel
+carouselShelf      = require('./scripts/components/carousel-shelf');
+
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal":8,"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab":9,"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip":10,"../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition":11,"../../node_modules/slick-carousel/slick/slick":12,"./scripts/components/carousel-billboard":2,"./scripts/components/carousel-shelf":3,"./scripts/components/tooltip":4,"./scripts/cookie":5,"./scripts/first-purchase":6,"./scripts/offers-hunter":7}],2:[function(require,module,exports){
-// Inicializar Carouseles
-$(function () {
-  // TODO(ecalvi): Maybe we should consider in the future moving these settings
-  // to their own module.
+// Styleguide section-functional.html#kssref-functional-carousel-2-shelfcarousel
 
-  // Initialize billboard carousel plugins
-  // Styleguide section-functional.html#kssref-functional-carousel-1-simplecarousel
-  $('.carousel-billboard').slick({
+$(function () {
+  // Billboard carousel settings
+  gb_ui.carousel.carouselBillboard.settings = {
       arrows: false,
       autoplay: true,
       autoplaySpeed: 2000,
@@ -66,14 +91,23 @@ $(function () {
           pauseOnFocus: true
         }
       }]
-  });
+  }
+
+  // Billboard carousel init
+  gb_ui.carousel.carouselBillboard.init = function(element) {
+    $(element).slick(gb_ui.carousel.carouselBillboard.settings);
+  }
+
+  // Billboard carousel on class
+  gb_ui.carousel.carouselBillboard.init('.carousel-billboard');
 });
 
 },{}],3:[function(require,module,exports){
+// Styleguide section-functional.html#kssref-functional-carousel-2-shelfcarousel
+
 $(function () {
-  // Shelf carousel plugins
-  // Styleguide section-functional.html#kssref-functional-carousel-2-shelfcarousel
-  $('.carousel-shelf').slick({
+  // Shelf carousel settings
+  gb_ui.carousel.carouselShelf.settings = {
     lazyLoad: 'ondemand',
     speed: 300,
     slidesToShow: 4.8,
@@ -84,7 +118,15 @@ $(function () {
       breakpoint: 1025,
       settings: 'unslick'
     }]
-  });
+  }
+
+  // Shelf carousel init
+  gb_ui.carousel.carouselShelf.init = function(element) {
+    $(element).slick(gb_ui.carousel.carouselShelf.settings);
+  }
+
+  // Shelf carousel on class
+  gb_ui.carousel.carouselShelf.init('.carousel-shelf');
 });
 
 },{}],4:[function(require,module,exports){
