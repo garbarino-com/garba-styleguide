@@ -8,10 +8,12 @@
     "./node_modules/garba-ui/app/lib/functional/",
     "./node_modules/garba-ui/app/lib/helpers/",
     "./node_modules/garba-ui/app/lib/modules/",
-    "./node_modules/garba-ui/app/lib/variables/"
+    "./node_modules/garba-ui/app/lib/variables/",
+    "./node_modules/garba-ui/app/javascript/"
   ],
   "homepage": "introduction.md",
   "destination":  "./dist/",
+  "mask": "*.css|*.sass|*.scss|*.js",
   "css": [
     "./kss-assets/css/garba-styleguide.css"
   ],
